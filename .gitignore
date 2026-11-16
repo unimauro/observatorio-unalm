@@ -1,0 +1,9 @@
+etl/venv/
+**/__pycache__/
+*.pyc
+.DS_Store
+node_modules/
+etl/cache_ordenes/
+etl/cache_pte/
+etl/work/
+etl/cache_*/

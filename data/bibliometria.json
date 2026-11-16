@@ -1,0 +1,1405 @@
+{
+ "uni": {
+  "name": "Universidad Nacional Agraria La Molina",
+  "works": 6167,
+  "cited": 140922,
+  "h_index": 139,
+  "i10": 2980,
+  "mean_citedness": 1.74,
+  "by_year": [
+   {
+    "year": 2010,
+    "works": 80,
+    "cited": 1577
+   },
+   {
+    "year": 2011,
+    "works": 81,
+    "cited": 3335
+   },
+   {
+    "year": 2012,
+    "works": 80,
+    "cited": 4627
+   },
+   {
+    "year": 2013,
+    "works": 114,
+    "cited": 3173
+   },
+   {
+    "year": 2014,
+    "works": 175,
+    "cited": 2965
+   },
+   {
+    "year": 2015,
+    "works": 193,
+    "cited": 3518
+   },
+   {
+    "year": 2016,
+    "works": 273,
+    "cited": 4890
+   },
+   {
+    "year": 2017,
+    "works": 182,
+    "cited": 2840
+   },
+   {
+    "year": 2018,
+    "works": 296,
+    "cited": 4218
+   },
+   {
+    "year": 2019,
+    "works": 398,
+    "cited": 4121
+   },
+   {
+    "year": 2020,
+    "works": 465,
+    "cited": 6579
+   },
+   {
+    "year": 2021,
+    "works": 476,
+    "cited": 6191
+   },
+   {
+    "year": 2022,
+    "works": 434,
+    "cited": 5067
+   },
+   {
+    "year": 2023,
+    "works": 450,
+    "cited": 2938
+   },
+   {
+    "year": 2024,
+    "works": 402,
+    "cited": 2346
+   },
+   {
+    "year": 2025,
+    "works": 416,
+    "cited": 1378
+   },
+   {
+    "year": 2026,
+    "works": 455,
+    "cited": 1390
+   }
+  ],
+  "openalex": "https://openalex.org/I79080234"
+ },
+ "pucp": {
+  "name": "pucp",
+  "works": 27994,
+  "cited": 541712,
+  "h_index": 251,
+  "i10": 9171,
+  "mean_citedness": 2.57,
+  "by_year": [
+   {
+    "year": 2010,
+    "works": 665,
+    "cited": null
+   },
+   {
+    "year": 2011,
+    "works": 612,
+    "cited": null
+   },
+   {
+    "year": 2012,
+    "works": 714,
+    "cited": null
+   },
+   {
+    "year": 2013,
+    "works": 745,
+    "cited": null
+   },
+   {
+    "year": 2014,
+    "works": 1047,
+    "cited": null
+   },
+   {
+    "year": 2015,
+    "works": 903,
+    "cited": null
+   },
+   {
+    "year": 2016,
+    "works": 962,
+    "cited": null
+   },
+   {
+    "year": 2017,
+    "works": 1021,
+    "cited": null
+   },
+   {
+    "year": 2018,
+    "works": 1004,
+    "cited": null
+   },
+   {
+    "year": 2019,
+    "works": 1054,
+    "cited": null
+   },
+   {
+    "year": 2020,
+    "works": 1111,
+    "cited": null
+   },
+   {
+    "year": 2021,
+    "works": 1301,
+    "cited": null
+   },
+   {
+    "year": 2022,
+    "works": 1256,
+    "cited": null
+   },
+   {
+    "year": 2023,
+    "works": 1430,
+    "cited": null
+   },
+   {
+    "year": 2024,
+    "works": 1397,
+    "cited": null
+   },
+   {
+    "year": 2025,
+    "works": 1503,
+    "cited": null
+   },
+   {
+    "year": 2026,
+    "works": 1398,
+    "cited": null
+   }
+  ],
+  "openalex": "https://openalex.org/I65285256"
+ },
+ "cayetano": {
+  "name": "cayetano",
+  "works": 17163,
+  "cited": 1211765,
+  "h_index": 318,
+  "i10": 16893,
+  "mean_citedness": 3.0,
+  "by_year": [
+   {
+    "year": 2010,
+    "works": 275,
+    "cited": null
+   },
+   {
+    "year": 2011,
+    "works": 409,
+    "cited": null
+   },
+   {
+    "year": 2012,
+    "works": 570,
+    "cited": null
+   },
+   {
+    "year": 2013,
+    "works": 821,
+    "cited": null
+   },
+   {
+    "year": 2014,
+    "works": 892,
+    "cited": null
+   },
+   {
+    "year": 2015,
+    "works": 725,
+    "cited": null
+   },
+   {
+    "year": 2016,
+    "works": 603,
+    "cited": null
+   },
+   {
+    "year": 2017,
+    "works": 650,
+    "cited": null
+   },
+   {
+    "year": 2018,
+    "works": 660,
+    "cited": null
+   },
+   {
+    "year": 2019,
+    "works": 746,
+    "cited": null
+   },
+   {
+    "year": 2020,
+    "works": 904,
+    "cited": null
+   },
+   {
+    "year": 2021,
+    "works": 1034,
+    "cited": null
+   },
+   {
+    "year": 2022,
+    "works": 922,
+    "cited": null
+   },
+   {
+    "year": 2023,
+    "works": 969,
+    "cited": null
+   },
+   {
+    "year": 2024,
+    "works": 1012,
+    "cited": null
+   },
+   {
+    "year": 2025,
+    "works": 1171,
+    "cited": null
+   },
+   {
+    "year": 2026,
+    "works": 1091,
+    "cited": null
+   }
+  ],
+  "openalex": "https://openalex.org/I197097402"
+ },
+ "sanmarcos": {
+  "name": "sanmarcos",
+  "works": 36919,
+  "cited": 531890,
+  "h_index": 201,
+  "i10": 11877,
+  "mean_citedness": 1.65,
+  "by_year": [
+   {
+    "year": 2010,
+    "works": 362,
+    "cited": null
+   },
+   {
+    "year": 2011,
+    "works": 543,
+    "cited": null
+   },
+   {
+    "year": 2012,
+    "works": 766,
+    "cited": null
+   },
+   {
+    "year": 2013,
+    "works": 985,
+    "cited": null
+   },
+   {
+    "year": 2014,
+    "works": 4336,
+    "cited": null
+   },
+   {
+    "year": 2015,
+    "works": 971,
+    "cited": null
+   },
+   {
+    "year": 2016,
+    "works": 1048,
+    "cited": null
+   },
+   {
+    "year": 2017,
+    "works": 1166,
+    "cited": null
+   },
+   {
+    "year": 2018,
+    "works": 1266,
+    "cited": null
+   },
+   {
+    "year": 2019,
+    "works": 1397,
+    "cited": null
+   },
+   {
+    "year": 2020,
+    "works": 1917,
+    "cited": null
+   },
+   {
+    "year": 2021,
+    "works": 2256,
+    "cited": null
+   },
+   {
+    "year": 2022,
+    "works": 2293,
+    "cited": null
+   },
+   {
+    "year": 2023,
+    "works": 2330,
+    "cited": null
+   },
+   {
+    "year": 2024,
+    "works": 2171,
+    "cited": null
+   },
+   {
+    "year": 2025,
+    "works": 2358,
+    "cited": null
+   },
+   {
+    "year": 2026,
+    "works": 2433,
+    "cited": null
+   }
+  ],
+  "openalex": "https://openalex.org/I192513696"
+ },
+ "unalm": {
+  "name": "unalm",
+  "works": 6167,
+  "cited": 140922,
+  "h_index": 139,
+  "i10": 2980,
+  "mean_citedness": 1.74,
+  "by_year": [
+   {
+    "year": 2010,
+    "works": 80,
+    "cited": 1577
+   },
+   {
+    "year": 2011,
+    "works": 81,
+    "cited": 3335
+   },
+   {
+    "year": 2012,
+    "works": 80,
+    "cited": 4627
+   },
+   {
+    "year": 2013,
+    "works": 114,
+    "cited": 3173
+   },
+   {
+    "year": 2014,
+    "works": 175,
+    "cited": 2965
+   },
+   {
+    "year": 2015,
+    "works": 193,
+    "cited": 3518
+   },
+   {
+    "year": 2016,
+    "works": 273,
+    "cited": 4890
+   },
+   {
+    "year": 2017,
+    "works": 182,
+    "cited": 2840
+   },
+   {
+    "year": 2018,
+    "works": 296,
+    "cited": 4218
+   },
+   {
+    "year": 2019,
+    "works": 398,
+    "cited": 4121
+   },
+   {
+    "year": 2020,
+    "works": 465,
+    "cited": 6579
+   },
+   {
+    "year": 2021,
+    "works": 476,
+    "cited": 6191
+   },
+   {
+    "year": 2022,
+    "works": 434,
+    "cited": 5067
+   },
+   {
+    "year": 2023,
+    "works": 450,
+    "cited": 2938
+   },
+   {
+    "year": 2024,
+    "works": 402,
+    "cited": 2346
+   },
+   {
+    "year": 2025,
+    "works": 416,
+    "cited": 1378
+   },
+   {
+    "year": 2026,
+    "works": 455,
+    "cited": 1390
+   }
+  ],
+  "openalex": "https://openalex.org/I79080234"
+ },
+ "upc": {
+  "name": "upc",
+  "works": 8506,
+  "cited": 135527,
+  "h_index": 109,
+  "i10": 3194,
+  "mean_citedness": 1.78,
+  "by_year": [
+   {
+    "year": 2010,
+    "works": 19,
+    "cited": null
+   },
+   {
+    "year": 2011,
+    "works": 35,
+    "cited": null
+   },
+   {
+    "year": 2012,
+    "works": 53,
+    "cited": null
+   },
+   {
+    "year": 2013,
+    "works": 80,
+    "cited": null
+   },
+   {
+    "year": 2014,
+    "works": 202,
+    "cited": null
+   },
+   {
+    "year": 2015,
+    "works": 202,
+    "cited": null
+   },
+   {
+    "year": 2016,
+    "works": 232,
+    "cited": null
+   },
+   {
+    "year": 2017,
+    "works": 206,
+    "cited": null
+   },
+   {
+    "year": 2018,
+    "works": 512,
+    "cited": null
+   },
+   {
+    "year": 2019,
+    "works": 577,
+    "cited": null
+   },
+   {
+    "year": 2020,
+    "works": 770,
+    "cited": null
+   },
+   {
+    "year": 2021,
+    "works": 684,
+    "cited": null
+   },
+   {
+    "year": 2022,
+    "works": 767,
+    "cited": null
+   },
+   {
+    "year": 2023,
+    "works": 888,
+    "cited": null
+   },
+   {
+    "year": 2024,
+    "works": 816,
+    "cited": null
+   },
+   {
+    "year": 2025,
+    "works": 936,
+    "cited": null
+   },
+   {
+    "year": 2026,
+    "works": 903,
+    "cited": null
+   }
+  ],
+  "openalex": "https://openalex.org/I1311157440"
+ },
+ "uni_ing": {
+  "name": "uni_ing",
+  "works": 4562,
+  "cited": 80622,
+  "h_index": 100,
+  "i10": 1711,
+  "mean_citedness": 1.96,
+  "by_year": [
+   {
+    "year": 2010,
+    "works": 45,
+    "cited": null
+   },
+   {
+    "year": 2011,
+    "works": 49,
+    "cited": null
+   },
+   {
+    "year": 2012,
+    "works": 56,
+    "cited": null
+   },
+   {
+    "year": 2013,
+    "works": 72,
+    "cited": null
+   },
+   {
+    "year": 2014,
+    "works": 100,
+    "cited": null
+   },
+   {
+    "year": 2015,
+    "works": 107,
+    "cited": null
+   },
+   {
+    "year": 2016,
+    "works": 122,
+    "cited": null
+   },
+   {
+    "year": 2017,
+    "works": 159,
+    "cited": null
+   },
+   {
+    "year": 2018,
+    "works": 267,
+    "cited": null
+   },
+   {
+    "year": 2019,
+    "works": 272,
+    "cited": null
+   },
+   {
+    "year": 2020,
+    "works": 314,
+    "cited": null
+   },
+   {
+    "year": 2021,
+    "works": 374,
+    "cited": null
+   },
+   {
+    "year": 2022,
+    "works": 327,
+    "cited": null
+   },
+   {
+    "year": 2023,
+    "works": 401,
+    "cited": null
+   },
+   {
+    "year": 2024,
+    "works": 362,
+    "cited": null
+   },
+   {
+    "year": 2025,
+    "works": 397,
+    "cited": null
+   },
+   {
+    "year": 2026,
+    "works": 470,
+    "cited": null
+   }
+  ],
+  "openalex": "https://openalex.org/I62520931"
+ },
+ "unsaac": {
+  "name": "unsaac",
+  "works": 3553,
+  "cited": 143493,
+  "h_index": 179,
+  "i10": 1558,
+  "mean_citedness": 2.85,
+  "by_year": [
+   {
+    "year": 2010,
+    "works": 31,
+    "cited": null
+   },
+   {
+    "year": 2011,
+    "works": 28,
+    "cited": null
+   },
+   {
+    "year": 2012,
+    "works": 39,
+    "cited": null
+   },
+   {
+    "year": 2013,
+    "works": 35,
+    "cited": null
+   },
+   {
+    "year": 2014,
+    "works": 47,
+    "cited": null
+   },
+   {
+    "year": 2015,
+    "works": 66,
+    "cited": null
+   },
+   {
+    "year": 2016,
+    "works": 86,
+    "cited": null
+   },
+   {
+    "year": 2017,
+    "works": 114,
+    "cited": null
+   },
+   {
+    "year": 2018,
+    "works": 117,
+    "cited": null
+   },
+   {
+    "year": 2019,
+    "works": 197,
+    "cited": null
+   },
+   {
+    "year": 2020,
+    "works": 196,
+    "cited": null
+   },
+   {
+    "year": 2021,
+    "works": 265,
+    "cited": null
+   },
+   {
+    "year": 2022,
+    "works": 260,
+    "cited": null
+   },
+   {
+    "year": 2023,
+    "works": 284,
+    "cited": null
+   },
+   {
+    "year": 2024,
+    "works": 370,
+    "cited": null
+   },
+   {
+    "year": 2025,
+    "works": 338,
+    "cited": null
+   },
+   {
+    "year": 2026,
+    "works": 364,
+    "cited": null
+   }
+  ],
+  "openalex": "https://openalex.org/I3132302805"
+ },
+ "ror": "https://ror.org/00vr49948",
+ "temas": {
+  "campos": [
+   {
+    "name": "Agricultural and Biological Sciences",
+    "works": 2614,
+    "pct": 47.2,
+    "cited": 33407
+   },
+   {
+    "name": "Environmental Science",
+    "works": 949,
+    "pct": 17.2,
+    "cited": 20670
+   },
+   {
+    "name": "Social Sciences",
+    "works": 285,
+    "pct": 5.2,
+    "cited": 2590
+   },
+   {
+    "name": "Biochemistry, Genetics and Molecular Biology",
+    "works": 240,
+    "pct": 4.3,
+    "cited": 4024
+   },
+   {
+    "name": "Medicine",
+    "works": 203,
+    "pct": 3.7,
+    "cited": 4167
+   },
+   {
+    "name": "Engineering",
+    "works": 174,
+    "pct": 3.1,
+    "cited": 1200
+   },
+   {
+    "name": "Earth and Planetary Sciences",
+    "works": 151,
+    "pct": 2.7,
+    "cited": 3718
+   },
+   {
+    "name": "Nursing",
+    "works": 117,
+    "pct": 2.1,
+    "cited": 2282
+   },
+   {
+    "name": "Economics, Econometrics and Finance",
+    "works": 109,
+    "pct": 2.0,
+    "cited": 395
+   },
+   {
+    "name": "Business, Management and Accounting",
+    "works": 107,
+    "pct": 1.9,
+    "cited": 477
+   },
+   {
+    "name": "Arts and Humanities",
+    "works": 98,
+    "pct": 1.8,
+    "cited": 125
+   },
+   {
+    "name": "Chemistry",
+    "works": 70,
+    "pct": 1.3,
+    "cited": 1716
+   }
+  ],
+  "subcampos": [
+   {
+    "name": "Plant Science",
+    "works": 834,
+    "pct": 15.1
+   },
+   {
+    "name": "Food Science",
+    "works": 332,
+    "pct": 6.0
+   },
+   {
+    "name": "Animal Science and Zoology",
+    "works": 302,
+    "pct": 5.5
+   },
+   {
+    "name": "Ecology, Evolution, Behavior and Systematics",
+    "works": 270,
+    "pct": 4.9
+   },
+   {
+    "name": "Global and Planetary Change",
+    "works": 234,
+    "pct": 4.2
+   },
+   {
+    "name": "Agronomy and Crop Science",
+    "works": 193,
+    "pct": 3.5
+   },
+   {
+    "name": "Soil Science",
+    "works": 192,
+    "pct": 3.5
+   },
+   {
+    "name": "Ecology",
+    "works": 183,
+    "pct": 3.3
+   },
+   {
+    "name": "Genetics",
+    "works": 167,
+    "pct": 3.0
+   },
+   {
+    "name": "Water Science and Technology",
+    "works": 158,
+    "pct": 2.9
+   },
+   {
+    "name": "Forestry",
+    "works": 154,
+    "pct": 2.8
+   },
+   {
+    "name": "Insect Science",
+    "works": 122,
+    "pct": 2.2
+   }
+  ],
+  "topicos": [
+   {
+    "name": "Botany and Plant Ecology Studies",
+    "works": 99,
+    "pct": 1.8
+   },
+   {
+    "name": "Genetic and phenotypic traits in livestock",
+    "works": 97,
+    "pct": 1.8
+   },
+   {
+    "name": "Seed and Plant Biochemistry",
+    "works": 82,
+    "pct": 1.5
+   },
+   {
+    "name": "Sustainable Agricultural Systems Analysis",
+    "works": 78,
+    "pct": 1.4
+   },
+   {
+    "name": "Conservation, Biodiversity, and Resource Management",
+    "works": 76,
+    "pct": 1.4
+   },
+   {
+    "name": "Ruminant Nutrition and Digestive Physiology",
+    "works": 69,
+    "pct": 1.2
+   },
+   {
+    "name": "Animal Nutrition and Physiology",
+    "works": 69,
+    "pct": 1.2
+   },
+   {
+    "name": "Plant and Fungal Species Descriptions",
+    "works": 66,
+    "pct": 1.2
+   },
+   {
+    "name": "Food composition and properties",
+    "works": 63,
+    "pct": 1.1
+   },
+   {
+    "name": "Climate variability and models",
+    "works": 59,
+    "pct": 1.1
+   },
+   {
+    "name": "Phytochemicals and Antioxidant Activities",
+    "works": 57,
+    "pct": 1.0
+   },
+   {
+    "name": "Plant-Microbe Interactions and Immunity",
+    "works": 53,
+    "pct": 1.0
+   }
+  ],
+  "topicos_institucion": [
+   {
+    "name": "Botany and Plant Ecology Studies",
+    "count": 461,
+    "field": "Agricultural and Biological Sciences"
+   },
+   {
+    "name": "Plant and Fungal Species Descriptions",
+    "count": 435,
+    "field": "Agricultural and Biological Sciences"
+   },
+   {
+    "name": "Plant Diversity and Evolution",
+    "count": 411,
+    "field": "Agricultural and Biological Sciences"
+   },
+   {
+    "name": "Food Nutrient Composition and Product Development",
+    "count": 218,
+    "field": "Agricultural and Biological Sciences"
+   },
+   {
+    "name": "Seed and Plant Biochemistry",
+    "count": 202,
+    "field": "Agricultural and Biological Sciences"
+   },
+   {
+    "name": "Conservation, Biodiversity, and Resource Management",
+    "count": 200,
+    "field": "Environmental Science"
+   },
+   {
+    "name": "Animal Nutrition and Physiology",
+    "count": 171,
+    "field": "Agricultural and Biological Sciences"
+   },
+   {
+    "name": "Ecology and Vegetation Dynamics Studies",
+    "count": 167,
+    "field": "Environmental Science"
+   },
+   {
+    "name": "Genetics and Plant Breeding",
+    "count": 154,
+    "field": "Agricultural and Biological Sciences"
+   },
+   {
+    "name": "Genetic and phenotypic traits in livestock",
+    "count": 151,
+    "field": "Biochemistry, Genetics and Molecular Biology"
+   },
+   {
+    "name": "Phytochemicals and Antioxidant Activities",
+    "count": 148,
+    "field": "Medicine"
+   },
+   {
+    "name": "Hydrology and Watershed Management Studies",
+    "count": 138,
+    "field": "Environmental Science"
+   }
+  ],
+  "nota": "Clasificación automática de OpenAlex (primary_topic por trabajo). No es la estructura de facultades de la UNALM."
+ },
+ "impacto": {
+  "works_barridos": 5533,
+  "works_sin_lotes_sospechosos": 5485,
+  "citas_por_trabajo": 14.29,
+  "ventana_2020_2024": {
+   "works": 2227,
+   "cited": 23121,
+   "citas_por_trabajo": 10.38
+  },
+  "fwci_media": 1.27,
+  "fwci_mediana": 0.29,
+  "fwci_n": 5274,
+  "pct_top10": 9.5,
+  "pct_top1": 1.0,
+  "pct_acceso_abierto": 83.3,
+  "tipos": {
+   "article": 5048,
+   "book-chapter": 104,
+   "conference-paper": 83,
+   "preprint": 65,
+   "review": 52,
+   "dataset": 42,
+   "conference-abstract": 35,
+   "erratum": 17
+  },
+  "autores_por_trabajo": {
+   "21-100": 78,
+   "2-5": 3298,
+   "6-20": 1437,
+   "1": 720
+  },
+  "mega_colaboraciones": {
+   "works_mas_100_autores": 0,
+   "citas": 0,
+   "pct_citas": 0.0
+  },
+  "nucleo_investigador": 787,
+  "citas_por_investigador": 179.1,
+  "nota": "FWCI = citas normalizadas por campo, año y tipo (1.0 = promedio mundial). Núcleo investigador = autores OpenAlex con última afiliación UNALM y >=5 trabajos: NO es el número de docentes. Conteo completo (no fraccional)."
+ },
+ "top_autores": {
+  "lista": [
+   {
+    "author": "Alberto Julca Otiniano",
+    "works_unalm": 108,
+    "cited_unalm": 1377,
+    "openalex": "https://openalex.org/A5015715479",
+    "orcid": "https://orcid.org/0000-0002-3433-9032",
+    "ultima_afiliacion": "Universidad Nacional Agraria La Molina",
+    "vigente_unalm": true,
+    "h_index_total": 19,
+    "works_total": 184
+   },
+   {
+    "author": "David Campos",
+    "works_unalm": 100,
+    "cited_unalm": 4343,
+    "openalex": "https://openalex.org/A5045904211",
+    "orcid": "https://orcid.org/0000-0003-1722-1187",
+    "ultima_afiliacion": "Universidad Nacional Agraria La Molina",
+    "vigente_unalm": true,
+    "h_index_total": 35,
+    "works_total": 118
+   },
+   {
+    "author": "Rosana Chirinos",
+    "works_unalm": 89,
+    "cited_unalm": 4378,
+    "openalex": "https://openalex.org/A5021283051",
+    "orcid": "https://orcid.org/0000-0002-9045-7471",
+    "ultima_afiliacion": "Universidad Nacional Agraria La Molina",
+    "vigente_unalm": true,
+    "h_index_total": 35,
+    "works_total": 102
+   },
+   {
+    "author": "Carlos Gómez",
+    "works_unalm": 78,
+    "cited_unalm": 1362,
+    "openalex": "https://openalex.org/A5006120495",
+    "orcid": "https://orcid.org/0000-0002-8282-5078",
+    "ultima_afiliacion": "Universidad Nacional Agraria La Molina",
+    "vigente_unalm": true,
+    "h_index_total": 20,
+    "works_total": 88
+   },
+   {
+    "author": "Carlos Reynel",
+    "works_unalm": 67,
+    "cited_unalm": 1737,
+    "openalex": "https://openalex.org/A5012141629",
+    "orcid": "https://orcid.org/0000-0002-6173-9023",
+    "ultima_afiliacion": "Universidad Nacional Agraria La Molina",
+    "vigente_unalm": true,
+    "h_index_total": 24,
+    "works_total": 339
+   },
+   {
+    "author": "Lía Ramos-Fernández",
+    "works_unalm": 64,
+    "cited_unalm": 628,
+    "openalex": "https://openalex.org/A5072958662",
+    "orcid": "https://orcid.org/0000-0003-3946-7188",
+    "ultima_afiliacion": "Universidad Nacional Agraria La Molina",
+    "vigente_unalm": true,
+    "h_index_total": 15,
+    "works_total": 72
+   },
+   {
+    "author": "Julio Alegre",
+    "works_unalm": 63,
+    "cited_unalm": 1666,
+    "openalex": "https://openalex.org/A5102857956",
+    "orcid": "https://orcid.org/0000-0002-7282-045X",
+    "ultima_afiliacion": "Universidad Nacional Agraria La Molina",
+    "vigente_unalm": true,
+    "h_index_total": 30,
+    "works_total": 128
+   },
+   {
+    "author": "Gustavo Gutiérrez",
+    "works_unalm": 62,
+    "cited_unalm": 677,
+    "openalex": "https://openalex.org/A5043787242",
+    "orcid": "https://orcid.org/0000-0002-1896-0048",
+    "ultima_afiliacion": "Iowa State University",
+    "vigente_unalm": false,
+    "h_index_total": 24,
+    "works_total": 144
+   },
+   {
+    "author": "Doris Zúñiga-Dávila",
+    "works_unalm": 59,
+    "cited_unalm": 1315,
+    "openalex": "https://openalex.org/A5010385789",
+    "orcid": "https://orcid.org/0000-0002-4564-6775",
+    "ultima_afiliacion": "Universidad Nacional Agraria La Molina",
+    "vigente_unalm": true,
+    "h_index_total": 17,
+    "works_total": 63
+   },
+   {
+    "author": "Ritva Repo‐Carrasco‐Valencia",
+    "works_unalm": 58,
+    "cited_unalm": 3207,
+    "openalex": "https://openalex.org/A5025060044",
+    "orcid": "https://orcid.org/0000-0002-3656-2377",
+    "ultima_afiliacion": "University of Turku",
+    "vigente_unalm": true,
+    "h_index_total": 24,
+    "works_total": 96
+   },
+   {
+    "author": "Gretty K. Villena",
+    "works_unalm": 48,
+    "cited_unalm": 1094,
+    "openalex": "https://openalex.org/A5031553196",
+    "orcid": "https://orcid.org/0000-0001-8123-3559",
+    "ultima_afiliacion": "Universidad Nacional Agraria La Molina",
+    "vigente_unalm": true,
+    "h_index_total": 18,
+    "works_total": 60
+   },
+   {
+    "author": "Carlos Vílchez‐Perales",
+    "works_unalm": 48,
+    "cited_unalm": 330,
+    "openalex": "https://openalex.org/A5001558407",
+    "orcid": "https://orcid.org/0000-0002-4757-527X",
+    "ultima_afiliacion": "Universidad Nacional Micaela Bastidas de Apurimac",
+    "vigente_unalm": true,
+    "h_index_total": 10,
+    "works_total": 63
+   },
+   {
+    "author": "Viviana Castro-Cépero",
+    "works_unalm": 47,
+    "cited_unalm": 384,
+    "openalex": "https://openalex.org/A5042637450",
+    "orcid": "https://orcid.org/0000-0001-8747-2665",
+    "ultima_afiliacion": "Universidad Nacional Agraria La Molina",
+    "vigente_unalm": true,
+    "h_index_total": 12,
+    "works_total": 53
+   },
+   {
+    "author": "Ricardo Borjas Ventura",
+    "works_unalm": 47,
+    "cited_unalm": 442,
+    "openalex": "https://openalex.org/A5113969844",
+    "orcid": null,
+    "ultima_afiliacion": "Universidad Nacional Agraria La Molina",
+    "vigente_unalm": true,
+    "h_index_total": 14,
+    "works_total": 101
+   },
+   {
+    "author": "Alejandrina Sotelo-Méndez",
+    "works_unalm": 46,
+    "cited_unalm": 264,
+    "openalex": "https://openalex.org/A5039027688",
+    "orcid": "https://orcid.org/0000-0002-6992-4821",
+    "ultima_afiliacion": "National Agrarian University",
+    "vigente_unalm": true,
+    "h_index_total": 10,
+    "works_total": 65
+   },
+   {
+    "author": "Luz Rayda Gómez-Pando",
+    "works_unalm": 44,
+    "cited_unalm": 1074,
+    "openalex": "https://openalex.org/A5021766639",
+    "orcid": "https://orcid.org/0000-0001-5536-5179",
+    "ultima_afiliacion": "Universidad Nacional Agraria La Molina",
+    "vigente_unalm": true,
+    "h_index_total": 18,
+    "works_total": 52
+   },
+   {
+    "author": "Christian R. Encina‐Zelada",
+    "works_unalm": 43,
+    "cited_unalm": 1120,
+    "openalex": "https://openalex.org/A5010372611",
+    "orcid": "https://orcid.org/0000-0001-6834-7121",
+    "ultima_afiliacion": "Universidad Nacional Agraria La Molina",
+    "vigente_unalm": true,
+    "h_index_total": 17,
+    "works_total": 61
+   },
+   {
+    "author": "Ana Aguilar‐Galvez",
+    "works_unalm": 43,
+    "cited_unalm": 937,
+    "openalex": "https://openalex.org/A5078190695",
+    "orcid": "https://orcid.org/0000-0001-7450-5114",
+    "ultima_afiliacion": "Universidad Nacional Agraria La Molina",
+    "vigente_unalm": true,
+    "h_index_total": 16,
+    "works_total": 49
+   },
+   {
+    "author": "Edward Faustino Loayza Maturrano",
+    "works_unalm": 40,
+    "cited_unalm": 540,
+    "openalex": "https://openalex.org/A5010590800",
+    "orcid": "https://orcid.org/0000-0002-1359-8414",
+    "ultima_afiliacion": "Universidad Nacional Agraria La Molina",
+    "vigente_unalm": true,
+    "h_index_total": 10,
+    "works_total": 52
+   },
+   {
+    "author": "Julio Mauricio Vidaurre-Ruiz",
+    "works_unalm": 40,
+    "cited_unalm": 406,
+    "openalex": "https://openalex.org/A5009729111",
+    "orcid": "https://orcid.org/0000-0003-0980-9474",
+    "ultima_afiliacion": "Universidad Nacional Agraria La Molina",
+    "vigente_unalm": true,
+    "h_index_total": 13,
+    "works_total": 58
+   },
+   {
+    "author": "Raúl Blas",
+    "works_unalm": 37,
+    "cited_unalm": 695,
+    "openalex": "https://openalex.org/A5002787581",
+    "orcid": "https://orcid.org/0000-0003-3378-4035",
+    "ultima_afiliacion": "Universidad Nacional Agraria La Molina",
+    "vigente_unalm": true,
+    "h_index_total": 13,
+    "works_total": 47
+   },
+   {
+    "author": "Jaime Mendo",
+    "works_unalm": 36,
+    "cited_unalm": 1156,
+    "openalex": "https://openalex.org/A5089577331",
+    "orcid": "https://orcid.org/0000-0001-6040-6190",
+    "ultima_afiliacion": "University of St Andrews",
+    "vigente_unalm": true,
+    "h_index_total": 20,
+    "works_total": 380
+   },
+   {
+    "author": "Leonel Alvarado-Huamán",
+    "works_unalm": 34,
+    "cited_unalm": 307,
+    "openalex": "https://openalex.org/A5068608059",
+    "orcid": "https://orcid.org/0000-0002-2121-2454",
+    "ultima_afiliacion": "Universidad Nacional Agraria La Molina",
+    "vigente_unalm": true,
+    "h_index_total": 11,
+    "works_total": 38
+   },
+   {
+    "author": "Alexander Regulo Rodríguez Berrio",
+    "works_unalm": 34,
+    "cited_unalm": 192,
+    "openalex": "https://openalex.org/A5077816732",
+    "orcid": "https://orcid.org/0000-0001-6052-7160",
+    "ultima_afiliacion": "Universidad Nacional Agraria La Molina",
+    "vigente_unalm": true,
+    "h_index_total": 7,
+    "works_total": 52
+   },
+   {
+    "author": "Waldo Sven Lavado-Casimiro",
+    "works_unalm": 33,
+    "cited_unalm": 1925,
+    "openalex": "https://openalex.org/A5040285739",
+    "orcid": "https://orcid.org/0000-0002-0051-0743",
+    "ultima_afiliacion": "Servicio Nacional de Meteorología e Hidrología del Perú",
+    "vigente_unalm": true,
+    "h_index_total": 43,
+    "works_total": 182
+   }
+  ],
+  "autores_con_registros_excluidos": 6,
+  "works_excluidos": 48,
+  "nota": "Autores con más trabajos firmados con afiliación UNALM en OpenAlex (desambiguación automática: puede fusionar o partir homónimos). Incluye coautores externos con afiliación UNALM en algún trabajo; 'vigente_unalm' indica si su última afiliación conocida es UNALM. No es un ranking de docentes. Se excluyen del conteo los trabajos en lotes sospechosos (registros basura/spam atribuidos por error de metadatos de la fuente; no implican conducta de los autores). Un mismo investigador puede aparecer partido en dos perfiles OpenAlex."
+ },
+ "auditoria_afiliacion": {
+  "autorias_unalm": 10947,
+  "autorias_sin_texto": 6,
+  "autorias_texto_ok": 10934,
+  "autorias_texto_sospechoso": 7,
+  "works_todas_sospechosas": 3,
+  "ejemplos_sospechosos": [],
+  "works_barridos": 5533,
+  "lotes_sospechosos": [
+   {
+    "source": "Arnaldoa",
+    "source_openalex": "https://openalex.org/S2737377412",
+    "year": 2019,
+    "works": 48,
+    "n_autores_lote": 6,
+    "citas_media": 0.0,
+    "titulos_ejemplo": [
+     "Extremamente durável 20W-100W Luz Rua Solar de LED de exteriorÃ§Ã£o orgÃ¢nica",
+     "3mm homens Neoprene Mergulho Wetsuit Surf Prensação orgânica",
+     "Barato Rastreador GPS GT06 para Aluguer/ moto /Ebike/suporte de Scooter 9V-90V Potência de"
+    ]
+   }
+  ],
+  "works_en_lotes_sospechosos": 48,
+  "pct_works_en_lotes_sospechosos": 0.9,
+  "regla_lotes": "Mismo source, año y conjunto idéntico de autores, >=10 trabajos y media de citas < 0.2. Se reportan (no se borran de works/by_year, que son cifras de la fuente tal cual).",
+  "pct_autorias_sospechosas": 0.06,
+  "works_con_coautor_peru": 5530,
+  "works_sin_coautor_peru": 3,
+  "ror": "https://ror.org/00vr49948",
+  "homonimos_revisados": "Búsqueda OpenAlex 'La Molina' y 'Agraria La Molina' devuelve una sola institución (I79080234). Se revisa el texto crudo de afiliación de cada autoría UNALM buscando 'Molina/UNALM/Agraria/Agrarian University'; las que no lo contienen se cuentan como sospechosas."
+ },
+ "caveats": [
+  "Fuente OpenAlex (abierta, no curada a mano): cobertura y afiliaciones difieren de Scopus/WoS; usar como indicador exploratorio, no ranking oficial (ver CWTS Leiden Ranking Open, SCImago).",
+  "Las citas por año de publicación caen en años recientes por ventana de citación (siguen acumulándose), no por menor calidad.",
+  "Mayor número de publicaciones = mayor VOLUMEN, no necesariamente mayor impacto; comparar con citas por trabajo y FWCI.",
+  "h-index e i10 son acumulados históricos y dependen del tamaño y antigüedad de la institución.",
+  "Conteo completo: un trabajo con autores de varias universidades cuenta entero para cada una (no fraccional); las mega-colaboraciones inflan citas.",
+  "mean_citedness = media de citas a 2 años de OpenAlex (summary_stats.2yr_mean_citedness).",
+  "OpenAlex contiene registros basura (p. ej. títulos comerciales en portugués atribuidos a una revista peruana en 2019); se detectan por regla y se reportan en auditoria_afiliacion.lotes_sospechosos. Las cifras works/by_year/h-index de la fuente los incluyen tal cual.",
+  "Totales de la institución (works) y suma de la serie no coinciden: el registro de institución incluye años previos a 2010 y se actualiza con distinto calendario que la búsqueda de trabajos.",
+  "Picos atípicos por año pueden deberse a cambios de indexación de la fuente (p. ej. repositorios o tesis) y se reportan tal cual."
+ ],
+ "_meta": {
+  "fuente": "OpenAlex API (open, CC0)",
+  "extraido": "2026-11-16",
+  "nota": "Datos bibliométricos reales. UNALM = OpenAlex I79080234 / ROR 00vr49948. works/cited/h/i10 del registro de institución; by_year = trabajos publicados por año y citas acumuladas a la fecha de corte de esos trabajos (solo UNALM; en los pares by_year.cited = null, no disponible, y by_year.works sale de group_by=publication_year). Script: etl/build_bibliometria_unalm.py",
+  "alcance": "Trabajos con afiliación institucional asignada por OpenAlex; serie 2010-2026 (2026 parcial)."
+ }
+}

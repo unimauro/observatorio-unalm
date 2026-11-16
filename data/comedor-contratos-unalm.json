@@ -1,0 +1,3302 @@
+{
+ "_meta": {
+  "titulo": "Comedor universitario UNALM: procesos de selección y contratos 2018-2026",
+  "entidad": {
+   "nombre": "Universidad Nacional Agraria La Molina",
+   "ruc": "20147897406",
+   "codigo_entidad_conosce": "001886",
+   "ocds_buyer_id": "PE-CONSUCODE-1886"
+  },
+  "generado": "2026-11-16T17:42:15",
+  "fecha_corte": "2026-11-16",
+  "fuentes": [
+   {
+    "nombre": "OECE CONOSCE - datos abiertos (convocatorias, adjudicaciones, desiertos, contratos, postores, PAC)",
+    "archivos": "licitaperu-alertas/seace-scraper/data/conosce/out/*_{2018..2026}.csv.gz",
+    "generados": "2026-10-27 (2018-2023) y 2026-11-03 (2024-2026)",
+    "nota": "Caché del scraper de licitaperu-alertas; para 2026 se usan XLSX frescos del portal si existen (ver siguiente fuente)."
+   },
+   {
+    "nombre": "OECE CONOSCE - XLSX descargados directamente del portal (reemplazan al caché para ese año)",
+    "url": "https://conosce.osce.gob.pe/buscador/assets/67ae6c4a/reportes/<tipo>/AAAA/<TIPO>AAAA_0.xlsx",
+    "archivos": [
+     "adjudicaciones_2026",
+     "contratos_2026",
+     "convocatorias_2026",
+     "desiertos_2026"
+    ],
+    "descargado": [
+     "2026-11-16"
+    ]
+   },
+   {
+    "nombre": "OECE CONOSCE - sancionados (TCE) e inhabilitados judiciales",
+    "fecha_corte": "2026-10-31"
+   },
+   {
+    "nombre": "OECE Contrataciones Abiertas (OCDS) - bulk mensual CSV",
+    "url": "https://contratacionesabiertas.oece.gob.pe/api/v1/file/seace_v3/csv/AAAA/MM/",
+    "meses_cargados": [
+     "2021_07",
+     "2026_11"
+    ],
+    "n_meses": 65,
+    "meses": [
+     "2021_07",
+     "2021_08",
+     "2021_09",
+     "2021_10",
+     "2021_11",
+     "2021_12",
+     "2022_01",
+     "2022_02",
+     "2022_03",
+     "2022_04",
+     "2022_05",
+     "2022_06",
+     "2022_07",
+     "2022_08",
+     "2022_09",
+     "2022_10",
+     "2022_11",
+     "2022_12",
+     "2023_01",
+     "2023_02",
+     "2023_03",
+     "2023_04",
+     "2023_05",
+     "2023_06",
+     "2023_07",
+     "2023_08",
+     "2023_09",
+     "2023_10",
+     "2023_11",
+     "2023_12",
+     "2024_01",
+     "2024_02",
+     "2024_03",
+     "2024_04",
+     "2024_05",
+     "2024_06",
+     "2024_07",
+     "2024_08",
+     "2024_09",
+     "2024_10",
+     "2024_11",
+     "2024_12",
+     "2025_01",
+     "2025_02",
+     "2025_03",
+     "2025_04",
+     "2025_05",
+     "2025_06",
+     "2025_07",
+     "2025_08",
+     "2025_09",
+     "2025_10",
+     "2025_11",
+     "2025_12",
+     "2026_01",
+     "2026_02",
+     "2026_03",
+     "2026_04",
+     "2026_05",
+     "2026_06",
+     "2026_07",
+     "2026_08",
+     "2026_09",
+     "2026_10",
+     "2026_11"
+    ],
+    "nota": "Meses no cargados solo afectan fechas de contratos antiguos. Cada archivo mensual agrupa procesos por mes de convocatoria con su última versión compilada."
+   }
+  ],
+  "metodo": {
+   "filtro_entidad": "codigo_entidad == 001886 o RUC 20147897406 (excluye otras entidades; p.ej. procesos del MIDAGRI/INIA que aparecen en archivos compartidos)",
+   "palabras_clave": [
+    "ALIMENT",
+    "VIVER",
+    "ABARROT",
+    "CARNE",
+    "POLLO",
+    "PESCAD",
+    "LECHE",
+    "LACTE",
+    "QUESO",
+    "YOGUR",
+    "VERDUR",
+    "HORTALIZ",
+    "TUBERCUL",
+    "FRUTA",
+    "PAN",
+    "PANETON",
+    "CEREAL",
+    "MENESTR",
+    "QUINUA",
+    "PASTAS",
+    "FIDEO",
+    "ATUN",
+    "ACEITE",
+    "ARROZ",
+    "AZUCAR",
+    "RACION",
+    "REFRIGERIO",
+    "CENA",
+    "DESAYUNO",
+    "MENU",
+    "CONCESION",
+    "CATERING",
+    "GAS",
+    "GLP",
+    "COMBUSTIBLE",
+    "PETROLEO",
+    "MENAJE",
+    "VAJILLA",
+    "TAZA",
+    "TAZON",
+    "GAMELA",
+    "MARMITA",
+    "COCINA",
+    "COMEDOR",
+    "PROTEIC",
+    "PAVO"
+   ],
+   "reglas": "classify(): exclusiones (zoológico/granja/zootecnia, alimentación eléctrica, laboratorio, odontología) -> relacionados (personal docente/administrativo; CEPRU/admisión) -> categorías comedor. Revisado a mano.",
+   "categorias": {
+    "servicio_alimentacion_comedor": "Servicio de alimentación tercerizado en el comedor universitario (concesionario / raciones para estudiantes)",
+    "inspeccion_nutricional_comedor": "Inspección higiénico-sanitaria y verificación nutricional del comedor",
+    "viveres_comedor": "Víveres/alimentos comprados directamente para el comedor",
+    "combustible_comedor": "Combustible/gas para la cocina del comedor",
+    "equipamiento_menaje_comedor": "Menaje y equipamiento del comedor",
+    "infraestructura_comedor": "Obras, expedientes, supervisión y mantenimiento de ambientes del comedor"
+   },
+   "relacionados": {
+    "alimentos_personal": "Tarjetas/vales de consumo de alimentos para el personal (NO es el comedor estudiantil)",
+    "refrigerios_admision": "Refrigerios para exámenes de admisión/eventos (no es el comedor)"
+   },
+   "excluidos_por_regla": {
+    "excluido: alimentación animal (granjas/unidades experimentales/zootecnia)": {
+     "items": 93,
+     "ejemplos": [
+      "AS-SM-1-2023-UNALM-1 | ADQUISICIÓN DE ALIMENTO BALANCEADO ELABORADO PARA CUYES",
+      "AS-SM-1-2023-UNALM-2 | ADQUISICIÓN DE ALIMENTO BALANCEADO ELABORADO PARA CUYES",
+      "AS-SM-1-2024-UNALM-1 | ADQUISICIÓN DE ALIMENTO BALANCEADO ELABORADO PARA CUYES",
+      "AS-SM-1-2024-UNALM-2 | ADQUISICIÓN DE ALIMENTO BALANCEADO ELABORADO PARA CUYES",
+      "AS-SM-11-2023-UNALM-1 | ADQUISICIÓN DE ALIMENTO BALANCEADO ELABORADO PARA CUYES",
+      "AS-SM-12-2019-UNALM-1 | ADQUISICIÓN DE INSUMOS: ALIMENTOS PARA ANIMALES",
+      "AS-SM-12-2019-UNALM-2 | ADQUISICIÓN DE INSUMOS: ALIMENTOS PARA ANIMALES",
+      "AS-SM-14-2021-UNALM-1 | ADQUISICIÓN DE ALIMENTO BALANCEADO ELABORADO PARA CUYES",
+      "AS-SM-16-2024-UNALM-1 | ADQUISICION DE UN (01) MEZCLADOR VERTICAL DE ALIMENTOS PARA GANADO PARA EL SERVICIO DE LA UNIDAD EXPERIMENTAL ",
+      "AS-SM-2-2022-UNALM-1 | ADQUISICIÓN DE ALIMENTO BALANCEADO ELABORADO PARA CUYES",
+      "AS-SM-23-2020-UNALM-1 | ADQUISICIÓN DE INSUMOS: ALIMENTOS PARA ANIMALES",
+      "AS-SM-23-2022-UNALM-1 | ADQUSICIÓN DE INSUMOS: ALIMENTOS PARA ANMALES",
+      "AS-SM-3-2019-UNALM-1 | ADQUISICIÓN DE INSUMOS: ALIMENTOS PARA ANIMALES",
+      "AS-SM-4-2020-UNALM-1 | ADQUISICIÓN DE INSUMOS: ALIMENTOS PARA ANIMALES",
+      "AS-SM-4-2022-UNALM-1 | ADQUISICIÓN DE ALIMENTO BALANCEADO ELABORADO PARA CUYES"
+     ]
+    },
+    "excluido: coincide palabra clave pero no es comedor (revisado)": {
+     "items": 28,
+     "ejemplos": [
+      "AS-SM-1-2018-UNALM-1 | ADQUISICION DE ENVASES DE PLASTICO PARA YOGURT",
+      "AS-SM-1-2020-UNALM-1 | ADQUISICIÓN DE GAS NATURAL VEHICULAR - GNV",
+      "AS-SM-10-2019-UNALM-1 | ADQUISICIÓN DE GAS NATURAL VEHICULAR - G.N.V.",
+      "AS-SM-14-2023-UNALM-1 | CONTRATACIÓN DEL SERVICIO DE RESTAURACIÓN DE BAÑOS, VESTIDORES Y ENCHAPADO DE PISOS DE LA PLANTA DE FRUTAS Y H",
+      "AS-SM-26-2021-UNALM-1 | ADQUISICIÒN DE\nDETECTOR DE FUGAS DE GAS",
+      "AS-SM-3-2021-UNALM-1 | ADQUISICIÓN DE GAS NATURAL VEHICULAR - GNV",
+      "AS-SM-8-2022-UNALM-1 | ADQUISICIÓN DE GAS NATURAL VEHICULAR - GNV",
+      "AS-SM-9-2018-UNALM-1 | ADQUISICIÓN DE GAS NATURAL VEHICULAR - GNV",
+      "CP-ABR-9-2025-UNALM-1 | Contratación del Servicio De Acondicionamiento De Sistema Eléctrico Del Museo Nacional De Antropología, Biodiv",
+      "DIRECTA-PROC-19-2024-UNALM-1 | ADQUISICION DE HOMOGENIZADOR PARA LACTEOS",
+      "DIRECTA-PROC-7-2023-UNALM-1 | ADQUISICIÓN E INSTALACIÓN DE UN SISTEMA DE EVALUACION DE OXIDACION ACEITE Y GRASAS MEDIANTE PRUEBAS ACELERADAS",
+      "INTER-PROC-1-2020-UNALM-1 | SERVICIO DE UN EXPOSITOR PROFESIONAL INTERNACIONAL PARA BRINDAR CONFERENCIA EN EL EVENTO DENOMINADO SIMPOSIO N",
+      "INTER-PROC-13-2018-UNALM-1 | ADQUISICION DE TUBO DE ACERO INOXIDABLE: TUBOS DE PERMEACION DE ACERO INOXIDABLE RELLENOS DE GAS SF6",
+      "INTER-PROC-14-2018-UNALM-1 | INSCRIPCIÓN A LA XIII CONFERENCIA INTERNACIONAL DE ARROZ PARA AMERICA LATINA Y EL CARIBE.",
+      "INTER-PROC-2-2020-UNALM-1 | SERVICIO DE UN EXPOSITOR PROFESIONAL INTERNACIONAL PARA BRINDAR CONFERENCIA EN EL EVENTO DENOMINADO SIMPOSIO N"
+     ]
+    },
+    "excluido: laboratorio / investigación / industrias alimentarias": {
+     "items": 24,
+     "ejemplos": [
+      "AS-SM-22-2023-UNALM-1 | ADQUISICION E INSTALACION DE UN ANALIZADOR DE ESTABILIDAD ALIMENTARIA",
+      "AS-SM-27-2021-UNALM-1 | CONTRATACIÓN DE CONSULTORIA DE OBRA PARA LA SUPERVISION DE LA OBRA: MEJORAMIENTO DE LOS SERVICIOS ADMINISTRATI",
+      "AS-SM-48-2019-UNALM-1 | ADQUISICIÓN DE IMPRESORAS 3D PARA EL LABORATORIO DE INNOVACIÓN - INCUBADORA DE LA UNALM",
+      "CONV-PROC-12-2026-UNALM-1 | ADQUISICION DE BALONES DE GAS Y RECARGA PARA TRABAJO DE INVESTIGACION DE LOS BECARIOS DEL PROGRAMA DOCTORAL EN",
+      "CP-ABR-5-2025-UNALM-1 | CONTRATACIÓN DE ELABORACIÓN DEL ESTUDIO DE PREINVERSIÓN A NIVEL DE PERFIL DENOMINADO MEJORAMIENTO Y AMPLIACIÓN",
+      "CP-ABR-5-2025-UNALM-2 | CONTRATACIÓN DE ELABORACIÓN DEL ESTUDIO DE PREINVERSIÓN A NIVEL DE PERFIL DENOMINADO MEJORAMIENTO Y AMPLIACIÓN",
+      "CP-ABR-5-2025-UNALM-3 | CONTRATACIÓN DE ELABORACIÓN DEL ESTUDIO DE PREINVERSIÓN A NIVEL DE PERFIL DENOMINADO MEJORAMIENTO Y AMPLIACIÓN",
+      "DIRECTA-PROC-14-2023-UNALM-1 | CONTRATACION DE LA EJECUCIÓN DEL SALDO DE OBRA: MEJORAMIENTO DE LOS SERVICIOS ADMINISTRATIVOS QUE BRINDA LA FA",
+      "DIRECTA-PROC-15-2023-UNALM-1 | CONTRATACION DE LA CONSULTORÍA DE OBRA PARA LA SUPERVISION DEL SALDO DE LA EJECUCION DE OBRA:   MEJORAMIENTO D",
+      "DIRECTA-PROC-3-2023-UNALM-1 | ELABORACIÓN DEL EXPEDIENTE TÉCNICO DEL SALDO DE OBRA DEL PROYECTO MEJORAMIENTO DE LOS SERVICIOS ADMINISTRATIVO",
+      "DIRECTA-PROC-4-2018-UNALM-1 | CONTRATACIÓN DEL SERVICIO PARA EL FORTALECIMIENTO DE LA INVESTIGACIÓN EN EL LABORATORIO DE BIOTECNOLOGÍA PIPS ",
+      "INTER-PROC-13-2024-UNALM-1 | CONTRATACION DEL SERVICIO DE ASESORIA EN INVESTIGACION ALIMENTARIA DE GRANOS ANDINOS",
+      "INTER-PROC-15-2024-UNALM-1 | CONTRATACION DEL SERVICIO DE ASESORIA EN INVESTIGACION ALIMENTARIA DE GRANOS ANDINOS",
+      "INTER-PROC-20-2024-UNALM-1 | ADQUISICION DE UNA IMPRESORA 3D DE ALIMENTOS Y ACCESORIOS PARA EL IIBBM",
+      "INTER-PROC-25-2021-UNALM-1 | SERVICIO DE ANALISIS DE CARACTERIZACIÓN FITOHORMONAL DE LAS MUESTRAS DE TEJIDO VEGETAL (TRIGO Y QUINUA) RECOGI"
+     ]
+    }
+   },
+   "estado_proceso": "derivado de estado_item: contratado / contratado (parcial) / adjudicado (buena pro, sin contrato registrado) / parcialmente desierto / desierto",
+   "familia": "nomenclatura sin el sufijo de nº de convocatoria (-1, -2, -3) para detectar reconvocatorias"
+  },
+  "caveats": [
+   "Solo procedimientos de selección registrados en SEACE (LP, AS, SIE, CP, contratación directa, etc.). Las órdenes de compra/servicio ≤ 8 UIT (compras menores) NO están aquí.",
+   "CONOSCE no publica procesos \"nulos\" ni cancelados como estado propio: solo adjudicados/contratados y desiertos. Un proceso convocado que aún no tiene buena pro puede no figurar; por eso se complementa con OCDS.",
+   "El dataset de contratos de CONOSCE puede estar incompleto; las fechas de vigencia faltantes se buscan en OCDS. Sin contrato registrado, el fin de vigencia es desconocido, no \"vencido\".",
+   "Los suministros de víveres suelen ejecutarse por entregas parciales hasta agotar el monto; la vigencia del contrato no garantiza entregas efectivas.",
+   "Montos en soles, tal como figuran en los datasets (monto referencial/valor estimado y monto adjudicado por ítem). No incluyen adicionales salvo que se indique.",
+   "Un monto adjudicado mayor al referencial puede reflejar actualización del valor estimado no capturada por el dataset; verificar en el expediente.",
+   "Clasificación por palabras clave (COMEDOR / SERVICIOS ALIMENTICIOS / servicio de alimentación para estudiantes). La UNALM compra mucho alimento para ANIMALES (granjas, unidades experimentales: afrecho, torta de soya, chala, forraje) y equipos para Industrias Alimentarias: se excluyen y se listan en metodo.excluidos_por_regla.",
+   "El comedor de la UNALM es un servicio tercerizado: el monto adjudicado es el valor total del contrato de servicio (raciones a lo largo de su vigencia), no compras de víveres por año.",
+   "OCDS vincula contratos al proceso por RUC del proveedor; un mismo contrato puede cubrir varios ítems (su monto es el del contrato, no del ítem).",
+   "Los procesos con estado NULO solo se ven en OCDS (CONOSCE no los publica).",
+   "Contratos 2026 (OCDS): CP SER-SM-8-2025-UNALM-1 (servicio 2026-2027, CIMPO S.R.L., contrato 010-2026-UNALM, vigencia 14-abr-2026 a 31-dic-2026 en OCDS) y la contratación directa DIRECTA-DIRECTA-2-2026-UNALM-1 (APC Corporación, contrato 29-2026-UNALM, ago-dic 2026, S/ 3,220,999) se superponen; los datos abiertos no explican el motivo de la contratación directa (p. ej. resolución parcial, ampliación de raciones o emergencia). Verificar en el expediente SEACE antes de afirmar una causa.",
+   "Según la vigencia registrada en OCDS al corte, ambos contratos vencen el 31-dic-2026, aunque el proceso CP SER-SM-8-2025 se denomina \"2026-2027\" (la vigencia puede ampliarse por adenda). No se encontró en CONOSCE/OCDS otro proceso convocado para el servicio desde enero 2027.",
+   "Ausencia en datos públicos no prueba inexistencia: puede haber contratos complementarios, ampliaciones o compras menores no reflejadas."
+  ]
+ },
+ "resumen_anual": [
+  {
+   "anio": 2018,
+   "adjudicado__alimentacion": 2312000.0,
+   "desierto__alimentacion": 0,
+   "items": 1,
+   "items_adjudicados_sin_contrato": 0,
+   "items_contratados": 1,
+   "items_desiertos": 0,
+   "monto_adjudicado": 2312000.0,
+   "monto_desierto": 0,
+   "monto_referencial": 2312000.0,
+   "procesos": 1
+  },
+  {
+   "anio": 2019,
+   "adjudicado__alimentacion": 2312000.0,
+   "adjudicado__infraestructura_comedor": 46000.0,
+   "desierto__alimentacion": 0,
+   "desierto__infraestructura_comedor": 0,
+   "items": 2,
+   "items_adjudicados_sin_contrato": 0,
+   "items_contratados": 2,
+   "items_desiertos": 0,
+   "monto_adjudicado": 2358000.0,
+   "monto_desierto": 0,
+   "monto_referencial": 2366660.13,
+   "procesos": 2
+  },
+  {
+   "anio": 2020,
+   "adjudicado__infraestructura_comedor": 175000.0,
+   "desierto__infraestructura_comedor": 0,
+   "items": 1,
+   "items_adjudicados_sin_contrato": 0,
+   "items_contratados": 1,
+   "items_desiertos": 0,
+   "monto_adjudicado": 175000.0,
+   "monto_desierto": 0,
+   "monto_referencial": 270113.14,
+   "procesos": 1
+  },
+  {
+   "anio": 2022,
+   "adjudicado__alimentacion": 2224690.0,
+   "desierto__alimentacion": 0,
+   "items": 2,
+   "items_adjudicados_sin_contrato": 0,
+   "items_contratados": 2,
+   "items_desiertos": 0,
+   "monto_adjudicado": 2224690.0,
+   "monto_desierto": 0,
+   "monto_referencial": 2545960.0,
+   "procesos": 2
+  },
+  {
+   "anio": 2023,
+   "adjudicado__alimentacion": 3630900.0,
+   "desierto__alimentacion": 0,
+   "items": 1,
+   "items_adjudicados_sin_contrato": 0,
+   "items_contratados": 1,
+   "items_desiertos": 0,
+   "monto_adjudicado": 3630900.0,
+   "monto_desierto": 0,
+   "monto_referencial": 3630900.0,
+   "procesos": 1
+  },
+  {
+   "anio": 2024,
+   "adjudicado__alimentacion": 11004179.88,
+   "adjudicado__inspeccion_nutricional_comedor": 95984.0,
+   "desierto__alimentacion": 8326041.84,
+   "desierto__inspeccion_nutricional_comedor": 0,
+   "items": 4,
+   "items_adjudicados_sin_contrato": 0,
+   "items_contratados": 3,
+   "items_desiertos": 1,
+   "monto_adjudicado": 11100163.88,
+   "monto_desierto": 8326041.84,
+   "monto_referencial": 19425651.02,
+   "procesos": 4
+  },
+  {
+   "anio": 2025,
+   "adjudicado__alimentacion": 11788243.2,
+   "adjudicado__equipamiento_menaje_comedor": 133250.0,
+   "desierto__alimentacion": 0,
+   "desierto__equipamiento_menaje_comedor": 275905.0,
+   "items": 4,
+   "items_adjudicados_sin_contrato": 0,
+   "items_contratados": 2,
+   "items_desiertos": 2,
+   "monto_adjudicado": 11921493.2,
+   "monto_desierto": 275905.0,
+   "monto_referencial": 12220885.0,
+   "procesos": 4
+  },
+  {
+   "anio": 2026,
+   "adjudicado__alimentacion": 3220999.0,
+   "adjudicado__equipamiento_menaje_comedor": 624100.0,
+   "desierto__alimentacion": 0,
+   "desierto__equipamiento_menaje_comedor": 0,
+   "items": 3,
+   "items_adjudicados_sin_contrato": 2,
+   "items_contratados": 1,
+   "items_desiertos": 0,
+   "monto_adjudicado": 3845099.0,
+   "monto_desierto": 0,
+   "monto_referencial": 3949922.99,
+   "procesos": 3
+  }
+ ],
+ "resumen_por_categoria": {
+  "servicio_alimentacion_comedor": {
+   "procesos": 10,
+   "monto_adjudicado": 36493012.08,
+   "monto_desierto": 8326041.84
+  },
+  "infraestructura_comedor": {
+   "procesos": 2,
+   "monto_adjudicado": 221000.0,
+   "monto_desierto": 0
+  },
+  "inspeccion_nutricional_comedor": {
+   "procesos": 1,
+   "monto_adjudicado": 95984.0,
+   "monto_desierto": 0
+  },
+  "equipamiento_menaje_comedor": {
+   "procesos": 5,
+   "monto_adjudicado": 757350.0,
+   "monto_desierto": 275905.0
+  }
+ },
+ "proveedores": [
+  {
+   "ruc": "20120507126",
+   "nombre": "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L",
+   "tipo": "Persona Juridica",
+   "items": 7,
+   "monto": 30594429.74,
+   "anios": [
+    2018,
+    2019,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "procesos": [
+    "AS-SM-36-2024-UNALM-1",
+    "CP SER-SM-8-2025-UNALM-1",
+    "CP-SM-1-2018-UNALM-1",
+    "CP-SM-1-2019-UNALM-1",
+    "CP-SM-1-2022-UNALM-1",
+    "CP-SM-2-2023-UNALM-1",
+    "DIRECTA-PROC-1-2022-UNALM-1"
+   ],
+   "rubros": [
+    "CONTRATACI N DEL SERVICIO DE CONCESIONAR",
+    "CONTRATACION DE SERVICIO DE ALIMENTACION",
+    "CONTRATACION DEL SERVICIO DE ALIMENTACIO",
+    "CONTRATACION DEL SERVICIO DE CONCESIONAR"
+   ],
+   "alertas": null,
+   "participacion_pct": 81.4
+  },
+  {
+   "ruc": "20102185863",
+   "nombre": "APC CORPORACION S.A.",
+   "tipo": "Persona Juridica",
+   "items": 2,
+   "monto": 5898582.34,
+   "anios": [
+    2024,
+    2026
+   ],
+   "procesos": [
+    "DIRECTA-DIRECTA-2-2026-UNALM-1",
+    "DIRECTA-PROC-1-2024-UNALM-1"
+   ],
+   "rubros": [
+    "CONTRATACION DE SERVICIO DE ALIMENTACION",
+    "CONTRATACION DEL SERVICIO DE ALIMENTACIO"
+   ],
+   "alertas": null,
+   "participacion_pct": 15.7
+  },
+  {
+   "ruc": "20602169155",
+   "nombre": "GRUPO CMONT S.A.C.",
+   "tipo": "Persona Juridica",
+   "items": 1,
+   "monto": 480600.0,
+   "anios": [
+    2026
+   ],
+   "procesos": [
+    "LP-SM-4-2026-UNALM-1"
+   ],
+   "rubros": [
+    "ADQUISICION E INSTALACION DE UNA (01) LA"
+   ],
+   "alertas": null,
+   "participacion_pct": 1.3
+  },
+  {
+   "ruc": "20460436771",
+   "nombre": "FRIONOX S.A.C.",
+   "tipo": "Persona Juridica",
+   "items": 2,
+   "monto": 276750.0,
+   "anios": [
+    2025,
+    2026
+   ],
+   "procesos": [
+    "LP-ABR-22-2026-UNALM-1",
+    "LP-ABR-36-2025-UNALM-3"
+   ],
+   "rubros": [
+    "ADQUISICION E INSTALACION DE HORNO COMBI",
+    "HORNO A GAS COMBINADO DE 20 BANDEJAS"
+   ],
+   "alertas": null,
+   "participacion_pct": 0.7
+  },
+  {
+   "ruc": "20451525701",
+   "nombre": "EMBISERV E.I.R.L",
+   "tipo": "Persona Juridica",
+   "items": 1,
+   "monto": 175000.0,
+   "anios": [
+    2020
+   ],
+   "procesos": [
+    "AS-SM-25-2020-UNALM-1"
+   ],
+   "rubros": [
+    "SERVICIO DE MANTENIMIENTO DE LA SALA DE "
+   ],
+   "alertas": null,
+   "participacion_pct": 0.5
+  },
+  {
+   "ruc": "20514553719",
+   "nombre": "FS CERTIFICACIONES SOCIEDAD ANONIMA CERRADA",
+   "tipo": "Persona Juridica",
+   "items": 1,
+   "monto": 95984.0,
+   "anios": [
+    2024
+   ],
+   "procesos": [
+    "AS-SM-60-2024-UNALM-1"
+   ],
+   "rubros": [
+    "CONTRATACION DEL SERVICIO DE INSPECCION "
+   ],
+   "alertas": null,
+   "participacion_pct": 0.3
+  },
+  {
+   "ruc": "10091177086",
+   "nombre": "HEREDIA PINEDO MOISES",
+   "tipo": "Persona Natural",
+   "items": 1,
+   "monto": 46000.0,
+   "anios": [
+    2019
+   ],
+   "procesos": [
+    "AS-SM-13-2019-UNALM-1"
+   ],
+   "rubros": [
+    "CONTRATACI N DEL SERVICIO DE INSTALACI N"
+   ],
+   "alertas": null,
+   "participacion_pct": 0.1
+  }
+ ],
+ "alertas": [
+  {
+   "tipo": "reconvocatorias_por_desierto",
+   "familia": "LP-ABR-36-2025-UNALM",
+   "detalle": "3 convocatorias del mismo procedimiento; 2 con ítems desiertos",
+   "convocatorias": [
+    {
+     "nomenclatura": "LP-ABR-36-2025-UNALM-1",
+     "fecha": "2025-10-01",
+     "estado": "desierto",
+     "monto_desierto": 119170.0
+    },
+    {
+     "nomenclatura": "LP-ABR-36-2025-UNALM-2",
+     "fecha": "2025-12-04",
+     "estado": "desierto",
+     "monto_desierto": 156735.0
+    },
+    {
+     "nomenclatura": "LP-ABR-36-2025-UNALM-3",
+     "fecha": "2025-12-30",
+     "estado": "contratado",
+     "monto_desierto": 0
+    }
+   ]
+  },
+  {
+   "tipo": "desierto_sin_reconvocatoria_misma_nomenclatura",
+   "familia": "CP-SM-1-2024-UNALM",
+   "detalle": "CP-SM-1-2024-UNALM-1 desierto (S/ 8,326,041.84); sin otra convocatoria con la misma nomenclatura base; posible reconvocatoria con otra nomenclatura",
+   "posibles_reconvocatorias": [
+    {
+     "nomenclatura": "AS-SM-36-2024-UNALM-1",
+     "fecha": "2024-07-17",
+     "estado": "contratado",
+     "similitud": 1.0,
+     "dias_despues": 96
+    }
+   ],
+   "descripcion": "CONTRATACIÓN DE SERVICIO DE ALIMENTACION EN LAS INSTALACIONES DEL COMEDOR UNIVERSITARIO PARA ESTUDIANTES DE LA UNALM 2024-II AL 2025 I-II"
+  },
+  {
+   "tipo": "concentracion_proveedores_alimentos",
+   "detalle": "Servicio de alimentación del comedor 2018-2026 (S/ 36,493,012.08 adjudicados): principales proveedores",
+   "top": [
+    {
+     "ruc": "20120507126",
+     "nombre": "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L",
+     "monto": 30594429.74,
+     "participacion_pct": 83.8,
+     "anios": [
+      2018,
+      2019,
+      2022,
+      2023,
+      2024,
+      2025
+     ]
+    },
+    {
+     "ruc": "20102185863",
+     "nombre": "APC CORPORACION S.A.",
+     "monto": 5898582.34,
+     "participacion_pct": 16.2,
+     "anios": [
+      2024,
+      2026
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "proceso_nulo",
+   "codigo_convocatoria": "1171588",
+   "nomenclatura": "CP SER-SM-8-2025-UNALM-1",
+   "fecha": "2025-12-18",
+   "valor_estimado": 11788245.0,
+   "n_postores": "10",
+   "reconvocada_como": [
+    {
+     "codigo_convocatoria": "1182299",
+     "fecha": "2025-12-30",
+     "estado": "contratado",
+     "monto_adjudicado": 11788243.2,
+     "n_postores_ocds": "17",
+     "n_postores_conosce": 2
+    }
+   ],
+   "nota_postores": "n_postores OCDS = numberOfTenderers (participantes registrados); n_postores CONOSCE = postores con oferta. No son comparables entre sí.",
+   "detalle": "Todos los ítems figuran NULO en OCDS (no aparece en CONOSCE adjudicaciones/desiertos).",
+   "descripcion": "Contratación del Servicio de Alimentación en las Instalación del Comedor Universitario para Estudiantes de la UNALM 2026-2027",
+   "fuente": "OCDS 2025_12 (ocds-dgv273-seacev3-1171588)"
+  }
+ ],
+ "cobertura_dic_2026": {
+  "brecha_viveres": {
+   "nota": "UNALM: el comedor es un SERVICIO DE ALIMENTACIÓN tercerizado (no compra víveres); la clave brecha_viveres se mantiene por compatibilidad con el dashboard y aquí contiene los contratos del servicio de alimentación según fecha de inicio de vigencia. La vigencia es el plazo contractual; en suministros las entregas pueden agotarse antes. Comparar fin del ciclo 2025-26 con inicio del ciclo 2026-27.",
+   "ciclo_2025_2026": [
+    {
+     "nomenclatura": "CP SER-SM-8-2025-UNALM-1",
+     "item": "Contratación del Servicio de Alimentación en las Instalación",
+     "proveedor": "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L",
+     "contrato": "010-2026-UNALM",
+     "inicio": "2026-04-14",
+     "fin": "2026-12-31"
+    }
+   ],
+   "ciclo_2026_2027": [
+    {
+     "nomenclatura": "DIRECTA-DIRECTA-2-2026-UNALM-1",
+     "item": "CONTRATACIÓN DEL SERVICIO DE ALIMENTACIÓN EN LAS INSTALACION",
+     "proveedor": "APC CORPORACION S.A.",
+     "contrato": "29-2026-UNALM",
+     "inicio": "2026-08-18",
+     "fin": "2026-12-31"
+    }
+   ],
+   "fin_mas_temprano_ciclo_2025": "2026-12-31",
+   "fin_mas_tardio_ciclo_2025": "2026-12-31",
+   "inicio_mas_temprano_ciclo_2026": "2026-08-18",
+   "inicio_mas_tardio_ciclo_2026": "2026-08-18"
+  },
+  "pregunta": "¿Hay contratos vigentes o procesos en curso que cubran el abastecimiento del comedor en diciembre 2026?",
+  "caveat_vigencia": "La descripción del proceso CP SER-SM-8-2025-UNALM-1 (convocatoria 1182299) dice «2026-2027», pero OCDS registra fin 2026-12-31 para el contrato 010-2026-UNALM; además, lo adjudicado con vigencia a 31-dic-2026 (S/ 11.79 M + S/ 3.22 M = S/ 15.0 M) es unas 2.7 veces el PIM 2026 del comedor (S/ 5.58 M). La fecha fin OCDS puede ser parcial o corresponder a un primer tramo: verificar el contrato 010-2026-UNALM en SEACE antes de afirmar cuándo vence el servicio.",
+  "items_2025_2026": [
+   {
+    "nomenclatura": "CP SER-SM-8-2025-UNALM-1",
+    "categoria": "servicio_alimentacion_comedor",
+    "item": "Contratación del Servicio de Alimentación en las Instalación del Comed",
+    "estado": "Contratado",
+    "proveedor": "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L",
+    "monto_adjudicado": 11788243.2,
+    "fecha_buenapro": "2026-03-25",
+    "vigencia_fin": "2026-12-31",
+    "fuente_vigencia": "OCDS"
+   },
+   {
+    "nomenclatura": "DIRECTA-DIRECTA-2-2026-UNALM-1",
+    "categoria": "servicio_alimentacion_comedor",
+    "item": "CONTRATACIÓN DEL SERVICIO DE ALIMENTACIÓN EN LAS INSTALACIONES DEL COM",
+    "estado": "Contratado",
+    "proveedor": "APC CORPORACION S.A.",
+    "monto_adjudicado": 3220999.0,
+    "fecha_buenapro": "2026-08-17",
+    "vigencia_fin": "2026-12-31",
+    "fuente_vigencia": "OCDS"
+   }
+  ],
+  "convocatorias_ocds_no_en_conosce": [
+   {
+    "codigo_convocatoria": "1171588",
+    "nomenclatura": "CP SER-SM-8-2025-UNALM-1",
+    "descripcion": "Contratación del Servicio de Alimentación en las Instalación del Comedor Universitario para Estudiantes de la UNALM 2026-2027",
+    "categoria": "servicio_alimentacion_comedor",
+    "relacionado_no_comedor": false,
+    "confianza": "alta",
+    "fecha_publicacion": "2025-12-18",
+    "metodo": "Concurso Público de Servicios",
+    "valor_estimado": 11788245.0,
+    "plazo_ofertas": [
+     "2025-12-18",
+     "2025-12-18"
+    ],
+    "items": [
+     {
+      "descripcion": "Contratación del Servicio de Alimentación en las Instalación del Comedor Universitario para Estudiantes de la UNALM 2026-2027",
+      "estado": "NULO",
+      "monto": 11788245.0
+     }
+    ],
+    "estado_items": [
+     "NULO"
+    ],
+    "n_postores": "10",
+    "postores": [
+     {
+      "id": "PE-RUC-10460335219",
+      "nombre": "CRISOSTOMO LAURENTE GIDDEL NATHAN"
+     },
+     {
+      "id": "PE-RUC-10703152282",
+      "nombre": "GALARZA COLQUEHUANCA IRVING HUGO"
+     },
+     {
+      "id": "PE-RUC-20525543570",
+      "nombre": "CENTRO DE ASESORIA Y CAPACITACION TECNOLOGICA EMPRESARIAL Y CONSULTORIA E.I.R.L."
+     },
+     {
+      "id": "PE-RUC-20602161901",
+      "nombre": "GESTION PERUANA DE INVERSION SOCIEDAD ANONIMA CERRADA"
+     },
+     {
+      "id": "PE-RUC-20562764756",
+      "nombre": "INVERSIONES KAMAR E.I.R.L."
+     },
+     {
+      "id": "PE-RUC-20603036221",
+      "nombre": "NEGOCIACIONES LEOPAT S.A.C."
+     },
+     {
+      "id": "PE-RUC-20600225805",
+      "nombre": "CORPORACION ALIMENTARIA MAAZ S.A.C. - CORALIMA S.A.C."
+     },
+     {
+      "id": "PE-RUC-20610139451",
+      "nombre": "INVERSIONES MAFERPO E.I.R.L."
+     },
+     {
+      "id": "PE-RUC-20611146770",
+      "nombre": "INGENIERIA Y PROYECTOS OMA S.A.C."
+     },
+     {
+      "id": "PE-RUC-20418767279",
+      "nombre": "NEGOCIACIONES HAROL S E.I.R.L."
+     }
+    ],
+    "documentos": [
+     {
+      "tipo": "Bases Administrativas",
+      "fecha": "2025-12-18",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=017d5630-5397-4a95-9a22-4d87d0528584"
+     }
+    ],
+    "adjudicaciones": [],
+    "contratos": [],
+    "fuente": "OCDS 2025_12 (ocds-dgv273-seacev3-1171588)"
+   }
+  ]
+ },
+ "procesos": [
+  {
+   "codigo_convocatoria": "427062",
+   "nomenclatura": "CP-SM-1-2018-UNALM-1",
+   "descripcion": "CONTRATACION DEL SERVICIO DE CONCESIONARIO PARA LA UNIDAD DE SERVICIOS ALIMENTICIOS DE LA UNALM",
+   "objeto": "Servicio",
+   "tipo_proceso": "Concurso Público",
+   "fecha_convocatoria": "2018-02-08",
+   "monto_referencial_proceso": 2312000.0,
+   "sistema": "Suma alzada",
+   "fecha_integracion": "2018-02-28",
+   "fecha_presentacion_ofertas": "2018-03-12",
+   "categoria": "servicio_alimentacion_comedor",
+   "confianza": "alta",
+   "motivo_clasificacion": "servicio de alimentación/concesionario del comedor universitario",
+   "items": [
+    {
+     "n_item": "1",
+     "descripcion_item": "CONTRATACION DEL SERVICIO DE CONCESIONARIO PARA LA UNIDAD DE SERVICIOS ALIMENTICIOS DE LA UNALM",
+     "estado": "Contratado",
+     "cantidad": 1.0,
+     "unidad": "Servicio",
+     "monto_referencial": 2312000.0,
+     "monto_adjudicado": 2312000.0,
+     "ruc_proveedor": "20120507126",
+     "proveedor": "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L",
+     "tipo_proveedor": "Persona Juridica",
+     "fecha_buenapro": "2018-03-21",
+     "fecha_consentimiento": "2018-04-05",
+     "postores": [
+      {
+       "ruc": "20120507126",
+       "nombre": "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L"
+      },
+      {
+       "ruc": "20510628501",
+       "nombre": "MANA ALIMENTOS S.R.L."
+      }
+     ],
+     "n_postores": 2,
+     "contratos": null,
+     "alertas_proveedor": null
+    }
+   ],
+   "estado": "contratado",
+   "anio": 2018,
+   "familia": "CP-SM-1-2018-UNALM",
+   "n_convocatoria": 1,
+   "monto_referencial_items": 2312000.0,
+   "monto_adjudicado": 2312000.0,
+   "monto_desierto": 0,
+   "proveedores": [
+    "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L (20120507126)"
+   ],
+   "vigencia_fin_max": null,
+   "vigencia_fin_fuente": null,
+   "fuente": [
+    "CONOSCE adjudicaciones_2018 (CSV.gz caché)"
+   ],
+   "url_ficha_seace": null
+  },
+  {
+   "codigo_convocatoria": "508951",
+   "nomenclatura": "CP-SM-1-2019-UNALM-1",
+   "descripcion": "CONTRATACIÓN DEL SERVICIO DE CONCESIONARIO PARA LA SUB DIRECCIÓN DE SERVICIOS ALIMENTICIOS DE LA UNALM",
+   "objeto": "Servicio",
+   "tipo_proceso": "Concurso Público",
+   "fecha_convocatoria": "2019-02-07",
+   "monto_referencial_proceso": 2312000.0,
+   "sistema": "Suma alzada",
+   "fecha_integracion": "2019-02-26",
+   "fecha_presentacion_ofertas": "2019-03-29",
+   "categoria": "servicio_alimentacion_comedor",
+   "confianza": "alta",
+   "motivo_clasificacion": "servicio de alimentación/concesionario del comedor universitario",
+   "items": [
+    {
+     "n_item": "1",
+     "descripcion_item": "CONTRATACI¿N DEL SERVICIO DE CONCESIONARIO PARA LA SUB DIRECCI¿N DE SERVICIOS ALIMENTICIOS DE LA UNALM",
+     "estado": "Contratado",
+     "cantidad": 1.0,
+     "unidad": "Servicio",
+     "monto_referencial": 2312000.0,
+     "monto_adjudicado": 2312000.0,
+     "ruc_proveedor": "20120507126",
+     "proveedor": "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L",
+     "tipo_proveedor": "Persona Juridica",
+     "fecha_buenapro": "2019-04-02",
+     "fecha_consentimiento": "2019-04-13",
+     "postores": [
+      {
+       "ruc": "20120507126",
+       "nombre": "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L"
+      },
+      {
+       "ruc": "20393045893",
+       "nombre": "SERVICIOS INTEGRADOS CAM S.A.C. - SEICAM"
+      },
+      {
+       "ruc": "20509227234",
+       "nombre": "SERVICIAL PERU S.A.C."
+      },
+      {
+       "ruc": "20510628501",
+       "nombre": "MANA ALIMENTOS S.R.L."
+      },
+      {
+       "ruc": "20511289824",
+       "nombre": "BRETT GOURMET S.A.C."
+      }
+     ],
+     "n_postores": 5,
+     "contratos": null,
+     "alertas_proveedor": null
+    }
+   ],
+   "estado": "contratado",
+   "anio": 2019,
+   "familia": "CP-SM-1-2019-UNALM",
+   "n_convocatoria": 1,
+   "monto_referencial_items": 2312000.0,
+   "monto_adjudicado": 2312000.0,
+   "monto_desierto": 0,
+   "proveedores": [
+    "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L (20120507126)"
+   ],
+   "vigencia_fin_max": null,
+   "vigencia_fin_fuente": null,
+   "fuente": [
+    "CONOSCE adjudicaciones_2019 (CSV.gz caché)"
+   ],
+   "url_ficha_seace": null
+  },
+  {
+   "codigo_convocatoria": "517597",
+   "nomenclatura": "AS-SM-13-2019-UNALM-1",
+   "descripcion": "CONTRATACIÓN DEL SERVICIO DE INSTALACIÓN DE ESTRUCTURA METÁLICA, COBERTURA DE POLICARBONATO Y CIELO RASO EN MADERA A TODO COSTO EN COMEDOR UNIVERSITARIO - HUEREQUEQUE",
+   "objeto": "Servicio",
+   "tipo_proceso": "Adjudicación Simplificada",
+   "fecha_convocatoria": "2019-04-03",
+   "monto_referencial_proceso": 54660.13,
+   "sistema": "Suma alzada",
+   "fecha_integracion": "2019-04-09",
+   "fecha_presentacion_ofertas": "2019-04-12",
+   "categoria": "infraestructura_comedor",
+   "confianza": "alta",
+   "motivo_clasificacion": "menciona COMEDOR + obra/mantenimiento",
+   "items": [
+    {
+     "n_item": "1",
+     "descripcion_item": "CONTRATACI¿N DEL SERVICIO DE INSTALACI¿N DE ESTRUCTURA MET¿LICA, COBERTURA DE POLICARBONATO Y CIELO RASO EN MADERA A TODO COSTO EN COMEDOR UNIVERSITARIO - HUEREQUEQUE",
+     "estado": "Contratado",
+     "cantidad": 1.0,
+     "unidad": "Servicio",
+     "monto_referencial": 54660.13,
+     "monto_adjudicado": 46000.0,
+     "ruc_proveedor": "10091177086",
+     "proveedor": "HEREDIA PINEDO MOISES",
+     "tipo_proveedor": "Persona Natural",
+     "fecha_buenapro": "2019-04-15",
+     "fecha_consentimiento": "2019-04-24",
+     "postores": [
+      {
+       "ruc": "10091177086",
+       "nombre": "HEREDIA PINEDO MOISES"
+      },
+      {
+       "ruc": "10210011639",
+       "nombre": "ASCENCIOS RIBBECK NANCY MIRIAM"
+      },
+      {
+       "ruc": "20451525701",
+       "nombre": "EMBISERV E.I.R.L"
+      },
+      {
+       "ruc": "20509255360",
+       "nombre": "PACHECO Y PACHECOS CONTRATISTAS SRL"
+      },
+      {
+       "ruc": "20565994108",
+       "nombre": "STEFF GROUP E.I.R.L."
+      },
+      {
+       "ruc": "20601736439",
+       "nombre": "VELME SOLUCIONES GLOBALES SOCIEDAD ANONIMA CERRADA - VELME SOLUCIONES GLOBALES S.A.C."
+      },
+      {
+       "ruc": "20601964342",
+       "nombre": "ESM INGENIEROS S.A.C"
+      },
+      {
+       "ruc": "302572",
+       "nombre": "CONSORCIO HUANGUAL"
+      },
+      {
+       "ruc": "302578",
+       "nombre": "CONSORCIO SAN MARTIN"
+      }
+     ],
+     "n_postores": 9,
+     "contratos": [
+      {
+       "n_item": "1",
+       "numero": "929-19",
+       "codigo_contrato": "1216714",
+       "ruc_contratista": "10091177086",
+       "monto_item": 46000.0,
+       "monto_total": 46000.0,
+       "adicional": 0.0,
+       "reduccion": 0.0,
+       "complementario": 0.0,
+       "fecha_suscripcion": "2019-05-09",
+       "vigencia_inicio": "2019-05-09",
+       "vigencia_fin": "2019-06-10",
+       "vigencia_fin_actualizada": "2019-06-10",
+       "url_contrato": "https://objectstorage.us-ashburn-1.oraclecloud.com/p/Dzntd99-p_tkMvf4fBb84XnTuATEnKSVs5kmqURV5UKjaREd6MlLfIx6a30XDwUP/n/axx9tnhijsfw/b/BUCKET_PROD_SEACE/o/documentos/mon/docs/contratos/2019/1886/358614509052019101349.pdf",
+       "fuente": "CONOSCE contratos_2019 (CSV.gz caché)"
+      }
+     ],
+     "alertas_proveedor": null
+    }
+   ],
+   "estado": "contratado",
+   "anio": 2019,
+   "familia": "AS-SM-13-2019-UNALM",
+   "n_convocatoria": 1,
+   "monto_referencial_items": 54660.13,
+   "monto_adjudicado": 46000.0,
+   "monto_desierto": 0,
+   "proveedores": [
+    "HEREDIA PINEDO MOISES (10091177086)"
+   ],
+   "vigencia_fin_max": "2019-06-10",
+   "vigencia_fin_fuente": "CONOSCE contratos",
+   "fuente": [
+    "CONOSCE adjudicaciones_2019 (CSV.gz caché)"
+   ],
+   "url_ficha_seace": null
+  },
+  {
+   "codigo_convocatoria": "656599",
+   "nomenclatura": "AS-SM-25-2020-UNALM-1",
+   "descripcion": "SERVICIO DE MANTENIMIENTO DE LA SALA DE PREPARADOS Y ALMACEN DE INSUMOS DEL COMEDOR UNIVERSITARIO DE LA UNALM",
+   "objeto": "Servicio",
+   "tipo_proceso": "Adjudicación Simplificada",
+   "fecha_convocatoria": "2020-10-09",
+   "monto_referencial_proceso": 270113.14,
+   "sistema": "Suma alzada",
+   "fecha_integracion": "2020-10-14",
+   "fecha_presentacion_ofertas": "2020-10-19",
+   "categoria": "infraestructura_comedor",
+   "confianza": "alta",
+   "motivo_clasificacion": "menciona COMEDOR + obra/mantenimiento",
+   "items": [
+    {
+     "n_item": "1",
+     "descripcion_item": "SERVICIO DE MANTENIMIENTO DE LA SALA DE PREPARADOS Y ALMACEN DE INSUMOS DEL COMEDOR UNIVERSITARIO DE LA UNALM",
+     "estado": "Contratado",
+     "cantidad": 1.0,
+     "unidad": "Servicio",
+     "monto_referencial": 270113.14,
+     "monto_adjudicado": 175000.0,
+     "ruc_proveedor": "20451525701",
+     "proveedor": "EMBISERV E.I.R.L",
+     "tipo_proveedor": "Persona Juridica",
+     "fecha_buenapro": "2020-10-23",
+     "fecha_consentimiento": "2020-11-02",
+     "postores": [
+      {
+       "ruc": "10091177086",
+       "nombre": "HEREDIA PINEDO MOISES"
+      },
+      {
+       "ruc": "10461355477",
+       "nombre": "SOTO QUILCA PEDRO"
+      },
+      {
+       "ruc": "20329552820",
+       "nombre": "J L Y O REPRESENTACIONES Y SERV.E.I.R.L."
+      },
+      {
+       "ruc": "20451525701",
+       "nombre": "EMBISERV E.I.R.L"
+      },
+      {
+       "ruc": "20495751229",
+       "nombre": "S & J CONTRATISTAS GENERALES SRL"
+      },
+      {
+       "ruc": "20521489872",
+       "nombre": "SANGAR CONTRATISTAS S.A.C."
+      },
+      {
+       "ruc": "20522816958",
+       "nombre": "PERU K & M S.A.C."
+      },
+      {
+       "ruc": "20524902355",
+       "nombre": "GRUPO IXION SOCIEDAD ANONIMA CERRADA"
+      },
+      {
+       "ruc": "20552167890",
+       "nombre": "SAP CONTRATISTAS GENERALES E.I.R.L."
+      },
+      {
+       "ruc": "20552971265",
+       "nombre": "CORPORACION RALE NEGOCIOS INTERNACIONALES PERU S.A.C."
+      },
+      {
+       "ruc": "20557419056",
+       "nombre": "MAYEKA CONTRATISTAS GENERALES SAC - MAYEKA SAC"
+      },
+      {
+       "ruc": "20600569725",
+       "nombre": "PEFASA INGENIEROS S.A.C."
+      },
+      {
+       "ruc": "20600621166",
+       "nombre": "M & G ASESORES ECOR E.I.R.L."
+      },
+      {
+       "ruc": "20600837819",
+       "nombre": "RSA CONSTRUCTORA E INVERSIONES EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA"
+      },
+      {
+       "ruc": "20600950623",
+       "nombre": "CORPORACION TONGOD E.I.R.L."
+      },
+      {
+       "ruc": "20601218268",
+       "nombre": "LEVI SERVICIOS E INGENIERIA SOCIEDAD ANONIMA CERRADA - LEVI SERVICIOS E INGENIERIA S.A.C."
+      },
+      {
+       "ruc": "20601248965",
+       "nombre": "ANDFER S.A.C."
+      },
+      {
+       "ruc": "20601898960",
+       "nombre": "MITH S.A.C."
+      },
+      {
+       "ruc": "20603130163",
+       "nombre": "SINARAL S.A.C."
+      },
+      {
+       "ruc": "20605529101",
+       "nombre": "BRAIN TEAM S.A.C."
+      },
+      {
+       "ruc": "20605968164",
+       "nombre": "GRUPO C & R CONTRATISTAS GENERALES S.A.C."
+      },
+      {
+       "ruc": "20606326298",
+       "nombre": "INVERSIONES Y ASOCIADOS ALYSON S.A.C."
+      },
+      {
+       "ruc": "423095",
+       "nombre": "CONSORCIO SEGAL COMEDOR"
+      },
+      {
+       "ruc": "423285",
+       "nombre": "CONSORCIO CHICLAYO"
+      }
+     ],
+     "n_postores": 24,
+     "contratos": [
+      {
+       "n_item": "1",
+       "numero": "019-2020-UNALM",
+       "codigo_contrato": "2018568",
+       "ruc_contratista": "20451525701",
+       "monto_item": 175000.0,
+       "monto_total": 175000.0,
+       "adicional": 38176.0,
+       "reduccion": 0.0,
+       "complementario": 0.0,
+       "fecha_suscripcion": "2020-11-11",
+       "vigencia_inicio": "2020-11-13",
+       "vigencia_fin": "2020-12-28",
+       "vigencia_fin_actualizada": "2020-12-28",
+       "url_contrato": "https://prodapp2.seace.gob.pe/portalseace-uiwd-pub/DownloadContratosFileServlet?fileName=3df5905e-a61b-47f8-b4ff-cd7860254b41.pdf",
+       "fuente": "CONOSCE contratos_2020 (CSV.gz caché)"
+      }
+     ],
+     "alertas_proveedor": null
+    }
+   ],
+   "estado": "contratado",
+   "anio": 2020,
+   "familia": "AS-SM-25-2020-UNALM",
+   "n_convocatoria": 1,
+   "monto_referencial_items": 270113.14,
+   "monto_adjudicado": 175000.0,
+   "monto_desierto": 0,
+   "proveedores": [
+    "EMBISERV E.I.R.L (20451525701)"
+   ],
+   "vigencia_fin_max": "2020-12-28",
+   "vigencia_fin_fuente": "CONOSCE contratos",
+   "fuente": [
+    "CONOSCE adjudicaciones_2020 (CSV.gz caché)"
+   ],
+   "url_ficha_seace": null
+  },
+  {
+   "codigo_convocatoria": "795123",
+   "nomenclatura": "CP-SM-1-2022-UNALM-1",
+   "descripcion": "CONTRATACIÓN DEL SERVICIO DE CONCESIONARIO PARA LA SUBDIRECCIÓN DE SERVICIOS ALIMENTICIOS DE LA UNALM",
+   "objeto": "Servicio",
+   "tipo_proceso": "Concurso Público",
+   "fecha_convocatoria": "2022-04-11",
+   "monto_referencial_proceso": 1913400.0,
+   "sistema": "Suma alzada",
+   "fecha_integracion": "2022-04-29",
+   "fecha_presentacion_ofertas": "2022-05-16",
+   "categoria": "servicio_alimentacion_comedor",
+   "confianza": "alta",
+   "motivo_clasificacion": "servicio de alimentación/concesionario del comedor universitario",
+   "items": [
+    {
+     "n_item": "1",
+     "descripcion_item": "CONTRATACIÓN DEL SERVICIO DE CONCESIONARIO PARA LA SUBDIRECCIÓN DE SERVICIOS ALIMENTICIOS DE LA UNALM",
+     "estado": "Contratado",
+     "cantidad": 1.0,
+     "unidad": "Servicio",
+     "monto_referencial": 1913400.0,
+     "monto_adjudicado": 1592130.0,
+     "ruc_proveedor": "20120507126",
+     "proveedor": "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L",
+     "tipo_proveedor": "Persona Juridica",
+     "fecha_buenapro": "2022-05-17",
+     "fecha_consentimiento": "2022-05-17",
+     "postores": [
+      {
+       "ruc": "20120507126",
+       "nombre": "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L"
+      }
+     ],
+     "n_postores": 1,
+     "contratos": [
+      {
+       "n_item": "1",
+       "numero": "013-2022-UNALM",
+       "codigo_contrato": "2120467",
+       "ruc_contratista": "20120507126",
+       "monto_item": 1592130.0,
+       "monto_total": 1592130.0,
+       "adicional": 214049.77,
+       "reduccion": 0.0,
+       "complementario": 0.0,
+       "fecha_suscripcion": "2022-05-31",
+       "vigencia_inicio": "2022-06-09",
+       "vigencia_fin": "2022-12-31",
+       "vigencia_fin_actualizada": "2023-04-28",
+       "url_contrato": "https://prodapp2.seace.gob.pe/portalseace-uiwd-pub/DownloadContratosFileServlet?fileName=0ddfd7ea-4fa2-4b28-846c-b4101967e8be.pdf",
+       "fuente": "CONOSCE contratos_2022 (CSV.gz caché)"
+      },
+      {
+       "n_item": "1",
+       "numero": "013-2022-UNALM",
+       "codigo_contrato": "2120467",
+       "ruc_contratista": "20120507126",
+       "monto_item": 1592130.0,
+       "monto_total": 1592130.0,
+       "adicional": 0.0,
+       "reduccion": 0.88,
+       "complementario": 0.0,
+       "fecha_suscripcion": "2022-05-31",
+       "vigencia_inicio": "2022-06-09",
+       "vigencia_fin": "2022-12-31",
+       "vigencia_fin_actualizada": "2023-04-28",
+       "url_contrato": "https://prodapp2.seace.gob.pe/portalseace-uiwd-pub/DownloadContratosFileServlet?fileName=0ddfd7ea-4fa2-4b28-846c-b4101967e8be.pdf",
+       "fuente": "CONOSCE contratos_2022 (CSV.gz caché)"
+      },
+      {
+       "n_item": "1",
+       "numero": "013-2022-UNALM",
+       "codigo_contrato": "2120467",
+       "ruc_contratista": "20120507126",
+       "monto_item": 1592130.0,
+       "monto_total": 1592130.0,
+       "adicional": 0.0,
+       "reduccion": 16063.9,
+       "complementario": 0.0,
+       "fecha_suscripcion": "2022-05-31",
+       "vigencia_inicio": "2022-06-09",
+       "vigencia_fin": "2022-12-31",
+       "vigencia_fin_actualizada": "2023-04-28",
+       "url_contrato": "https://prodapp2.seace.gob.pe/portalseace-uiwd-pub/DownloadContratosFileServlet?fileName=0ddfd7ea-4fa2-4b28-846c-b4101967e8be.pdf",
+       "fuente": "CONOSCE contratos_2022 (CSV.gz caché)"
+      },
+      {
+       "n_item": "1",
+       "numero": "013-2022-UNALM",
+       "codigo_contrato": "2120467",
+       "ruc_contratista": "20120507126",
+       "monto_item": 1592130.0,
+       "monto_total": 1592130.0,
+       "adicional": 0.0,
+       "reduccion": 39198.92,
+       "complementario": 0.0,
+       "fecha_suscripcion": "2022-05-31",
+       "vigencia_inicio": "2022-06-09",
+       "vigencia_fin": "2022-12-31",
+       "vigencia_fin_actualizada": "2023-04-28",
+       "url_contrato": "https://prodapp2.seace.gob.pe/portalseace-uiwd-pub/DownloadContratosFileServlet?fileName=0ddfd7ea-4fa2-4b28-846c-b4101967e8be.pdf",
+       "fuente": "CONOSCE contratos_2022 (CSV.gz caché)"
+      }
+     ],
+     "contratos_ocds": [
+      {
+       "award_id": "795123-20120507126",
+       "numero": "013-2022-UNALM",
+       "inicio": "2022-06-09",
+       "fin": "2022-12-31",
+       "dias": "205",
+       "monto": 1592130.0,
+       "firmado": "2022-05-31",
+       "estado": null,
+       "fuente": "OCDS 2022_04"
+      }
+     ],
+     "alertas_proveedor": null
+    }
+   ],
+   "estado": "contratado",
+   "anio": 2022,
+   "familia": "CP-SM-1-2022-UNALM",
+   "n_convocatoria": 1,
+   "monto_referencial_items": 1913400.0,
+   "monto_adjudicado": 1592130.0,
+   "monto_desierto": 0,
+   "proveedores": [
+    "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L (20120507126)"
+   ],
+   "vigencia_fin_max": "2023-04-28",
+   "vigencia_fin_fuente": "CONOSCE contratos",
+   "ocds": {
+    "ocid": "ocds-dgv273-seacev3-2022-1886-38",
+    "mes_archivo": "2022_04",
+    "fecha_publicacion": "2022-04-11",
+    "plazo_ofertas": [
+     "2022-04-11",
+     "2022-04-11"
+    ],
+    "n_postores": "12",
+    "documentos": [
+     {
+      "tipo": "Bases Administrativas",
+      "fecha": "2022-04-11",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=15112e62-edc6-41f7-8e0d-93b29b8a0db5"
+     },
+     {
+      "tipo": "Resumen ejecutivo",
+      "fecha": "2022-04-11",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=ae0bf842-f58f-40ed-8139-aa7d85b9c6b5"
+     },
+     {
+      "tipo": "Bases Integradas",
+      "fecha": "2022-04-29",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=a4a6a1a2-74fb-4331-a3bd-0717ab0745b3"
+     },
+     {
+      "tipo": "Pliego de absolución de consultas y observaciones",
+      "fecha": "2022-04-29",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=6201bc65-c3a8-41ad-8db6-4f34803fe686"
+     },
+     {
+      "tipo": "Documentos de Presentación de Propuestas",
+      "fecha": "2022-05-17",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=247c9c12-aac6-4662-8daa-a08d6bab2594"
+     },
+     {
+      "tipo": "Documentos de Calificación y Evaluación",
+      "fecha": "2022-05-17",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=f4c37229-e663-47ee-85dd-eefcc9673c81"
+     },
+     {
+      "tipo": "Documentos de Otorgamiento de Buena Pro",
+      "fecha": "2022-05-17",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=43b1d88a-45b1-48ae-b4e7-c32f4460da71"
+     }
+    ]
+   },
+   "fuente": [
+    "CONOSCE adjudicaciones_2022 (CSV.gz caché)",
+    "OCDS 2022_04"
+   ],
+   "url_ficha_seace": null
+  },
+  {
+   "codigo_convocatoria": "797460",
+   "nomenclatura": "DIRECTA-PROC-1-2022-UNALM-1",
+   "descripcion": "CONTRATACIÓN DEL SERVICIO DE CONCESIONARIO PARA LA SUBDIRECCIÓN DE SERVICIOS ALIMENTICIOS DE LA UNALM",
+   "objeto": "Servicio",
+   "tipo_proceso": "Contratación Directa",
+   "fecha_convocatoria": "2022-04-29",
+   "monto_referencial_proceso": 632560.0,
+   "sistema": "Suma alzada",
+   "categoria": "servicio_alimentacion_comedor",
+   "confianza": "alta",
+   "motivo_clasificacion": "servicio de alimentación/concesionario del comedor universitario",
+   "items": [
+    {
+     "n_item": "1",
+     "descripcion_item": "CONTRATACIÓN DEL SERVICIO DE CONCESIONARIO PARA LA SUBDIRECCIÓN DE SERVICIOS ALIMENTICIOS DE LA UNALM",
+     "estado": "Contratado",
+     "cantidad": 1.0,
+     "unidad": "Servicio",
+     "monto_referencial": 632560.0,
+     "monto_adjudicado": 632560.0,
+     "ruc_proveedor": "20120507126",
+     "proveedor": "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L",
+     "tipo_proveedor": "Persona Juridica",
+     "fecha_buenapro": "2022-04-29",
+     "fecha_consentimiento": "2022-04-30",
+     "postores": [
+      {
+       "ruc": "20120507126",
+       "nombre": "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L"
+      }
+     ],
+     "n_postores": 1,
+     "contratos": [
+      {
+       "n_item": "1",
+       "numero": "008-2022-UNALM",
+       "codigo_contrato": "2113299",
+       "ruc_contratista": "20120507126",
+       "monto_item": 632560.0,
+       "monto_total": 632560.0,
+       "adicional": 0.0,
+       "reduccion": 158140.0,
+       "complementario": 0.0,
+       "fecha_suscripcion": "2022-04-25",
+       "vigencia_inicio": "2022-04-25",
+       "vigencia_fin": "2022-06-30",
+       "vigencia_fin_actualizada": "2022-06-30",
+       "url_contrato": "https://prodapp2.seace.gob.pe/portalseace-uiwd-pub/DownloadContratosFileServlet?fileName=4b92ac57-5268-4735-8521-9d7a7fa191e5.pdf",
+       "fuente": "CONOSCE contratos_2022 (CSV.gz caché)"
+      }
+     ],
+     "contratos_ocds": [
+      {
+       "award_id": "797460-20120507126",
+       "numero": "008-2022-UNALM",
+       "inicio": "2022-04-25",
+       "fin": "2022-06-30",
+       "dias": "66",
+       "monto": 632560.0,
+       "firmado": "2022-04-25",
+       "estado": null,
+       "fuente": "OCDS 2022_04"
+      }
+     ],
+     "alertas_proveedor": null
+    }
+   ],
+   "estado": "contratado",
+   "anio": 2022,
+   "familia": "DIRECTA-PROC-1-2022-UNALM",
+   "n_convocatoria": 1,
+   "monto_referencial_items": 632560.0,
+   "monto_adjudicado": 632560.0,
+   "monto_desierto": 0,
+   "proveedores": [
+    "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L (20120507126)"
+   ],
+   "vigencia_fin_max": "2022-06-30",
+   "vigencia_fin_fuente": "OCDS contracts",
+   "ocds": {
+    "ocid": "ocds-dgv273-seacev3-797460",
+    "mes_archivo": "2022_04",
+    "fecha_publicacion": "2022-04-29",
+    "plazo_ofertas": [
+     null,
+     null
+    ],
+    "n_postores": "1",
+    "documentos": [
+     {
+      "tipo": "Bases Administrativas",
+      "fecha": "2022-04-29",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=cb11dee8-3e40-4860-9393-1807fa367345"
+     },
+     {
+      "tipo": "Resumen ejecutivo",
+      "fecha": "2022-04-29",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=698a9ef4-0b70-4d50-8d63-ecf96e88eef3"
+     },
+     {
+      "tipo": "Documentos de Presentación de Propuestas",
+      "fecha": "2022-04-29",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=09f29d1e-8977-43c2-8c15-d85e408a4632"
+     },
+     {
+      "tipo": "Documentos de Otorgamiento de Buena Pro",
+      "fecha": "2022-04-29",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=02befa58-e541-4fd8-855f-d5f8b0d7deb2"
+     }
+    ]
+   },
+   "fuente": [
+    "CONOSCE adjudicaciones_2022 (CSV.gz caché)",
+    "OCDS 2022_04"
+   ],
+   "url_ficha_seace": null
+  },
+  {
+   "codigo_convocatoria": "883297",
+   "nomenclatura": "CP-SM-2-2023-UNALM-1",
+   "descripcion": "CONTRATACIÓN DEL SERVICIO DE CONCESIONARIO PARA LA SUBDIRECCIÓN DE SERVICIOS ALIMENTICIOS DE LA UNALM",
+   "objeto": "Servicio",
+   "tipo_proceso": "Concurso Público",
+   "fecha_convocatoria": "2023-03-07",
+   "monto_referencial_proceso": 3630900.0,
+   "sistema": "Suma alzada",
+   "fecha_integracion": "2023-03-22",
+   "fecha_presentacion_ofertas": "2023-04-10",
+   "categoria": "servicio_alimentacion_comedor",
+   "confianza": "alta",
+   "motivo_clasificacion": "servicio de alimentación/concesionario del comedor universitario",
+   "items": [
+    {
+     "n_item": "1",
+     "descripcion_item": "CONTRATACIÓN DEL SERVICIO DE CONCESIONARIO PARA LA SUBDIRECCIÓN DE SERVICIOS ALIMENTICIOS DE LA UNALM",
+     "estado": "Contratado",
+     "cantidad": 1.0,
+     "unidad": "Servicio",
+     "monto_referencial": 3630900.0,
+     "monto_adjudicado": 3630900.0,
+     "ruc_proveedor": "20120507126",
+     "proveedor": "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L",
+     "tipo_proveedor": "Persona Juridica",
+     "fecha_buenapro": "2023-04-11",
+     "fecha_consentimiento": "2023-04-24",
+     "postores": [
+      {
+       "ruc": "20120507126",
+       "nombre": "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L"
+      },
+      {
+       "ruc": "20601490651",
+       "nombre": "INNOVACIONES Y SERVICIOS GENERALES ATIY SOCIEDAD ANONIMA CERRADA-INNOVACIONES Y SERVICIOS GENERALES"
+      }
+     ],
+     "n_postores": 2,
+     "contratos": [
+      {
+       "n_item": "1",
+       "numero": "013-2023-UNALM",
+       "codigo_contrato": "2179174",
+       "ruc_contratista": "20120507126",
+       "monto_item": 3630900.0,
+       "monto_total": 3630900.0,
+       "adicional": 0.0,
+       "reduccion": 113703.8,
+       "complementario": 0.0,
+       "fecha_suscripcion": "2023-04-25",
+       "vigencia_inicio": "2023-04-25",
+       "vigencia_fin": "2023-12-31",
+       "vigencia_fin_actualizada": "2024-01-31",
+       "url_contrato": "https://prodapp2.seace.gob.pe/portalseace-uiwd-pub/DownloadContratosFileServlet?fileName=28edea90-5a7d-46e0-a860-4e2bbd866e2e.pdf",
+       "fuente": "CONOSCE contratos_2023 (CSV.gz caché)"
+      }
+     ],
+     "contratos_ocds": [
+      {
+       "award_id": "883297-20120507126",
+       "numero": "013-2023-UNALM",
+       "inicio": "2023-04-25",
+       "fin": "2023-12-31",
+       "dias": "250",
+       "monto": 3630900.0,
+       "firmado": "2023-04-25",
+       "estado": null,
+       "fuente": "OCDS 2023_03"
+      }
+     ],
+     "alertas_proveedor": null
+    }
+   ],
+   "estado": "contratado",
+   "anio": 2023,
+   "familia": "CP-SM-2-2023-UNALM",
+   "n_convocatoria": 1,
+   "monto_referencial_items": 3630900.0,
+   "monto_adjudicado": 3630900.0,
+   "monto_desierto": 0,
+   "proveedores": [
+    "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L (20120507126)"
+   ],
+   "vigencia_fin_max": "2024-01-31",
+   "vigencia_fin_fuente": "CONOSCE contratos",
+   "ocds": {
+    "ocid": "ocds-dgv273-seacev3-2023-1886-11",
+    "mes_archivo": "2023_03",
+    "fecha_publicacion": "2023-03-07",
+    "plazo_ofertas": [
+     "2023-03-07",
+     "2023-03-07"
+    ],
+    "n_postores": "14",
+    "documentos": [
+     {
+      "tipo": "Bases Administrativas",
+      "fecha": "2023-03-07",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=88ed7688-99f3-4b1e-bc0d-df4579ef8d22"
+     },
+     {
+      "tipo": "Resumen ejecutivo",
+      "fecha": "2023-03-07",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=e308da5b-5d64-48c7-b38b-2c0f7c29054b"
+     },
+     {
+      "tipo": "Pliego de absolución de consultas y observaciones",
+      "fecha": "2023-03-22",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=e2dbe558-c45a-403a-915c-8716ffadf152"
+     },
+     {
+      "tipo": "Bases Integradas",
+      "fecha": "2023-03-22",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=10b137d0-9ac1-42df-ab17-b2f6a1be0bd3"
+     },
+     {
+      "tipo": "Documentos de Presentación de Propuestas",
+      "fecha": "2023-04-11",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=5bb9e5f0-4a40-43e7-adc3-f08ca0f10c3a"
+     },
+     {
+      "tipo": "Documentos de Calificación y Evaluación",
+      "fecha": "2023-04-11",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=1a153bc3-889a-4da9-9eba-41778f187ccc"
+     },
+     {
+      "tipo": "Documentos de Otorgamiento de Buena Pro",
+      "fecha": "2023-04-11",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=f4da8b2e-b2dd-4b10-af75-5a3d6fabbbbf"
+     }
+    ]
+   },
+   "fuente": [
+    "CONOSCE adjudicaciones_2023 (CSV.gz caché)",
+    "OCDS 2023_03"
+   ],
+   "url_ficha_seace": null
+  },
+  {
+   "codigo_convocatoria": "993034",
+   "nomenclatura": "DIRECTA-PROC-1-2024-UNALM-1",
+   "descripcion": "CONTRATACIÓN DE SERVICIO DE ALIMENTACIÓN EN LAS INSTALACIONES DEL COMEDOR UNIVERSITARIO PARA ESTUDIANTES DE LA UNALM",
+   "objeto": "Servicio",
+   "tipo_proceso": "Contratación Directa",
+   "fecha_convocatoria": "2024-03-08",
+   "monto_referencial_proceso": 2677583.34,
+   "sistema": "Precios unitarios",
+   "categoria": "servicio_alimentacion_comedor",
+   "confianza": "alta",
+   "motivo_clasificacion": "servicio de alimentación/concesionario del comedor universitario",
+   "items": [
+    {
+     "n_item": "1",
+     "descripcion_item": "CONTRATACIÓN DE SERVICIO DE ALIMENTACIÓN EN LAS INSTALACIONES DEL COMEDOR UNIVERSITARIO PARA ESTUDIANTES DE LA UNALM",
+     "estado": "Contratado",
+     "cantidad": 1.0,
+     "unidad": "Servicio",
+     "monto_referencial": 2677583.34,
+     "monto_adjudicado": 2677583.34,
+     "ruc_proveedor": "20102185863",
+     "proveedor": "APC CORPORACION S.A.",
+     "tipo_proveedor": "Persona Juridica",
+     "fecha_buenapro": "2024-03-11",
+     "fecha_consentimiento": "2024-03-12",
+     "postores": [
+      {
+       "ruc": "20102185863",
+       "nombre": "APC CORPORACION S.A."
+      }
+     ],
+     "n_postores": 1,
+     "contratos": [
+      {
+       "n_item": "1",
+       "numero": "002-2024-UNALM",
+       "codigo_contrato": "2243876",
+       "ruc_contratista": "20102185863",
+       "monto_item": 2677583.34,
+       "monto_total": 2677583.34,
+       "adicional": 0.0,
+       "reduccion": 144332.17,
+       "complementario": 0.0,
+       "fecha_suscripcion": "2024-03-18",
+       "vigencia_inicio": "2024-03-18",
+       "vigencia_fin": "2024-06-30",
+       "vigencia_fin_actualizada": "2024-06-30",
+       "url_contrato": "https://prodapp2.seace.gob.pe/portalseace-uiwd-pub/DownloadContratosFileServlet?fileName=2d5d7330-7814-4304-9a06-979a0c92f3d9.pdf",
+       "fuente": "CONOSCE contratos_2024 (CSV.gz caché)"
+      }
+     ],
+     "contratos_ocds": [
+      {
+       "award_id": "993034-20102185863",
+       "numero": "002-2024-UNALM",
+       "inicio": "2024-03-18",
+       "fin": "2024-06-30",
+       "dias": "104",
+       "monto": 2677583.34,
+       "firmado": "2024-03-18",
+       "estado": null,
+       "fuente": "OCDS 2024_03"
+      }
+     ],
+     "alertas_proveedor": null
+    }
+   ],
+   "estado": "contratado",
+   "anio": 2024,
+   "familia": "DIRECTA-PROC-1-2024-UNALM",
+   "n_convocatoria": 1,
+   "monto_referencial_items": 2677583.34,
+   "monto_adjudicado": 2677583.34,
+   "monto_desierto": 0,
+   "proveedores": [
+    "APC CORPORACION S.A. (20102185863)"
+   ],
+   "vigencia_fin_max": "2024-06-30",
+   "vigencia_fin_fuente": "OCDS contracts",
+   "ocds": {
+    "ocid": "ocds-dgv273-seacev3-993034",
+    "mes_archivo": "2024_03",
+    "fecha_publicacion": "2024-03-08",
+    "plazo_ofertas": [
+     null,
+     null
+    ],
+    "n_postores": "1",
+    "documentos": [
+     {
+      "tipo": "Bases Administrativas",
+      "fecha": "2024-03-08",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=39b5e2fe-f351-4137-8491-a43d08e4ed8e"
+     },
+     {
+      "tipo": "Resumen ejecutivo",
+      "fecha": "2024-03-08",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=0201e657-6d06-42c8-bcfb-8b5bb1275309"
+     },
+     {
+      "tipo": "Documentos de Presentación de Propuestas",
+      "fecha": "2024-03-11",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=96645075-1933-4317-bee0-a6f01da7c869"
+     },
+     {
+      "tipo": "Documentos de Otorgamiento de Buena Pro",
+      "fecha": "2024-03-11",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=d3f76455-abc0-4ba9-bf79-496da27f16aa"
+     }
+    ]
+   },
+   "fuente": [
+    "CONOSCE adjudicaciones_2024 (CSV.gz caché)",
+    "OCDS 2024_03"
+   ],
+   "url_ficha_seace": null
+  },
+  {
+   "codigo_convocatoria": "1004145",
+   "nomenclatura": "CP-SM-1-2024-UNALM-1",
+   "descripcion": "CONTRATACIÓN DE SERVICIO DE ALIMENTACION EN LAS INSTALACIONES DEL COMEDOR UNIVERSITARIO PARA ESTUDIANTES DE LA UNALM 2024-II AL 2025 I-II",
+   "objeto": "Servicio",
+   "tipo_proceso": "Concurso Público",
+   "fecha_convocatoria": "2024-04-12",
+   "monto_referencial_proceso": 8326041.84,
+   "sistema": "Suma alzada",
+   "fecha_integracion": "2024-05-06",
+   "fecha_presentacion_ofertas": "2024-06-17",
+   "categoria": "servicio_alimentacion_comedor",
+   "confianza": "alta",
+   "motivo_clasificacion": "servicio de alimentación/concesionario del comedor universitario",
+   "items": [
+    {
+     "n_item": "1",
+     "descripcion_item": "CONTRATACIÓN DE SERVICIO DE ALIMENTACION EN LAS INSTALACIONES DEL COMEDOR UNIVERSITARIO PARA ESTUDIANTES DE LA UNALM 2024-II AL 2025 I-II",
+     "estado": "Desierto",
+     "cantidad": null,
+     "unidad": "Servicio",
+     "monto_referencial": 8326041.84,
+     "monto_adjudicado": null,
+     "ruc_proveedor": null,
+     "proveedor": null,
+     "tipo_proveedor": null,
+     "fecha_buenapro": null,
+     "fecha_consentimiento": null,
+     "postores": null,
+     "n_postores": null,
+     "contratos": null,
+     "alertas_proveedor": null
+    }
+   ],
+   "estado": "desierto",
+   "anio": 2024,
+   "familia": "CP-SM-1-2024-UNALM",
+   "n_convocatoria": 1,
+   "monto_referencial_items": 8326041.84,
+   "monto_adjudicado": 0,
+   "monto_desierto": 8326041.84,
+   "proveedores": [],
+   "vigencia_fin_max": null,
+   "vigencia_fin_fuente": null,
+   "ocds": {
+    "ocid": "ocds-dgv273-seacev3-2024-1886-7",
+    "mes_archivo": "2024_04",
+    "fecha_publicacion": "2024-04-12",
+    "plazo_ofertas": [
+     "2024-04-12",
+     "2024-04-12"
+    ],
+    "n_postores": "25",
+    "documentos": [
+     {
+      "tipo": "Bases Administrativas",
+      "fecha": "2024-04-12",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=1f2d649c-2954-4128-acba-55fde7722ab8"
+     },
+     {
+      "tipo": "Resumen ejecutivo",
+      "fecha": "2024-04-12",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=43a69b3d-6920-4977-8ad3-24d334a5672d"
+     },
+     {
+      "tipo": "Pliego de absolución de consultas y observaciones",
+      "fecha": "2024-05-06",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=bfdd8fcc-e9c3-4042-a3e1-ff7e107ec9d9"
+     },
+     {
+      "tipo": "Bases Integradas",
+      "fecha": "2024-05-06",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=793d0ea4-885c-43d7-902d-dcc202f4d735"
+     },
+     {
+      "tipo": "",
+      "fecha": "2024-06-04",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=15b957cd-a146-4169-b1fa-c359d6236ac6"
+     },
+     {
+      "tipo": "",
+      "fecha": "2024-06-04",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=b8dba5c2-4c30-4d81-afaa-ce2b81991ec3"
+     },
+     {
+      "tipo": "Documentos de Presentación de Propuestas",
+      "fecha": "2024-06-21",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=94af28a4-efa5-4d02-b6d2-37f8ee651764"
+     },
+     {
+      "tipo": "Documentos de Calificación y Evaluación",
+      "fecha": "2024-06-21",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=8b605f05-60fc-4009-b150-8f6764e13f4d"
+     },
+     {
+      "tipo": "Documentos de Otorgamiento de Buena Pro",
+      "fecha": "2024-06-21",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=96bb2927-fe15-4ca6-836f-56e022490049"
+     }
+    ]
+   },
+   "fuente": [
+    "CONOSCE desiertos_2024 (CSV.gz caché)",
+    "OCDS 2024_04"
+   ],
+   "url_ficha_seace": null
+  },
+  {
+   "codigo_convocatoria": "1034472",
+   "nomenclatura": "AS-SM-36-2024-UNALM-1",
+   "descripcion": "CONTRATACIÓN DE SERVICIO DE ALIMENTACION EN LAS INSTALACIONES DEL COMEDOR UNIVERSITARIO PARA ESTUDIANTES DE LA UNALM 2024-II AL 2025 I-II",
+   "objeto": "Servicio",
+   "tipo_proceso": "Adjudicación Simplificada",
+   "fecha_convocatoria": "2024-07-17",
+   "monto_referencial_proceso": 8326041.84,
+   "sistema": "Suma alzada",
+   "fecha_integracion": "2024-07-22",
+   "fecha_presentacion_ofertas": "2024-07-30",
+   "categoria": "servicio_alimentacion_comedor",
+   "confianza": "alta",
+   "motivo_clasificacion": "servicio de alimentación/concesionario del comedor universitario",
+   "items": [
+    {
+     "n_item": "1",
+     "descripcion_item": "CONTRATACIÓN DE SERVICIO DE ALIMENTACION EN LAS INSTALACIONES DEL COMEDOR UNIVERSITARIO PARA ESTUDIANTES DE LA UNALM 2024-II AL 2025 I-II",
+     "estado": "Contratado",
+     "cantidad": 1.0,
+     "unidad": "Servicio",
+     "monto_referencial": 8326041.84,
+     "monto_adjudicado": 8326596.54,
+     "ruc_proveedor": "20120507126",
+     "proveedor": "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L",
+     "tipo_proveedor": "Persona Juridica",
+     "fecha_buenapro": "2024-08-21",
+     "fecha_consentimiento": "2024-08-29",
+     "postores": [
+      {
+       "ruc": "20102185863",
+       "nombre": "APC CORPORACION S.A."
+      },
+      {
+       "ruc": "20120507126",
+       "nombre": "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L"
+      }
+     ],
+     "n_postores": 2,
+     "contratos": [
+      {
+       "n_item": "1",
+       "numero": "031-2024-UNALM",
+       "codigo_contrato": "2278352",
+       "ruc_contratista": "20120507126",
+       "monto_item": 8326596.54,
+       "monto_total": 8326596.54,
+       "adicional": 0.0,
+       "reduccion": 418493.0,
+       "complementario": 0.0,
+       "fecha_suscripcion": "2024-09-06",
+       "vigencia_inicio": "2024-09-23",
+       "vigencia_fin": "2025-12-31",
+       "vigencia_fin_actualizada": "2026-05-29",
+       "url_contrato": "https://prodapp2.seace.gob.pe/portalseace-uiwd-pub/DownloadContratosFileServlet?fileName=a045d1b0-2cda-4df8-985a-38647269ff15.pdf",
+       "fuente": "CONOSCE contratos_2024 (CSV.gz caché)"
+      },
+      {
+       "n_item": "1",
+       "numero": "031-2024-UNALM",
+       "codigo_contrato": "2278352",
+       "ruc_contratista": "20120507126",
+       "monto_item": 8326596.54,
+       "monto_total": 8326596.54,
+       "adicional": 0.0,
+       "reduccion": 964263.17,
+       "complementario": 0.0,
+       "fecha_suscripcion": "2024-09-06",
+       "vigencia_inicio": "2024-09-23",
+       "vigencia_fin": "2025-12-31",
+       "vigencia_fin_actualizada": "2026-05-29",
+       "url_contrato": "https://prodapp2.seace.gob.pe/portalseace-uiwd-pub/DownloadContratosFileServlet?fileName=a045d1b0-2cda-4df8-985a-38647269ff15.pdf",
+       "fuente": "CONOSCE contratos_2024 (CSV.gz caché)"
+      },
+      {
+       "n_item": "1",
+       "numero": "031-2024-UNALM",
+       "codigo_contrato": "2278352",
+       "ruc_contratista": "20120507126",
+       "monto_item": 8326596.54,
+       "monto_total": 8326596.54,
+       "adicional": 0.0,
+       "reduccion": 307910.13,
+       "complementario": 0.0,
+       "fecha_suscripcion": "2024-09-06",
+       "vigencia_inicio": "2024-09-23",
+       "vigencia_fin": "2025-12-31",
+       "vigencia_fin_actualizada": "2026-05-29",
+       "url_contrato": "https://prodapp2.seace.gob.pe/portalseace-uiwd-pub/DownloadContratosFileServlet?fileName=a045d1b0-2cda-4df8-985a-38647269ff15.pdf",
+       "fuente": "CONOSCE contratos_2024 (CSV.gz caché)"
+      },
+      {
+       "n_item": "1",
+       "numero": "031-2024-UNALM",
+       "codigo_contrato": "2278352",
+       "ruc_contratista": "20120507126",
+       "monto_item": 8326596.54,
+       "monto_total": 8326596.54,
+       "adicional": 0.0,
+       "reduccion": 156312.43,
+       "complementario": 0.0,
+       "fecha_suscripcion": "2024-09-06",
+       "vigencia_inicio": "2024-09-23",
+       "vigencia_fin": "2025-12-31",
+       "vigencia_fin_actualizada": "2026-05-29",
+       "url_contrato": "https://prodapp2.seace.gob.pe/portalseace-uiwd-pub/DownloadContratosFileServlet?fileName=a045d1b0-2cda-4df8-985a-38647269ff15.pdf",
+       "fuente": "CONOSCE contratos_2024 (CSV.gz caché)"
+      }
+     ],
+     "contratos_ocds": [
+      {
+       "award_id": "1034472-20120507126",
+       "numero": "031-2024-UNALM",
+       "inicio": "2024-09-23",
+       "fin": "2025-12-31",
+       "dias": "464",
+       "monto": 8326596.54,
+       "firmado": "2024-09-06",
+       "estado": null,
+       "fuente": "OCDS 2024_07"
+      }
+     ],
+     "alertas_proveedor": null
+    }
+   ],
+   "estado": "contratado",
+   "anio": 2024,
+   "familia": "AS-SM-36-2024-UNALM",
+   "n_convocatoria": 1,
+   "monto_referencial_items": 8326041.84,
+   "monto_adjudicado": 8326596.54,
+   "monto_desierto": 0,
+   "proveedores": [
+    "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L (20120507126)"
+   ],
+   "vigencia_fin_max": "2026-05-29",
+   "vigencia_fin_fuente": "CONOSCE contratos",
+   "ocds": {
+    "ocid": "ocds-dgv273-seacev3-1034472",
+    "mes_archivo": "2024_07",
+    "fecha_publicacion": "2024-07-17",
+    "plazo_ofertas": [
+     "2024-07-17",
+     "2024-07-17"
+    ],
+    "n_postores": "12",
+    "documentos": [
+     {
+      "tipo": "Acta de no formulación de consultas y observaciones",
+      "fecha": "2024-07-22",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=4cdcb3b3-aba3-4497-9b01-4a772c5752d9"
+     },
+     {
+      "tipo": "Bases Integradas",
+      "fecha": "2024-07-22",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=25c0b992-87b1-44f0-b1e3-3ef7b3c810d3"
+     },
+     {
+      "tipo": "Bases Administrativas",
+      "fecha": "2024-07-17",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=2779a28d-066a-43ff-87d5-1e95bc069d6f"
+     },
+     {
+      "tipo": "Resumen ejecutivo",
+      "fecha": "2024-07-17",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=43a69b3d-6920-4977-8ad3-24d334a5672d"
+     },
+     {
+      "tipo": "Informe que sustenta la declaratoria de Desierto",
+      "fecha": "2024-07-17",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=07b9a787-f716-4f3c-8cb3-e1c469f9c6ce"
+     },
+     {
+      "tipo": "Documentos de Presentación de Propuestas",
+      "fecha": "2024-08-21",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=0b73f0e0-96c5-4c0d-87e6-f01efd5f911b"
+     },
+     {
+      "tipo": "Documentos de Calificación y Evaluación",
+      "fecha": "2024-08-21",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=4c05f79b-8b64-44e0-a208-a032ec2d639a"
+     },
+     {
+      "tipo": "Documentos de Otorgamiento de Buena Pro",
+      "fecha": "2024-08-21",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=7e29cc65-8019-48f7-adb9-010d5099c0c6"
+     }
+    ]
+   },
+   "fuente": [
+    "CONOSCE adjudicaciones_2024 (CSV.gz caché)",
+    "OCDS 2024_07"
+   ],
+   "url_ficha_seace": null
+  },
+  {
+   "codigo_convocatoria": "1065346",
+   "nomenclatura": "AS-SM-60-2024-UNALM-1",
+   "descripcion": "CONTRATACIÓN DEL SERVICIO DE INSPECCIÓN HIGIÉNICO SANITARIA Y VERIFICACIÓN NUTRICIONAL DEL COMEDOR UNIVERSITARIO PARA ESTUDIANTES DE LA UNALM",
+   "objeto": "Servicio",
+   "tipo_proceso": "Adjudicación Simplificada",
+   "fecha_convocatoria": "2024-10-30",
+   "monto_referencial_proceso": 95984.0,
+   "sistema": "Suma alzada",
+   "fecha_integracion": "2024-11-05",
+   "fecha_presentacion_ofertas": "2024-11-08",
+   "categoria": "inspeccion_nutricional_comedor",
+   "confianza": "alta",
+   "motivo_clasificacion": "menciona COMEDOR + inspección sanitaria/nutricional",
+   "items": [
+    {
+     "n_item": "1",
+     "descripcion_item": "CONTRATACIÓN DEL SERVICIO DE INSPECCIÓN HIGIÉNICO SANITARIA Y VERIFICACIÓN NUTRICIONAL DEL COMEDOR UNIVERSITARIO PARA ESTUDIANTES DE LA UNALM",
+     "estado": "Contratado",
+     "cantidad": 1.0,
+     "unidad": "Servicio",
+     "monto_referencial": 95984.0,
+     "monto_adjudicado": 95984.0,
+     "ruc_proveedor": "20514553719",
+     "proveedor": "FS CERTIFICACIONES SOCIEDAD ANONIMA CERRADA",
+     "tipo_proveedor": "Persona Juridica",
+     "fecha_buenapro": "2024-11-11",
+     "fecha_consentimiento": "2024-11-11",
+     "postores": [
+      {
+       "ruc": "20514553719",
+       "nombre": "FS CERTIFICACIONES SOCIEDAD ANONIMA CERRADA"
+      }
+     ],
+     "n_postores": 1,
+     "contratos": null,
+     "contratos_ocds": [
+      {
+       "award_id": "1065346-20514553719",
+       "numero": "049-2024-UNALM",
+       "inicio": "2024-11-27",
+       "fin": "2024-12-31",
+       "dias": "34",
+       "monto": 95984.0,
+       "firmado": "2024-11-27",
+       "estado": null,
+       "fuente": "OCDS 2024_10"
+      }
+     ],
+     "alertas_proveedor": null
+    }
+   ],
+   "estado": "contratado",
+   "anio": 2024,
+   "familia": "AS-SM-60-2024-UNALM",
+   "n_convocatoria": 1,
+   "monto_referencial_items": 95984.0,
+   "monto_adjudicado": 95984.0,
+   "monto_desierto": 0,
+   "proveedores": [
+    "FS CERTIFICACIONES SOCIEDAD ANONIMA CERRADA (20514553719)"
+   ],
+   "vigencia_fin_max": "2024-12-31",
+   "vigencia_fin_fuente": "OCDS contracts",
+   "ocds": {
+    "ocid": "ocds-dgv273-seacev3-2024-1886-200",
+    "mes_archivo": "2024_10",
+    "fecha_publicacion": "2024-10-30",
+    "plazo_ofertas": [
+     "2024-10-30",
+     "2024-10-30"
+    ],
+    "n_postores": "5",
+    "documentos": [
+     {
+      "tipo": "Bases Administrativas",
+      "fecha": "2024-10-30",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=e0e91126-d513-4784-9859-fa4a7be4726a"
+     },
+     {
+      "tipo": "Resumen ejecutivo",
+      "fecha": "2024-10-30",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=abc8c694-4d6c-4672-a1c5-f4f1cb3748f4"
+     },
+     {
+      "tipo": "Pliego de absolución de consultas y observaciones",
+      "fecha": "2024-11-05",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=c39272b2-4068-4319-abed-708aa7493d8d"
+     },
+     {
+      "tipo": "Bases Integradas",
+      "fecha": "2024-11-05",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=ee0eba1b-8f2c-4055-8914-c828092cc6da"
+     },
+     {
+      "tipo": "Documentos de Presentación de Propuestas",
+      "fecha": "2024-11-11",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=91e9693d-ac9d-47fa-b2b9-85d4da1d4960"
+     },
+     {
+      "tipo": "Documentos de Calificación y Evaluación",
+      "fecha": "2024-11-11",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=a8bbc174-d925-42a9-9de3-844a49864ad7"
+     },
+     {
+      "tipo": "Documentos de Otorgamiento de Buena Pro",
+      "fecha": "2024-11-11",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=5433e9ed-b600-4629-9002-93b7cd506614"
+     }
+    ]
+   },
+   "fuente": [
+    "CONOSCE adjudicaciones_2024 (CSV.gz caché)",
+    "OCDS 2024_10"
+   ],
+   "url_ficha_seace": null
+  },
+  {
+   "codigo_convocatoria": "1156460",
+   "nomenclatura": "LP-ABR-36-2025-UNALM-1",
+   "descripcion": "ADQUISICION E INSTALACION DE UN HORNO COMBINADO INTELIGENTE DE USO GASTRONOMICO A GLP PARA COMEDOR UNIVERSITARIO DE LA UNIVERSIDAD NACIONAL AGRARIA LA MOLINA",
+   "objeto": "Bien",
+   "tipo_proceso": "Licitación Pública Abreviada",
+   "fecha_convocatoria": "2025-10-01",
+   "monto_referencial_proceso": 119170.0,
+   "sistema": "Suma alzada",
+   "fecha_integracion": "2025-10-09",
+   "fecha_presentacion_ofertas": "2025-10-14",
+   "categoria": "equipamiento_menaje_comedor",
+   "confianza": "alta",
+   "motivo_clasificacion": "menciona COMEDOR + equipos/menaje",
+   "items": [
+    {
+     "n_item": "1",
+     "descripcion_item": "HORNO A GAS COMBINADO DE 20 BANDEJAS",
+     "estado": "Desierto",
+     "cantidad": null,
+     "unidad": "Unidad",
+     "monto_referencial": 119170.0,
+     "monto_adjudicado": null,
+     "ruc_proveedor": null,
+     "proveedor": null,
+     "tipo_proveedor": null,
+     "fecha_buenapro": null,
+     "fecha_consentimiento": null,
+     "postores": null,
+     "n_postores": null,
+     "contratos": null,
+     "alertas_proveedor": null
+    }
+   ],
+   "estado": "desierto",
+   "anio": 2025,
+   "familia": "LP-ABR-36-2025-UNALM",
+   "n_convocatoria": 1,
+   "monto_referencial_items": 119170.0,
+   "monto_adjudicado": 0,
+   "monto_desierto": 119170.0,
+   "proveedores": [],
+   "vigencia_fin_max": null,
+   "vigencia_fin_fuente": null,
+   "ocds": {
+    "ocid": "ocds-dgv273-seacev3-1156460",
+    "mes_archivo": "2025_10",
+    "fecha_publicacion": "2025-10-01",
+    "plazo_ofertas": [
+     "2025-10-01",
+     "2025-10-01"
+    ],
+    "n_postores": "10",
+    "documentos": [
+     {
+      "tipo": "Bases Administrativas",
+      "fecha": "2025-10-01",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=af4e189f-8919-486c-9bcd-b44c66a465c5"
+     },
+     {
+      "tipo": "Pliego de absolución de consultas y observaciones",
+      "fecha": "2025-10-09",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=97953ebd-541a-4d94-8a57-148a61d122cc"
+     },
+     {
+      "tipo": "Bases Integradas",
+      "fecha": "2025-10-09",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=5df64082-779d-4c4e-a761-24fb0b1c7451"
+     },
+     {
+      "tipo": "Documentos de Presentación de Propuestas",
+      "fecha": "2025-11-06",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=320543c5-9e1c-4c37-a168-79372fd6b278"
+     },
+     {
+      "tipo": "Documentos de Calificación y Evaluación",
+      "fecha": "2025-11-06",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=b7ed1f1b-2341-4821-9ff9-6abf4544f713"
+     },
+     {
+      "tipo": "Documentos de Otorgamiento de Buena Pro",
+      "fecha": "2025-11-06",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=9a649867-6942-4fba-be90-e2b90ddf3e74"
+     }
+    ]
+   },
+   "fuente": [
+    "CONOSCE desiertos_2025 (CSV.gz caché)",
+    "OCDS 2025_10"
+   ],
+   "url_ficha_seace": null
+  },
+  {
+   "codigo_convocatoria": "1176371",
+   "nomenclatura": "LP-ABR-36-2025-UNALM-2",
+   "descripcion": "ADQUISICION E INSTALACION DE UN HORNO COMBINADO INTELIGENTE DE USO GASTRONOMICO A GLP PARA COMEDOR UNIVERSITARIO DE LA UNIVERSIDAD NACIONAL AGRARIA LA MOLINA",
+   "objeto": "Bien",
+   "tipo_proceso": "Licitación Pública Abreviada",
+   "fecha_convocatoria": "2025-12-04",
+   "monto_referencial_proceso": 156735.0,
+   "sistema": "Suma alzada",
+   "fecha_integracion": "2025-12-12",
+   "fecha_presentacion_ofertas": "2025-12-17",
+   "categoria": "equipamiento_menaje_comedor",
+   "confianza": "alta",
+   "motivo_clasificacion": "menciona COMEDOR + equipos/menaje",
+   "items": [
+    {
+     "n_item": "1",
+     "descripcion_item": "HORNO A GAS COMBINADO DE 20 BANDEJAS",
+     "estado": "Desierto",
+     "cantidad": null,
+     "unidad": "Unidad",
+     "monto_referencial": 156735.0,
+     "monto_adjudicado": null,
+     "ruc_proveedor": null,
+     "proveedor": null,
+     "tipo_proveedor": null,
+     "fecha_buenapro": null,
+     "fecha_consentimiento": null,
+     "postores": null,
+     "n_postores": null,
+     "contratos": null,
+     "alertas_proveedor": null
+    }
+   ],
+   "estado": "desierto",
+   "anio": 2025,
+   "familia": "LP-ABR-36-2025-UNALM",
+   "n_convocatoria": 2,
+   "monto_referencial_items": 156735.0,
+   "monto_adjudicado": 0,
+   "monto_desierto": 156735.0,
+   "proveedores": [],
+   "vigencia_fin_max": null,
+   "vigencia_fin_fuente": null,
+   "ocds": {
+    "ocid": "ocds-dgv273-seacev3-1176371",
+    "mes_archivo": "2025_12",
+    "fecha_publicacion": "2025-12-04",
+    "plazo_ofertas": [
+     "2025-12-04",
+     "2025-12-04"
+    ],
+    "n_postores": "10",
+    "documentos": [
+     {
+      "tipo": "Bases Administrativas",
+      "fecha": "2025-12-04",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=7a1249e3-ac68-4114-826f-e40deaa39591"
+     },
+     {
+      "tipo": "Informe que sustenta la declaratoria de Desierto",
+      "fecha": "2025-12-04",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=13e62a03-5563-4542-80e0-ad0ad4d58d8f"
+     },
+     {
+      "tipo": "Bases Integradas",
+      "fecha": "2025-12-12",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=1296a874-6f0a-4185-a499-d275dfb6b676"
+     },
+     {
+      "tipo": "Acta de no formulación de consultas y observaciones",
+      "fecha": "2025-12-12",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=e0d68545-ad4a-4142-b934-2c3bc4538c81"
+     },
+     {
+      "tipo": "Documentos de Presentación de Propuestas",
+      "fecha": "2025-12-18",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=04810971-67ed-42ec-936e-099204eec890"
+     },
+     {
+      "tipo": "Documentos de Calificación y Evaluación",
+      "fecha": "2025-12-18",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=14e57c8d-4e7f-4dec-a7f2-10e67a9f1942"
+     },
+     {
+      "tipo": "Documentos de Otorgamiento de Buena Pro",
+      "fecha": "2025-12-18",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=e1ab1705-d26a-4005-8b41-8a77dfc3deaf"
+     }
+    ]
+   },
+   "fuente": [
+    "CONOSCE desiertos_2025 (CSV.gz caché)",
+    "OCDS 2025_12"
+   ],
+   "url_ficha_seace": null
+  },
+  {
+   "codigo_convocatoria": "1182299",
+   "nomenclatura": "CP SER-SM-8-2025-UNALM-1",
+   "descripcion": "Contratación del Servicio de Alimentación en las Instalación del Comedor Universitario para Estudiantes de la UNALM 2026-2027",
+   "objeto": "Servicio",
+   "tipo_proceso": "Concurso Público de Servicios",
+   "fecha_convocatoria": "2025-12-30",
+   "monto_referencial_proceso": 11788245.0,
+   "sistema": "Precios unitarios",
+   "fecha_integracion": "2026-01-26",
+   "fecha_presentacion_ofertas": "2026-03-13",
+   "categoria": "servicio_alimentacion_comedor",
+   "confianza": "alta",
+   "motivo_clasificacion": "servicio de alimentación/concesionario del comedor universitario",
+   "items": [
+    {
+     "n_item": "1",
+     "descripcion_item": "Contratación del Servicio de Alimentación en las Instalación del Comedor Universitario para Estudiantes de la UNALM 2026-2027",
+     "estado": "Contratado",
+     "cantidad": 1.0,
+     "unidad": "Servicio",
+     "monto_referencial": 11788245.0,
+     "monto_adjudicado": 11788243.2,
+     "ruc_proveedor": "20120507126",
+     "proveedor": "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L",
+     "tipo_proveedor": "Persona Juridica",
+     "fecha_buenapro": "2026-03-25",
+     "fecha_consentimiento": "2026-04-09",
+     "postores": [
+      {
+       "ruc": "20102185863",
+       "nombre": "APC CORPORACION S.A."
+      },
+      {
+       "ruc": "20120507126",
+       "nombre": "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L"
+      }
+     ],
+     "n_postores": 2,
+     "contratos": null,
+     "contratos_ocds": [
+      {
+       "award_id": "1182299-20120507126",
+       "numero": "010-2026-UNALM",
+       "inicio": "2026-04-14",
+       "fin": "2026-12-31",
+       "dias": "261",
+       "monto": 11788243.2,
+       "firmado": "2026-04-14",
+       "estado": null,
+       "fuente": "OCDS 2025_12"
+      }
+     ],
+     "alertas_proveedor": null
+    }
+   ],
+   "estado": "contratado",
+   "anio": 2025,
+   "familia": "CP SER-SM-8-2025-UNALM",
+   "n_convocatoria": 1,
+   "monto_referencial_items": 11788245.0,
+   "monto_adjudicado": 11788243.2,
+   "monto_desierto": 0,
+   "proveedores": [
+    "CENTRO INTEGRAL MEDICO PARA LA OBESIDAD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA - CIMPO S.R.L (20120507126)"
+   ],
+   "vigencia_fin_max": "2026-12-31",
+   "vigencia_fin_fuente": "OCDS contracts",
+   "ocds": {
+    "ocid": "ocds-dgv273-seacev3-1182299",
+    "mes_archivo": "2025_12",
+    "fecha_publicacion": "2025-12-30",
+    "plazo_ofertas": [
+     "2025-12-30",
+     "2025-12-30"
+    ],
+    "n_postores": "17",
+    "documentos": [
+     {
+      "tipo": "Bases Administrativas",
+      "fecha": "2025-12-30",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=a9dfd8e7-66ed-4be6-85af-1c63287eaab8"
+     },
+     {
+      "tipo": "Pliego de absolución de consultas y observaciones",
+      "fecha": "2026-01-26",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=7539484d-3142-408f-aba3-e41e1f7ab890"
+     },
+     {
+      "tipo": "Bases Integradas",
+      "fecha": "2026-01-26",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=e9fc1d41-3ca0-468f-bc26-93d380f6b1ab"
+     },
+     {
+      "tipo": "",
+      "fecha": "2026-03-04",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=6e4d3dd2-92df-4c3f-873b-7c76bcd989aa"
+     },
+     {
+      "tipo": "",
+      "fecha": "2026-03-04",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=46806b2c-d170-41c1-ba55-1bb8e8e1e884"
+     },
+     {
+      "tipo": "Documentos de Presentación de Propuestas",
+      "fecha": "2026-03-25",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=f5d71b47-59e2-4fab-abe3-16817eb6965e"
+     },
+     {
+      "tipo": "Documentos de Calificación y Evaluación",
+      "fecha": "2026-03-25",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=5979ba2a-c0f3-4e36-a961-bf96c11fc3f5"
+     },
+     {
+      "tipo": "Documentos de Otorgamiento de Buena Pro",
+      "fecha": "2026-03-25",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=34804d5f-48fa-448c-b827-a1ce6cbd56da"
+     }
+    ]
+   },
+   "fuente": [
+    "CONOSCE adjudicaciones_2025 (CSV.gz caché)",
+    "OCDS 2025_12"
+   ],
+   "url_ficha_seace": null
+  },
+  {
+   "codigo_convocatoria": "1182521",
+   "nomenclatura": "LP-ABR-36-2025-UNALM-3",
+   "descripcion": "ADQUISICION E INSTALACION DE UN HORNO COMBINADO INTELIGENTE DE USO GASTRONOMICO A GLP PARA COMEDOR UNIVERSITARIO DE LA UNIVERSIDAD NACIONAL AGRARIA LA MOLINA",
+   "objeto": "Bien",
+   "tipo_proceso": "Licitación Pública Abreviada",
+   "fecha_convocatoria": "2025-12-30",
+   "monto_referencial_proceso": 156735.0,
+   "sistema": "Suma alzada",
+   "fecha_integracion": "2026-01-09",
+   "fecha_presentacion_ofertas": "2026-01-14",
+   "categoria": "equipamiento_menaje_comedor",
+   "confianza": "alta",
+   "motivo_clasificacion": "menciona COMEDOR + equipos/menaje",
+   "items": [
+    {
+     "n_item": "1",
+     "descripcion_item": "HORNO A GAS COMBINADO DE 20 BANDEJAS",
+     "estado": "Contratado",
+     "cantidad": 1.0,
+     "unidad": "Unidad",
+     "monto_referencial": 156735.0,
+     "monto_adjudicado": 133250.0,
+     "ruc_proveedor": "20460436771",
+     "proveedor": "FRIONOX S.A.C.",
+     "tipo_proveedor": "Persona Juridica",
+     "fecha_buenapro": "2026-02-18",
+     "fecha_consentimiento": "2026-02-26",
+     "postores": [
+      {
+       "ruc": "20460436771",
+       "nombre": "FRIONOX S.A.C."
+      },
+      {
+       "ruc": "20602216609",
+       "nombre": "TECNOLOGIA Y EQUIPAMIENTO KANG S.A.C."
+      }
+     ],
+     "n_postores": 2,
+     "contratos": null,
+     "contratos_ocds": [
+      {
+       "award_id": "1182521-20460436771",
+       "numero": "005-2026-UNALM",
+       "inicio": "2026-03-10",
+       "fin": "2026-03-30",
+       "dias": "20",
+       "monto": 133250.0,
+       "firmado": "2026-03-05",
+       "estado": null,
+       "fuente": "OCDS 2025_12"
+      }
+     ],
+     "alertas_proveedor": null
+    }
+   ],
+   "estado": "contratado",
+   "anio": 2025,
+   "familia": "LP-ABR-36-2025-UNALM",
+   "n_convocatoria": 3,
+   "monto_referencial_items": 156735.0,
+   "monto_adjudicado": 133250.0,
+   "monto_desierto": 0,
+   "proveedores": [
+    "FRIONOX S.A.C. (20460436771)"
+   ],
+   "vigencia_fin_max": "2026-03-30",
+   "vigencia_fin_fuente": "OCDS contracts",
+   "ocds": {
+    "ocid": "ocds-dgv273-seacev3-1182521",
+    "mes_archivo": "2025_12",
+    "fecha_publicacion": "2025-12-30",
+    "plazo_ofertas": [
+     "2025-12-30",
+     "2025-12-30"
+    ],
+    "n_postores": "5",
+    "documentos": [
+     {
+      "tipo": "Bases Administrativas",
+      "fecha": "2025-12-30",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=3037f9ef-c2bd-4377-b541-d0a198dfe29e"
+     },
+     {
+      "tipo": "Informe que sustenta la declaratoria de Desierto",
+      "fecha": "2025-12-30",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=1592112a-2c2e-481c-8a96-8de630eaaeac"
+     },
+     {
+      "tipo": "Pliego de absolución de consultas y observaciones",
+      "fecha": "2026-01-09",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=30ed813e-f565-4392-a7bd-2025e94c1e3f"
+     },
+     {
+      "tipo": "Bases Integradas",
+      "fecha": "2026-01-09",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=e6742b11-3dc8-4e04-a65e-2f779eb22c2a"
+     },
+     {
+      "tipo": "Documentos de Presentación de Propuestas",
+      "fecha": "2026-02-18",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=b5ed1529-f5d3-438c-b19f-c23a43ca2085"
+     },
+     {
+      "tipo": "Documentos de Calificación y Evaluación",
+      "fecha": "2026-02-18",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=4792d5c0-0b9f-43b1-93a4-2ccad79421ea"
+     },
+     {
+      "tipo": "Documentos de Otorgamiento de Buena Pro",
+      "fecha": "2026-02-18",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=6ba97686-87bc-49ac-be72-f39d6911aa13"
+     }
+    ]
+   },
+   "fuente": [
+    "CONOSCE adjudicaciones_2025 (CSV.gz caché)",
+    "OCDS 2025_12"
+   ],
+   "url_ficha_seace": null
+  },
+  {
+   "codigo_convocatoria": "1238494",
+   "nomenclatura": "DIRECTA-DIRECTA-2-2026-UNALM-1",
+   "descripcion": "CONTRATACIÓN DEL SERVICIO DE ALIMENTACIÓN EN LAS INSTALACIONES DEL COMEDOR UNIVERSITARIO PARA ESTUDIANTES DE LA UNALM AGOSTO - DICIEMBRE 2026",
+   "objeto": "Servicio",
+   "tipo_proceso": "Contratación Directa",
+   "fecha_convocatoria": "2026-08-13",
+   "monto_referencial_proceso": 3220999.0,
+   "sistema": "Precios unitarios",
+   "categoria": "servicio_alimentacion_comedor",
+   "confianza": "alta",
+   "motivo_clasificacion": "servicio de alimentación/concesionario del comedor universitario",
+   "items": [
+    {
+     "n_item": "1",
+     "descripcion_item": "CONTRATACIÓN DEL SERVICIO DE ALIMENTACIÓN EN LAS INSTALACIONES DEL COMEDOR UNIVERSITARIO PARA ESTUDIANTES DE LA UNALM AGOSTO - DICIEMBRE 2026",
+     "estado": "Contratado",
+     "cantidad": 1.0,
+     "unidad": "Servicio",
+     "monto_referencial": 3220999.0,
+     "monto_adjudicado": 3220999.0,
+     "ruc_proveedor": "20102185863",
+     "proveedor": "APC CORPORACION S.A.",
+     "tipo_proveedor": "Persona Juridica",
+     "fecha_buenapro": "2026-08-17",
+     "fecha_consentimiento": "2026-08-18",
+     "postores": [
+      {
+       "ruc": "20102185863",
+       "nombre": "APC CORPORACION S.A."
+      }
+     ],
+     "n_postores": 1,
+     "contratos": null,
+     "contratos_ocds": [
+      {
+       "award_id": "1238494-20102185863",
+       "numero": "29-2026-UNALM",
+       "inicio": "2026-08-18",
+       "fin": "2026-12-31",
+       "dias": "135",
+       "monto": 3220999.0,
+       "firmado": "2026-08-18",
+       "estado": null,
+       "fuente": "OCDS 2026_08"
+      }
+     ],
+     "alertas_proveedor": null
+    }
+   ],
+   "estado": "contratado",
+   "anio": 2026,
+   "familia": "DIRECTA-DIRECTA-2-2026-UNALM",
+   "n_convocatoria": 1,
+   "monto_referencial_items": 3220999.0,
+   "monto_adjudicado": 3220999.0,
+   "monto_desierto": 0,
+   "proveedores": [
+    "APC CORPORACION S.A. (20102185863)"
+   ],
+   "vigencia_fin_max": "2026-12-31",
+   "vigencia_fin_fuente": "OCDS contracts",
+   "ocds": {
+    "ocid": "ocds-dgv273-seacev3-1238494",
+    "mes_archivo": "2026_08",
+    "fecha_publicacion": "2026-08-13",
+    "plazo_ofertas": [
+     null,
+     null
+    ],
+    "n_postores": "1",
+    "documentos": [
+     {
+      "tipo": "Bases Administrativas",
+      "fecha": "2026-08-13",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=bd928675-f077-473e-899a-f9daba580e6b"
+     },
+     {
+      "tipo": "Documentos de Otorgamiento de Buena Pro",
+      "fecha": "2026-08-17",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=51e9c093-18d8-4074-a2cd-9f8e48d55058"
+     }
+    ]
+   },
+   "fuente": [
+    "CONOSCE adjudicaciones_2026 (XLSX portal, fresco)",
+    "OCDS 2026_08"
+   ],
+   "url_ficha_seace": null
+  },
+  {
+   "codigo_convocatoria": "1251925",
+   "nomenclatura": "LP-SM-4-2026-UNALM-1",
+   "descripcion": "ADQUISICIÓN E INSTALACIÓN DE UNA (01) LAVAVAJILLA INDUSTRIAL DE ARRASTRE CONTINUO TIPO TÚNEL PARA EL COMEDOR UNIVERSITARIO DE LA UNIVERSIDAD NACIONAL AGRARIA LA MOLINA",
+   "objeto": "Bien",
+   "tipo_proceso": "Licitación Pública",
+   "fecha_convocatoria": "2026-09-21",
+   "monto_referencial_proceso": 569667.18,
+   "sistema": "Suma alzada",
+   "fecha_integracion": "2026-10-15",
+   "fecha_presentacion_ofertas": "2026-10-26",
+   "categoria": "equipamiento_menaje_comedor",
+   "confianza": "alta",
+   "motivo_clasificacion": "menciona COMEDOR + equipos/menaje",
+   "items": [
+    {
+     "n_item": "1",
+     "descripcion_item": "Adquisición e Instalación de Una (01) Lavavajilla Industrial de Arrastre Continuo Tipo Túnel para el Comedor Universitario de La Universidad Nacional Agraria La Molina",
+     "estado": "Consentido",
+     "cantidad": 1.0,
+     "unidad": "Unidad",
+     "monto_referencial": 569667.18,
+     "monto_adjudicado": 480600.0,
+     "ruc_proveedor": "20602169155",
+     "proveedor": "GRUPO CMONT S.A.C.",
+     "tipo_proveedor": "Persona Juridica",
+     "fecha_buenapro": "2026-11-10",
+     "fecha_consentimiento": "2026-11-10",
+     "postores": null,
+     "n_postores": null,
+     "contratos": null,
+     "contratos_ocds": null,
+     "alertas_proveedor": null
+    }
+   ],
+   "estado": "adjudicado (buena pro, sin contrato registrado)",
+   "anio": 2026,
+   "familia": "LP-SM-4-2026-UNALM",
+   "n_convocatoria": 1,
+   "monto_referencial_items": 569667.18,
+   "monto_adjudicado": 480600.0,
+   "monto_desierto": 0,
+   "proveedores": [
+    "GRUPO CMONT S.A.C. (20602169155)"
+   ],
+   "vigencia_fin_max": null,
+   "vigencia_fin_fuente": null,
+   "ocds": {
+    "ocid": "ocds-dgv273-seacev3-1251925",
+    "mes_archivo": "2026_09",
+    "fecha_publicacion": "2026-09-21",
+    "plazo_ofertas": [
+     "2026-09-21",
+     "2026-09-21"
+    ],
+    "n_postores": "10",
+    "documentos": [
+     {
+      "tipo": "Bases Administrativas",
+      "fecha": "2026-09-21",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=6b7a0eb9-f2cf-4335-9ab1-01b3605db56e"
+     },
+     {
+      "tipo": "Pliego de absolución de consultas y observaciones",
+      "fecha": "2026-10-15",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=2dfa0416-0dce-4adc-85ef-49e73a15fed4"
+     },
+     {
+      "tipo": "Bases Integradas",
+      "fecha": "2026-10-15",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=a0218967-4a4a-4fcb-9fb2-f78c674bc4a7"
+     },
+     {
+      "tipo": "Documentos de Otorgamiento de Buena Pro",
+      "fecha": "2026-10-30",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=c2a4add8-1c98-429d-883f-7a4844a5fce6"
+     },
+     {
+      "tipo": "Documentos de Presentación de Propuestas",
+      "fecha": "2026-10-30",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=9bce1d4e-a685-44d6-ac13-c02def1db399"
+     },
+     {
+      "tipo": "Documentos de Calificación y Evaluación",
+      "fecha": "2026-10-30",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=449d1704-9287-46b1-b7f9-e02833bbe078"
+     },
+     {
+      "tipo": "Documentos de Otorgamiento de Buena Pro",
+      "fecha": "2026-10-30",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=1aa56526-70c4-4fd7-9f46-34554f3460cf"
+     },
+     {
+      "tipo": "Documentos de Otorgamiento de Buena Pro",
+      "fecha": "2026-11-10",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=e7653ebc-ea41-430f-ba80-1e61fb140686"
+     }
+    ]
+   },
+   "fuente": [
+    "CONOSCE adjudicaciones_2026 (XLSX portal, fresco)",
+    "OCDS 2026_09"
+   ],
+   "url_ficha_seace": null
+  },
+  {
+   "codigo_convocatoria": "1260541",
+   "nomenclatura": "LP-ABR-22-2026-UNALM-1",
+   "descripcion": "ADQUISICION E INSTALACION DE HORNO COMBINADO DEL COMEDOR UNIVERSITARIO DE LA UNIVERSIDAD NACIONAL AGRARIA LA MOLINA",
+   "objeto": "Bien",
+   "tipo_proceso": "Licitación Pública Abreviada",
+   "fecha_convocatoria": "2026-10-23",
+   "monto_referencial_proceso": 159256.81,
+   "sistema": "Suma alzada",
+   "fecha_integracion": "2026-10-30",
+   "fecha_presentacion_ofertas": "2026-11-04",
+   "categoria": "equipamiento_menaje_comedor",
+   "confianza": "alta",
+   "motivo_clasificacion": "menciona COMEDOR + equipos/menaje",
+   "items": [
+    {
+     "n_item": "1",
+     "descripcion_item": "ADQUISICION E INSTALACION DE HORNO COMBINADO DEL COMEDOR UNIVERSITARIO DE LA UNIVERSIDAD AGRARIA LA MOLINA",
+     "estado": "Adjudicado",
+     "cantidad": 1.0,
+     "unidad": "Unidad",
+     "monto_referencial": 159256.81,
+     "monto_adjudicado": 143500.0,
+     "ruc_proveedor": "20460436771",
+     "proveedor": "FRIONOX S.A.C.",
+     "tipo_proveedor": "Persona Juridica",
+     "fecha_buenapro": "2026-11-06",
+     "fecha_consentimiento": "2026-11-14",
+     "postores": null,
+     "n_postores": null,
+     "contratos": null,
+     "contratos_ocds": null,
+     "alertas_proveedor": null
+    }
+   ],
+   "estado": "adjudicado (buena pro, sin contrato registrado)",
+   "anio": 2026,
+   "familia": "LP-ABR-22-2026-UNALM",
+   "n_convocatoria": 1,
+   "monto_referencial_items": 159256.81,
+   "monto_adjudicado": 143500.0,
+   "monto_desierto": 0,
+   "proveedores": [
+    "FRIONOX S.A.C. (20460436771)"
+   ],
+   "vigencia_fin_max": null,
+   "vigencia_fin_fuente": null,
+   "ocds": {
+    "ocid": "ocds-dgv273-seacev3-1260541",
+    "mes_archivo": "2026_10",
+    "fecha_publicacion": "2026-10-23",
+    "plazo_ofertas": [
+     "2026-10-23",
+     "2026-10-23"
+    ],
+    "n_postores": "8",
+    "documentos": [
+     {
+      "tipo": "Bases Administrativas",
+      "fecha": "2026-10-23",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=281f880d-e226-4d2e-bedc-58d97f8d6383"
+     },
+     {
+      "tipo": "Bases Integradas",
+      "fecha": "2026-10-30",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=c04a4c81-ab4b-42c4-aab2-22a7e2bfa3a9"
+     },
+     {
+      "tipo": "Acta de no formulación de consultas y observaciones",
+      "fecha": "2026-10-29",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=8dfa2e5a-fb08-43bb-871e-c9ca997be1f4"
+     },
+     {
+      "tipo": "Documentos de Presentación de Propuestas",
+      "fecha": "2026-11-06",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=e0934c3c-73ad-4249-a3ac-de7ca13f5ad8"
+     },
+     {
+      "tipo": "Documentos de Calificación y Evaluación",
+      "fecha": "2026-11-06",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=f514c8bc-a50f-4682-b916-aa9e907c4544"
+     },
+     {
+      "tipo": "Documentos de Otorgamiento de Buena Pro",
+      "fecha": "2026-11-06",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=bdb1a074-1c5c-4bbc-956c-183f55d8fa5a"
+     }
+    ]
+   },
+   "fuente": [
+    "CONOSCE adjudicaciones_2026 (XLSX portal, fresco)",
+    "OCDS 2026_10"
+   ],
+   "url_ficha_seace": null
+  }
+ ],
+ "relacionados_no_comedor": [
+  {
+   "codigo_convocatoria": "480830",
+   "nomenclatura": "AS-SM-23-2018-UNALM-1",
+   "descripcion": "ADQUISICIÓN DE VALES DE PAVO X 10 KG.",
+   "objeto": "Bien",
+   "tipo_proceso": "Adjudicación Simplificada",
+   "fecha_convocatoria": "2018-10-04",
+   "monto_referencial_proceso": 140000.0,
+   "sistema": "Suma alzada",
+   "fecha_integracion": "2018-10-11",
+   "fecha_presentacion_ofertas": "2018-10-16",
+   "categoria": "alimentos_personal",
+   "confianza": "alta",
+   "motivo_clasificacion": "destinatario: personal de la UNALM",
+   "items": [
+    {
+     "n_item": "1",
+     "descripcion_item": "ADQUISICI¿N DE VALES DE PAVO X 10 KG",
+     "estado": "Contratado",
+     "cantidad": 1400.0,
+     "unidad": "Unidad",
+     "monto_referencial": 140000.0,
+     "monto_adjudicado": 105840.0,
+     "ruc_proveedor": "20100154308",
+     "proveedor": "SAN FERNANDO S.A.",
+     "tipo_proveedor": "Persona Juridica",
+     "fecha_buenapro": "2018-10-17",
+     "fecha_consentimiento": "2018-10-24",
+     "postores": [
+      {
+       "ruc": "20100070970",
+       "nombre": "SUPERMERCADOS PERUANOS SOCIEDAD ANONIMA 'O ' S.P.S.A."
+      },
+      {
+       "ruc": "20100154308",
+       "nombre": "SAN FERNANDO S.A."
+      }
+     ],
+     "n_postores": 2,
+     "contratos": [
+      {
+       "n_item": "1",
+       "numero": "033-2018-UNALM",
+       "codigo_contrato": "1189275",
+       "ruc_contratista": "20100154308",
+       "monto_item": 105840.0,
+       "monto_total": 105840.0,
+       "adicional": 0.0,
+       "reduccion": 0.0,
+       "complementario": 0.0,
+       "fecha_suscripcion": "2018-11-06",
+       "vigencia_inicio": "2018-11-12",
+       "vigencia_fin": "2018-11-19",
+       "vigencia_fin_actualizada": "2018-11-19",
+       "url_contrato": "https://objectstorage.us-ashburn-1.oraclecloud.com/p/Dzntd99-p_tkMvf4fBb84XnTuATEnKSVs5kmqURV5UKjaREd6MlLfIx6a30XDwUP/n/axx9tnhijsfw/b/BUCKET_PROD_SEACE/o/documentos/mon/docs/contratos/2018/1886/356185614112018105458.pdf",
+       "fuente": "CONOSCE contratos_2018 (CSV.gz caché)"
+      }
+     ],
+     "alertas_proveedor": [
+      {
+       "tipo": "sancionado_tce",
+       "registros": [
+        {
+         "nombre": "SAN FERNANDO S.A.",
+         "fecha_inicio": "2026-04-27",
+         "fecha_fin": "2028-06-27",
+         "resolucion": "2954-2026-TCP-S2",
+         "motivo": "j) Presentar documentos falsos o adulterados a las Entidades, al Tribunal de Contrataciones del Estado, al Registro Nacional de Proveedores (RNP), al Organismo Supervisor de las Contrataciones del Estado (OSCE), o a la Central de Compras Públicas– Perú Compras.",
+         "vigente_en_fecha_buenapro": false,
+         "nota_nombre": null
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "estado": "contratado",
+   "anio": 2018,
+   "familia": "AS-SM-23-2018-UNALM",
+   "n_convocatoria": 1,
+   "monto_referencial_items": 140000.0,
+   "monto_adjudicado": 105840.0,
+   "monto_desierto": 0,
+   "proveedores": [
+    "SAN FERNANDO S.A. (20100154308)"
+   ],
+   "vigencia_fin_max": "2018-11-19",
+   "vigencia_fin_fuente": "CONOSCE contratos",
+   "fuente": [
+    "CONOSCE adjudicaciones_2018 (CSV.gz caché)"
+   ],
+   "url_ficha_seace": null
+  },
+  {
+   "codigo_convocatoria": "663265",
+   "nomenclatura": "LP-SM-5-2020-UNALM-1",
+   "descripcion": "ADQUISICION DE TARJETAS DE CONSUMO DE ALIMENTOS PARA EL PERSONAL DE LA UNALM",
+   "objeto": "Bien",
+   "tipo_proceso": "Licitación Pública",
+   "fecha_convocatoria": "2020-10-28",
+   "monto_referencial_proceso": 848100.0,
+   "sistema": "Suma alzada",
+   "fecha_integracion": "2020-11-16",
+   "fecha_presentacion_ofertas": "2020-11-27",
+   "categoria": "alimentos_personal",
+   "confianza": "alta",
+   "motivo_clasificacion": "destinatario: personal de la UNALM",
+   "items": [
+    {
+     "n_item": "1",
+     "descripcion_item": "ADQUISICION DE TARJETAS DE CONSUMO DE ALIMENTOS PARA EL PERSONAL DE LA UNALM",
+     "estado": "Contratado",
+     "cantidad": 2928.0,
+     "unidad": "Unidad",
+     "monto_referencial": 848100.0,
+     "monto_adjudicado": 847000.0,
+     "ruc_proveedor": "20507634479",
+     "proveedor": "EDENRED PERU S.A.",
+     "tipo_proveedor": "Persona Juridica",
+     "fecha_buenapro": "2020-11-30",
+     "fecha_consentimiento": "2020-12-11",
+     "postores": [
+      {
+       "ruc": "20100070970",
+       "nombre": "SUPERMERCADOS PERUANOS SOCIEDAD ANONIMA 'O ' S.P.S.A."
+      },
+      {
+       "ruc": "20507634479",
+       "nombre": "EDENRED PERU S.A."
+      }
+     ],
+     "n_postores": 2,
+     "contratos": null,
+     "alertas_proveedor": null
+    }
+   ],
+   "estado": "contratado",
+   "anio": 2020,
+   "familia": "LP-SM-5-2020-UNALM",
+   "n_convocatoria": 1,
+   "monto_referencial_items": 848100.0,
+   "monto_adjudicado": 847000.0,
+   "monto_desierto": 0,
+   "proveedores": [
+    "EDENRED PERU S.A. (20507634479)"
+   ],
+   "vigencia_fin_max": null,
+   "vigencia_fin_fuente": null,
+   "fuente": [
+    "CONOSCE adjudicaciones_2020 (CSV.gz caché)"
+   ],
+   "url_ficha_seace": null
+  },
+  {
+   "codigo_convocatoria": "946053",
+   "nomenclatura": "AS-SM-26-2023-UNALM-1",
+   "descripcion": "ADQUISICIÓN DE VALES DE PAVO PARA EL PERSONAL DOCENTE Y ADMINISTRATIVO DE LA UNALM",
+   "objeto": "Bien",
+   "tipo_proceso": "Adjudicación Simplificada",
+   "fecha_convocatoria": "2023-10-04",
+   "monto_referencial_proceso": 161675.0,
+   "sistema": "Suma alzada",
+   "fecha_integracion": "2023-10-10",
+   "fecha_presentacion_ofertas": "2023-10-13",
+   "categoria": "alimentos_personal",
+   "confianza": "alta",
+   "motivo_clasificacion": "destinatario: personal de la UNALM",
+   "items": [
+    {
+     "n_item": "1",
+     "descripcion_item": "ADQUISICIÓN DE VALES DE PAVO PARA EL PERSONAL DOCENTE Y ADMINISTRATIVO DE LA UNALM",
+     "estado": "Contratado",
+     "cantidad": 1330.0,
+     "unidad": "Unidad",
+     "monto_referencial": 161675.0,
+     "monto_adjudicado": 157825.24,
+     "ruc_proveedor": "20100154308",
+     "proveedor": "SAN FERNANDO S.A.",
+     "tipo_proveedor": "Persona Juridica",
+     "fecha_buenapro": "2023-10-16",
+     "fecha_consentimiento": "2023-10-16",
+     "postores": [
+      {
+       "ruc": "20100154308",
+       "nombre": "SAN FERNANDO S.A."
+      }
+     ],
+     "n_postores": 1,
+     "contratos": null,
+     "contratos_ocds": [
+      {
+       "award_id": "946053-20100154308",
+       "numero": "ORDEN DE COMPRA Nº 2954",
+       "inicio": "2023-10-18",
+       "fin": "2023-11-24",
+       "dias": "37",
+       "monto": 157825.24,
+       "firmado": "2023-10-18",
+       "estado": null,
+       "fuente": "OCDS 2023_10"
+      }
+     ],
+     "alertas_proveedor": [
+      {
+       "tipo": "sancionado_tce",
+       "registros": [
+        {
+         "nombre": "SAN FERNANDO S.A.",
+         "fecha_inicio": "2026-04-27",
+         "fecha_fin": "2028-06-27",
+         "resolucion": "2954-2026-TCP-S2",
+         "motivo": "j) Presentar documentos falsos o adulterados a las Entidades, al Tribunal de Contrataciones del Estado, al Registro Nacional de Proveedores (RNP), al Organismo Supervisor de las Contrataciones del Estado (OSCE), o a la Central de Compras Públicas– Perú Compras.",
+         "vigente_en_fecha_buenapro": false,
+         "nota_nombre": null
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "estado": "contratado",
+   "anio": 2023,
+   "familia": "AS-SM-26-2023-UNALM",
+   "n_convocatoria": 1,
+   "monto_referencial_items": 161675.0,
+   "monto_adjudicado": 157825.24,
+   "monto_desierto": 0,
+   "proveedores": [
+    "SAN FERNANDO S.A. (20100154308)"
+   ],
+   "vigencia_fin_max": "2023-11-24",
+   "vigencia_fin_fuente": "OCDS contracts",
+   "ocds": {
+    "ocid": "ocds-dgv273-seacev3-2023-1886-137",
+    "mes_archivo": "2023_10",
+    "fecha_publicacion": "2023-10-04",
+    "plazo_ofertas": [
+     "2023-10-04",
+     "2023-10-04"
+    ],
+    "n_postores": "5",
+    "documentos": [
+     {
+      "tipo": "Documentos de Presentación de Propuestas",
+      "fecha": "2023-10-16",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=5dfe2fcc-9483-4933-82fb-3377275d06f5"
+     },
+     {
+      "tipo": "Documentos de Calificación y Evaluación",
+      "fecha": "2023-10-16",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=ac586a51-0835-4786-9231-13b9ea835348"
+     },
+     {
+      "tipo": "Documentos de Otorgamiento de Buena Pro",
+      "fecha": "2023-10-16",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=aab8f6fb-b21e-4c5f-9097-69cb27b0411f"
+     },
+     {
+      "tipo": "Acta de no formulación de consultas y observaciones",
+      "fecha": "2023-10-08",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=e16478ce-2cb1-4803-90fe-1abe90d864b8"
+     },
+     {
+      "tipo": "Bases Integradas",
+      "fecha": "2023-10-10",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=ade90e64-0bc3-4632-89f7-cf9495de7a76"
+     },
+     {
+      "tipo": "Bases Administrativas",
+      "fecha": "2023-10-04",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=049babd8-7ac6-4ff5-98a0-de1112df70a0"
+     },
+     {
+      "tipo": "Resumen ejecutivo",
+      "fecha": "2023-10-04",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=8787378d-520d-461c-8eca-76959d0d16eb"
+     }
+    ]
+   },
+   "fuente": [
+    "CONOSCE adjudicaciones_2023 (CSV.gz caché)",
+    "OCDS 2023_10"
+   ],
+   "url_ficha_seace": null
+  },
+  {
+   "codigo_convocatoria": "1060654",
+   "nomenclatura": "AS-SM-55-2024-UNALM-1",
+   "descripcion": "ADQUISICION DE VALES DE PAVO PARA EL PERSONAL DE LA UNALM",
+   "objeto": "Bien",
+   "tipo_proceso": "Adjudicación Simplificada",
+   "fecha_convocatoria": "2024-10-16",
+   "monto_referencial_proceso": 134993.18,
+   "sistema": "Suma alzada",
+   "fecha_integracion": "2024-10-21",
+   "fecha_presentacion_ofertas": "2024-10-24",
+   "categoria": "alimentos_personal",
+   "confianza": "alta",
+   "motivo_clasificacion": "destinatario: personal de la UNALM",
+   "items": [
+    {
+     "n_item": "1",
+     "descripcion_item": "ADQUISICION DE VALES DE PAVO PARA EL PERSONAL DE LA UNALM",
+     "estado": "Contratado",
+     "cantidad": 1330.0,
+     "unidad": "Unidad",
+     "monto_referencial": 134993.18,
+     "monto_adjudicado": 125841.1,
+     "ruc_proveedor": "20100154308",
+     "proveedor": "SAN FERNANDO S.A.",
+     "tipo_proveedor": "Persona Juridica",
+     "fecha_buenapro": "2024-10-25",
+     "fecha_consentimiento": "2024-10-25",
+     "postores": [
+      {
+       "ruc": "20100154308",
+       "nombre": "SAN FERNANDO S.A."
+      }
+     ],
+     "n_postores": 1,
+     "contratos": null,
+     "contratos_ocds": [
+      {
+       "award_id": "1060654-20100154308",
+       "numero": "ORDEN DE COMPRA Nº 4042",
+       "inicio": "2024-10-31",
+       "fin": "2024-11-30",
+       "dias": "30",
+       "monto": 125841.1,
+       "firmado": "2024-10-31",
+       "estado": null,
+       "fuente": "OCDS 2024_10"
+      }
+     ],
+     "alertas_proveedor": [
+      {
+       "tipo": "sancionado_tce",
+       "registros": [
+        {
+         "nombre": "SAN FERNANDO S.A.",
+         "fecha_inicio": "2026-04-27",
+         "fecha_fin": "2028-06-27",
+         "resolucion": "2954-2026-TCP-S2",
+         "motivo": "j) Presentar documentos falsos o adulterados a las Entidades, al Tribunal de Contrataciones del Estado, al Registro Nacional de Proveedores (RNP), al Organismo Supervisor de las Contrataciones del Estado (OSCE), o a la Central de Compras Públicas– Perú Compras.",
+         "vigente_en_fecha_buenapro": false,
+         "nota_nombre": null
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "estado": "contratado",
+   "anio": 2024,
+   "familia": "AS-SM-55-2024-UNALM",
+   "n_convocatoria": 1,
+   "monto_referencial_items": 134993.18,
+   "monto_adjudicado": 125841.1,
+   "monto_desierto": 0,
+   "proveedores": [
+    "SAN FERNANDO S.A. (20100154308)"
+   ],
+   "vigencia_fin_max": "2024-11-30",
+   "vigencia_fin_fuente": "OCDS contracts",
+   "ocds": {
+    "ocid": "ocds-dgv273-seacev3-2024-1886-71",
+    "mes_archivo": "2024_10",
+    "fecha_publicacion": "2024-10-16",
+    "plazo_ofertas": [
+     "2024-10-16",
+     "2024-10-16"
+    ],
+    "n_postores": "4",
+    "documentos": [
+     {
+      "tipo": "Bases Integradas",
+      "fecha": "2024-10-21",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=394b239f-d99f-478b-b19c-10f76e14197a"
+     },
+     {
+      "tipo": "Bases Administrativas",
+      "fecha": "2024-10-16",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=9a8c46fd-7472-4870-a650-c80f4d2d2b60"
+     },
+     {
+      "tipo": "Resumen ejecutivo",
+      "fecha": "2024-10-16",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=83bf087b-c2d9-4fa8-a040-c85762a0cebc"
+     },
+     {
+      "tipo": "Acta de no formulación de consultas y observaciones",
+      "fecha": "2024-10-20",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=749f336c-17af-462e-b4db-430f61271aba"
+     },
+     {
+      "tipo": "Documentos de Presentación de Propuestas",
+      "fecha": "2024-10-25",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=b4360b9c-fbdc-4721-9406-02145d1a2517"
+     },
+     {
+      "tipo": "Documentos de Calificación y Evaluación",
+      "fecha": "2024-10-25",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=c2817afb-4d34-427f-bdb1-26f31b000240"
+     },
+     {
+      "tipo": "Documentos de Otorgamiento de Buena Pro",
+      "fecha": "2024-10-25",
+      "url": "https://prod1.seace.gob.pe/SeaceWeb-PRO/SdescargarArchivoAlfresco?fileCode=dffb06cd-9006-4f99-b3f9-96312552c853"
+     }
+    ]
+   },
+   "fuente": [
+    "CONOSCE adjudicaciones_2024 (CSV.gz caché)",
+    "OCDS 2024_10"
+   ],
+   "url_ficha_seace": null
+  }
+ ]
+}

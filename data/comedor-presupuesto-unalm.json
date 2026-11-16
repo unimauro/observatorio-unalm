@@ -1,0 +1,5440 @@
+{
+ "_meta": {
+  "titulo": "Presupuesto del comedor universitario y bienestar estudiantil — UNALM (pliego 518)",
+  "fuente": "Consulta Amigable MEF (apps5.mineco.gob.pe/transparencia/Navegador/), modo Actividades y Proyectos; Gobierno Nacional > Sector 10 Educación > Pliego 518 U.N. Agraria La Molina.",
+  "url": "https://apps5.mineco.gob.pe/transparencia/Navegador/default.aspx",
+  "corte": "2026-11-16",
+  "extraido": "2026-11-16",
+  "unidad": "S/ corrientes",
+  "definiciones": {
+   "comedor_alimentos": "Específica 2.3.2.7.11.5 'Servicios de alimentación de consumo humano' dentro de la actividad 5005863 BIENESTAR Y ASISTENCIA SOCIAL (producto 3000786 SERVICIOS ADECUADOS DE APOYO AL ESTUDIANTE, PP 0066). La UNALM terceriza el comedor (contrato de servicio de alimentación con concesionario), por eso se usa esta específica de servicios y no la de víveres (2.3.1.1.1.1, casi nula en Bienestar: PIM 2026 S/ 1,114). Es la mejor aproximación pública al pago del servicio de comedor.",
+   "bienestar_asistencia_social": "Actividad 5005863 completa (incluye comedor, pero también salud, servicio social, deporte/cultura, personal CAS, etc.).",
+   "columnas": "pia=Presupuesto Inicial de Apertura, pim=Presupuesto Institucional Modificado, cert=certificado, comp_anual=compromiso anual, dev=devengado (gasto reconocido), gir=girado (pagado)."
+  },
+  "caveats": [
+   "La Consulta Amigable no muestra el nombre de la META presupuestal; 'comedor' se infiere por actividad (Bienestar) + específica (2.3.2.7.11.5 servicios de alimentación de consumo humano). Gastos del comedor en otras específicas (equipos, mantenimiento de ambientes, inspección sanitaria, personal) quedan dentro de 'bienestar_asistencia_social' pero mezclados con otros servicios de bienestar.",
+   "Hay servicios de alimentación también en otras actividades (Gestión Administrativa, Unidades de Enseñanza y Producción, etc.) que NO se cuentan como comedor (refrigerios, eventos, etc.); ver alimentos_consumo_humano_todo_pliego (misma específica en todo el pliego).",
+   "Devengado = gasto reconocido contablemente (pago al concesionario por raciones conformadas), no raciones servidas; el servicio suele devengarse con rezago mensual, así que un mes sin devengado no implica que no se haya servido comida.",
+   "2026 es parcial (corte 16-nov-2026). Noviembre está incompleto. La proyección es aritmética simple (promedio ene-oct), no considera calendario académico, vacaciones, ni contratos ya comprometidos con entregas programadas.",
+   "2018-2020: la específica 2.3.2.7.11.5 no aparece en la actividad Bienestar (comedor_alimentos = null), aunque en esos años había contrato de concesionario (CP-SM-1-2018/2019, S/ 2.31 M c/u, ver comedor-contratos-unalm.json). El pago pudo registrarse en otra específica/actividad o el concesionario cobrar directamente; no se infiere un monto. Usar bienestar_asistencia_social como referencia para esos años.",
+   "La API SQL de Datos Abiertos MEF devolvió 404 el 16-nov-2026; no se pudieron obtener nombres de meta ni detalle por META_NOMBRE. Reintentar para confirmar la meta del comedor."
+  ]
+ },
+ "serie": [
+  {
+   "year": 2018,
+   "comedor_alimentos": null,
+   "bienestar_asistencia_social": {
+    "pia": 4821966.0,
+    "pim": 6979657.0,
+    "cert": 6778145.0,
+    "comp_anual": 6228840.0,
+    "dev": 6225279.0,
+    "gir": 6224639.0,
+    "avance_pct": 89.2
+   },
+   "producto_apoyo_estudiante": {
+    "pia": 5374559.0,
+    "pim": 8127850.0,
+    "cert": 7837163.0,
+    "dev": 7281297.0,
+    "avance_pct": 89.6
+   },
+   "alimentos_consumo_humano_todo_pliego": null,
+   "parcial": false
+  },
+  {
+   "year": 2019,
+   "comedor_alimentos": null,
+   "bienestar_asistencia_social": {
+    "pia": 6423623.0,
+    "pim": 7060865.0,
+    "cert": 6828612.0,
+    "comp_anual": 6637944.0,
+    "dev": 6620811.0,
+    "gir": 6619888.0,
+    "avance_pct": 93.8
+   },
+   "producto_apoyo_estudiante": {
+    "pia": 8792255.0,
+    "pim": 10448950.0,
+    "cert": 10099779.0,
+    "dev": 9879820.0,
+    "avance_pct": 94.6
+   },
+   "alimentos_consumo_humano_todo_pliego": {
+    "pia": 0.0,
+    "pim": 54184.0,
+    "cert": 54184.0,
+    "dev": 54184.0,
+    "avance_pct": 100.0
+   },
+   "parcial": false
+  },
+  {
+   "year": 2020,
+   "comedor_alimentos": null,
+   "bienestar_asistencia_social": {
+    "pia": 6099534.0,
+    "pim": 3631663.0,
+    "cert": 2798100.0,
+    "comp_anual": 2724052.0,
+    "dev": 2724052.0,
+    "gir": 2724052.0,
+    "avance_pct": 75.0
+   },
+   "producto_apoyo_estudiante": {
+    "pia": 9369153.0,
+    "pim": 7333193.0,
+    "cert": 5879015.0,
+    "dev": 5786474.0,
+    "avance_pct": 78.9
+   },
+   "alimentos_consumo_humano_todo_pliego": {
+    "pia": 36531.0,
+    "pim": 22317.0,
+    "cert": 22317.0,
+    "dev": 22317.0,
+    "avance_pct": null
+   },
+   "parcial": false
+  },
+  {
+   "year": 2021,
+   "comedor_alimentos": {
+    "pia": 3222235.0,
+    "pim": 367938.0,
+    "cert": 0.0,
+    "comp_anual": 0.0,
+    "dev": 0.0,
+    "gir": 0.0,
+    "avance_pct": 0.0
+   },
+   "bienestar_asistencia_social": {
+    "pia": 6388882.0,
+    "pim": 4273297.0,
+    "cert": 3600574.0,
+    "comp_anual": 3591063.0,
+    "dev": 3591063.0,
+    "gir": 3590388.0,
+    "avance_pct": 84.0
+   },
+   "producto_apoyo_estudiante": {
+    "pia": 9204637.0,
+    "pim": 9265493.0,
+    "cert": 7948847.0,
+    "dev": 7939336.0,
+    "avance_pct": 85.7
+   },
+   "alimentos_consumo_humano_todo_pliego": {
+    "pia": 3261521.0,
+    "pim": 420186.0,
+    "cert": 26071.0,
+    "dev": 26071.0,
+    "avance_pct": 6.2
+   },
+   "parcial": false
+  },
+  {
+   "year": 2022,
+   "comedor_alimentos": {
+    "pia": 2842131.0,
+    "pim": 2100302.0,
+    "cert": 2100301.0,
+    "comp_anual": 2100300.0,
+    "dev": 2100300.0,
+    "gir": 2100300.0,
+    "avance_pct": 100.0
+   },
+   "bienestar_asistencia_social": {
+    "pia": 5719338.0,
+    "pim": 5817062.0,
+    "cert": 5597438.0,
+    "comp_anual": 5597417.0,
+    "dev": 5594885.0,
+    "gir": 5593257.0,
+    "avance_pct": 96.2
+   },
+   "producto_apoyo_estudiante": {
+    "pia": 8807049.0,
+    "pim": 11467887.0,
+    "cert": 10397874.0,
+    "dev": 10395321.0,
+    "avance_pct": 90.6
+   },
+   "alimentos_consumo_humano_todo_pliego": {
+    "pia": 2884217.0,
+    "pim": 2142229.0,
+    "cert": 2142226.0,
+    "dev": 2142225.0,
+    "avance_pct": 100.0
+   },
+   "parcial": false
+  },
+  {
+   "year": 2023,
+   "comedor_alimentos": {
+    "pia": 4013030.0,
+    "pim": 3845207.0,
+    "cert": 3845206.0,
+    "comp_anual": 3845206.0,
+    "dev": 3845206.0,
+    "gir": 3845206.0,
+    "avance_pct": 100.0
+   },
+   "bienestar_asistencia_social": {
+    "pia": 7661284.0,
+    "pim": 7814188.0,
+    "cert": 7803921.0,
+    "comp_anual": 7795247.0,
+    "dev": 7792265.0,
+    "gir": 7792139.0,
+    "avance_pct": 99.7
+   },
+   "producto_apoyo_estudiante": {
+    "pia": 11421631.0,
+    "pim": 11791064.0,
+    "cert": 11703812.0,
+    "dev": 11674162.0,
+    "avance_pct": 99.0
+   },
+   "alimentos_consumo_humano_todo_pliego": {
+    "pia": 4071316.0,
+    "pim": 3915343.0,
+    "cert": 3915341.0,
+    "dev": 3915341.0,
+    "avance_pct": 100.0
+   },
+   "parcial": false
+  },
+  {
+   "year": 2024,
+   "comedor_alimentos": {
+    "pia": 6641039.0,
+    "pim": 4159937.0,
+    "cert": 4159636.0,
+    "comp_anual": 4159636.0,
+    "dev": 4159636.0,
+    "gir": 4159636.0,
+    "avance_pct": 100.0
+   },
+   "bienestar_asistencia_social": {
+    "pia": 10166113.0,
+    "pim": 8386639.0,
+    "cert": 8371744.0,
+    "comp_anual": 8177175.0,
+    "dev": 8160717.0,
+    "gir": 8160717.0,
+    "avance_pct": 97.3
+   },
+   "producto_apoyo_estudiante": {
+    "pia": 13562861.0,
+    "pim": 15154034.0,
+    "cert": 15110321.0,
+    "dev": 14877883.0,
+    "avance_pct": 98.2
+   },
+   "alimentos_consumo_humano_todo_pliego": {
+    "pia": 6641039.0,
+    "pim": 4344707.0,
+    "cert": 4338917.0,
+    "dev": 4338917.0,
+    "avance_pct": 99.9
+   },
+   "parcial": false
+  },
+  {
+   "year": 2025,
+   "comedor_alimentos": {
+    "pia": 7725280.0,
+    "pim": 5807352.0,
+    "cert": 5499441.0,
+    "comp_anual": 5499441.0,
+    "dev": 5499441.0,
+    "gir": 5499441.0,
+    "avance_pct": 94.7
+   },
+   "bienestar_asistencia_social": {
+    "pia": 11251018.0,
+    "pim": 11911905.0,
+    "cert": 10527320.0,
+    "comp_anual": 10343028.0,
+    "dev": 10319998.0,
+    "gir": 10319461.0,
+    "avance_pct": 86.6
+   },
+   "producto_apoyo_estudiante": {
+    "pia": 15611020.0,
+    "pim": 19245687.0,
+    "cert": 17399326.0,
+    "dev": 16888883.0,
+    "avance_pct": 87.8
+   },
+   "alimentos_consumo_humano_todo_pliego": {
+    "pia": 7775280.0,
+    "pim": 6007264.0,
+    "cert": 5688753.0,
+    "dev": 5683773.0,
+    "avance_pct": 94.6
+   },
+   "parcial": false
+  },
+  {
+   "year": 2026,
+   "comedor_alimentos": {
+    "pia": 6752476.0,
+    "pim": 5582318.0,
+    "cert": 5572895.0,
+    "comp_anual": 5572895.0,
+    "dev": 4191036.0,
+    "gir": 4191036.0,
+    "avance_pct": 75.1
+   },
+   "bienestar_asistencia_social": {
+    "pia": 9475334.0,
+    "pim": 11097444.0,
+    "cert": 10373094.0,
+    "comp_anual": 9511805.0,
+    "dev": 7443721.0,
+    "gir": 7237412.0,
+    "avance_pct": 67.1
+   },
+   "producto_apoyo_estudiante": {
+    "pia": 12696203.0,
+    "pim": 16292462.0,
+    "cert": 15166374.0,
+    "dev": 10800675.0,
+    "avance_pct": 66.3
+   },
+   "alimentos_consumo_humano_todo_pliego": {
+    "pia": 6802476.0,
+    "pim": 5720630.0,
+    "cert": 5711038.0,
+    "dev": 4301141.0,
+    "avance_pct": 75.2
+   },
+   "parcial": true
+  }
+ ],
+ "detalle_anual": {
+  "2018": {
+   "year": 2018,
+   "actividades_apoyo_estudiante": [
+    {
+     "code": "5005862",
+     "name": "APOYO ACADEMICO",
+     "pia": 216874.0,
+     "pim": 750620.0,
+     "cert": 727518.0,
+     "comp_anual": 727518.0,
+     "comp_mensual": 727518.0,
+     "dev": 724518.0,
+     "gir": 724518.0,
+     "avance_pct": 96.5
+    },
+    {
+     "code": "5005863",
+     "name": "BIENESTAR Y ASISTENCIA SOCIAL",
+     "pia": 4821966.0,
+     "pim": 6979657.0,
+     "cert": 6778145.0,
+     "comp_anual": 6228840.0,
+     "comp_mensual": 6228840.0,
+     "dev": 6225279.0,
+     "gir": 6224639.0,
+     "avance_pct": 89.2
+    },
+    {
+     "code": "5005864",
+     "name": "SERVICIOS EDUCACIONALES COMPLEMENTARIOS",
+     "pia": 335719.0,
+     "pim": 397573.0,
+     "cert": 331500.0,
+     "comp_anual": 331500.0,
+     "comp_mensual": 331500.0,
+     "dev": 331500.0,
+     "gir": 331408.0,
+     "avance_pct": 83.4
+    }
+   ],
+   "producto_apoyo_estudiante": {
+    "code": "3000786",
+    "name": "SERVICIOS ADECUADOS DE APOYO AL ESTUDIANTE",
+    "pia": 5374559.0,
+    "pim": 8127850.0,
+    "cert": 7837163.0,
+    "comp_anual": 7287858.0,
+    "comp_mensual": 7287858.0,
+    "dev": 7281297.0,
+    "gir": 7280564.0,
+    "avance_pct": 89.6
+   },
+   "bienestar_alimentos_detalle": [
+    {
+     "code": "99",
+     "name": "SERVICIOS DIVERSOS",
+     "pia": 0.0,
+     "pim": 3158628.0,
+     "cert": 3158627.0,
+     "comp_anual": 2634206.0,
+     "comp_mensual": 2634206.0,
+     "dev": 2634206.0,
+     "gir": 2634206.0,
+     "avance_pct": 83.4
+    }
+   ],
+   "bienestar_alimentos_mes": [],
+   "bienestar_mes": [
+    {
+     "mes": 1,
+     "nombre": "Enero",
+     "cert": 1144622.0,
+     "comp_anual": 1062711.0,
+     "comp_mensual": 375951.0,
+     "dev": 68141.0,
+     "gir": 68141.0
+    },
+    {
+     "mes": 2,
+     "nombre": "Febrero",
+     "cert": 3257964.0,
+     "comp_anual": 746362.0,
+     "comp_mensual": 714253.0,
+     "dev": 460068.0,
+     "gir": 160143.0
+    },
+    {
+     "mes": 3,
+     "nombre": "Marzo",
+     "cert": 149660.0,
+     "comp_anual": 146149.0,
+     "comp_mensual": 206804.0,
+     "dev": 163546.0,
+     "gir": 461148.0
+    },
+    {
+     "mes": 4,
+     "nombre": "Abril",
+     "cert": 856714.0,
+     "comp_anual": 771336.0,
+     "comp_mensual": 774264.0,
+     "dev": 554199.0,
+     "gir": 388091.0
+    },
+    {
+     "mes": 5,
+     "nombre": "Mayo",
+     "cert": 42189.0,
+     "comp_anual": 2202893.0,
+     "comp_mensual": 2151854.0,
+     "dev": 516786.0,
+     "gir": 655647.0
+    },
+    {
+     "mes": 6,
+     "nombre": "Junio",
+     "cert": 240534.0,
+     "comp_anual": 104796.0,
+     "comp_mensual": 163458.0,
+     "dev": 625206.0,
+     "gir": 646503.0
+    },
+    {
+     "mes": 7,
+     "nombre": "Julio",
+     "cert": 58625.0,
+     "comp_anual": 135734.0,
+     "comp_mensual": 195453.0,
+     "dev": 579236.0,
+     "gir": 437309.0
+    },
+    {
+     "mes": 8,
+     "nombre": "Agosto",
+     "cert": 48120.0,
+     "comp_anual": 56210.0,
+     "comp_mensual": 140416.0,
+     "dev": 178741.0,
+     "gir": 298537.0
+    },
+    {
+     "mes": 9,
+     "nombre": "Setiembre",
+     "cert": 62967.0,
+     "comp_anual": 153241.0,
+     "comp_mensual": 291010.0,
+     "dev": 454471.0,
+     "gir": 395389.0
+    },
+    {
+     "mes": 10,
+     "nombre": "Octubre",
+     "cert": 221654.0,
+     "comp_anual": 256159.0,
+     "comp_mensual": 268404.0,
+     "dev": 703925.0,
+     "gir": 726884.0
+    },
+    {
+     "mes": 11,
+     "nombre": "Noviembre",
+     "cert": 195252.0,
+     "comp_anual": 201859.0,
+     "comp_mensual": 229142.0,
+     "dev": 677969.0,
+     "gir": 553600.0
+    },
+    {
+     "mes": 12,
+     "nombre": "Diciembre",
+     "cert": 499844.0,
+     "comp_anual": 391389.0,
+     "comp_mensual": 717830.0,
+     "dev": 1242991.0,
+     "gir": 1433248.0
+    }
+   ],
+   "bienestar_generica": [
+    {
+     "code": "5-21",
+     "name": "PERSONAL Y OBLIGACIONES SOCIALES",
+     "pia": 374618.0,
+     "pim": 392499.0,
+     "cert": 387072.0,
+     "comp_anual": 387072.0,
+     "comp_mensual": 387072.0,
+     "dev": 387072.0,
+     "gir": 387072.0,
+     "avance_pct": 98.6
+    },
+    {
+     "code": "5-23",
+     "name": "BIENES Y SERVICIOS",
+     "pia": 4124880.0,
+     "pim": 5794799.0,
+     "cert": 5619326.0,
+     "comp_anual": 5070661.0,
+     "comp_mensual": 5070661.0,
+     "dev": 5070271.0,
+     "gir": 5069631.0,
+     "avance_pct": 87.5
+    },
+    {
+     "code": "5-25",
+     "name": "OTROS GASTOS",
+     "pia": 322468.0,
+     "pim": 790569.0,
+     "cert": 769957.0,
+     "comp_anual": 769317.0,
+     "comp_mensual": 769317.0,
+     "dev": 766146.0,
+     "gir": 766146.0,
+     "avance_pct": 96.9
+    },
+    {
+     "code": "6-26",
+     "name": "ADQUISICION DE ACTIVOS NO FINANCIEROS",
+     "pia": 0.0,
+     "pim": 1790.0,
+     "cert": 1790.0,
+     "comp_anual": 1790.0,
+     "comp_mensual": 1790.0,
+     "dev": 1790.0,
+     "gir": 1790.0,
+     "avance_pct": 100.0
+    }
+   ],
+   "pliego_alimentos_detalle": [
+    {
+     "code": "1",
+     "name": "EMBALAJE Y ALMACENAJE",
+     "pia": 0.0,
+     "pim": 200.0,
+     "cert": 200.0,
+     "comp_anual": 200.0,
+     "comp_mensual": 200.0,
+     "dev": 200.0,
+     "gir": 200.0,
+     "avance_pct": 100.0
+    },
+    {
+     "code": "2",
+     "name": "TRANSPORTE Y TRASLADO DE CARGA, BIENES Y MATERIALES",
+     "pia": 9030.0,
+     "pim": 37873.0,
+     "cert": 37873.0,
+     "comp_anual": 37873.0,
+     "comp_mensual": 37873.0,
+     "dev": 37873.0,
+     "gir": 37873.0,
+     "avance_pct": 100.0
+    },
+    {
+     "code": "3",
+     "name": "SERVICIOS RELACIONADOS CON FLORERIA, JARDINERIA Y OTRAS ACTIVIDADES SIMILARES",
+     "pia": 10120.0,
+     "pim": 7805.0,
+     "cert": 7805.0,
+     "comp_anual": 7805.0,
+     "comp_mensual": 7805.0,
+     "dev": 7805.0,
+     "gir": 7805.0,
+     "avance_pct": 100.0
+    },
+    {
+     "code": "99",
+     "name": "SERVICIOS DIVERSOS",
+     "pia": 16113.0,
+     "pim": 7801828.0,
+     "cert": 7716824.0,
+     "comp_anual": 7125528.0,
+     "comp_mensual": 7125528.0,
+     "dev": 7125528.0,
+     "gir": 7125133.0,
+     "avance_pct": 91.3
+    }
+   ]
+  },
+  "2019": {
+   "year": 2019,
+   "actividades_apoyo_estudiante": [
+    {
+     "code": "5005862",
+     "name": "APOYO ACADEMICO",
+     "pia": 1329740.0,
+     "pim": 1328270.0,
+     "cert": 1275028.0,
+     "comp_anual": 1272192.0,
+     "comp_mensual": 1267192.0,
+     "dev": 1263955.0,
+     "gir": 1263698.0,
+     "avance_pct": 95.2
+    },
+    {
+     "code": "5005863",
+     "name": "BIENESTAR Y ASISTENCIA SOCIAL",
+     "pia": 6423623.0,
+     "pim": 7060865.0,
+     "cert": 6828612.0,
+     "comp_anual": 6637944.0,
+     "comp_mensual": 6636144.0,
+     "dev": 6620811.0,
+     "gir": 6619888.0,
+     "avance_pct": 93.8
+    },
+    {
+     "code": "5005864",
+     "name": "SERVICIOS EDUCACIONALES COMPLEMENTARIOS",
+     "pia": 1038892.0,
+     "pim": 2059815.0,
+     "cert": 1996139.0,
+     "comp_anual": 1995559.0,
+     "comp_mensual": 1995559.0,
+     "dev": 1995054.0,
+     "gir": 1991770.0,
+     "avance_pct": 96.9
+    }
+   ],
+   "producto_apoyo_estudiante": {
+    "code": "3000786",
+    "name": "SERVICIOS ADECUADOS DE APOYO AL ESTUDIANTE",
+    "pia": 8792255.0,
+    "pim": 10448950.0,
+    "cert": 10099779.0,
+    "comp_anual": 9905695.0,
+    "comp_mensual": 9898895.0,
+    "dev": 9879820.0,
+    "gir": 9875356.0,
+    "avance_pct": 94.6
+   },
+   "bienestar_alimentos_detalle": [
+    {
+     "code": "6",
+     "name": "SERVICIO DE IMPRESIONES, ENCUADERNACION Y EMPASTADO",
+     "pia": 0.0,
+     "pim": 7.0,
+     "cert": 7.0,
+     "comp_anual": 7.0,
+     "comp_mensual": 7.0,
+     "dev": 7.0,
+     "gir": 7.0,
+     "avance_pct": 100.0
+    },
+    {
+     "code": "99",
+     "name": "SERVICIOS DIVERSOS",
+     "pia": 2299708.0,
+     "pim": 2762805.0,
+     "cert": 2641582.0,
+     "comp_anual": 2554216.0,
+     "comp_mensual": 2554216.0,
+     "dev": 2554216.0,
+     "gir": 2554216.0,
+     "avance_pct": 92.5
+    }
+   ],
+   "bienestar_alimentos_mes": [],
+   "bienestar_mes": [
+    {
+     "mes": 1,
+     "nombre": "Enero",
+     "cert": 3233301.0,
+     "comp_anual": 915507.0,
+     "comp_mensual": 155486.0,
+     "dev": 98936.0,
+     "gir": 90573.0
+    },
+    {
+     "mes": 2,
+     "nombre": "Febrero",
+     "cert": 825433.0,
+     "comp_anual": 591901.0,
+     "comp_mensual": 466383.0,
+     "dev": 188050.0,
+     "gir": 194942.0
+    },
+    {
+     "mes": 3,
+     "nombre": "Marzo",
+     "cert": 949196.0,
+     "comp_anual": 116333.0,
+     "comp_mensual": 205229.0,
+     "dev": 289614.0,
+     "gir": 227448.0
+    },
+    {
+     "mes": 4,
+     "nombre": "Abril",
+     "cert": 98291.0,
+     "comp_anual": 659872.0,
+     "comp_mensual": 738899.0,
+     "dev": 495386.0,
+     "gir": 484516.0
+    },
+    {
+     "mes": 5,
+     "nombre": "Mayo",
+     "cert": 74295.0,
+     "comp_anual": 131293.0,
+     "comp_mensual": 210130.0,
+     "dev": 451456.0,
+     "gir": 511929.0
+    },
+    {
+     "mes": 6,
+     "nombre": "Junio",
+     "cert": 82732.0,
+     "comp_anual": 2394117.0,
+     "comp_mensual": 1808298.0,
+     "dev": 214608.0,
+     "gir": 175040.0
+    },
+    {
+     "mes": 7,
+     "nombre": "Julio",
+     "cert": 97283.0,
+     "comp_anual": 436172.0,
+     "comp_mensual": 472096.0,
+     "dev": 448191.0,
+     "gir": 474047.0
+    },
+    {
+     "mes": 8,
+     "nombre": "Agosto",
+     "cert": 185601.0,
+     "comp_anual": 99701.0,
+     "comp_mensual": 178782.0,
+     "dev": 359979.0,
+     "gir": 372808.0
+    },
+    {
+     "mes": 9,
+     "nombre": "Setiembre",
+     "cert": 570989.0,
+     "comp_anual": 311231.0,
+     "comp_mensual": 876813.0,
+     "dev": 797314.0,
+     "gir": 757123.0
+    },
+    {
+     "mes": 10,
+     "nombre": "Octubre",
+     "cert": 407799.0,
+     "comp_anual": 690277.0,
+     "comp_mensual": 769208.0,
+     "dev": 1396513.0,
+     "gir": 1371282.0
+    },
+    {
+     "mes": 11,
+     "nombre": "Noviembre",
+     "cert": 437846.0,
+     "comp_anual": 459454.0,
+     "comp_mensual": 470005.0,
+     "dev": 948849.0,
+     "gir": 834298.0
+    },
+    {
+     "mes": 12,
+     "nombre": "Diciembre",
+     "cert": -134153.0,
+     "comp_anual": -167915.0,
+     "comp_mensual": 284815.0,
+     "dev": 931915.0,
+     "gir": 1125883.0
+    }
+   ],
+   "bienestar_generica": [
+    {
+     "code": "5-21",
+     "name": "PERSONAL Y OBLIGACIONES SOCIALES",
+     "pia": 516033.0,
+     "pim": 397297.0,
+     "cert": 393041.0,
+     "comp_anual": 393041.0,
+     "comp_mensual": 393041.0,
+     "dev": 393041.0,
+     "gir": 392863.0,
+     "avance_pct": 98.9
+    },
+    {
+     "code": "5-23",
+     "name": "BIENES Y SERVICIOS",
+     "pia": 5635586.0,
+     "pim": 6146746.0,
+     "cert": 5946650.0,
+     "comp_anual": 5759482.0,
+     "comp_mensual": 5759482.0,
+     "dev": 5759482.0,
+     "gir": 5758738.0,
+     "avance_pct": 93.7
+    },
+    {
+     "code": "5-25",
+     "name": "OTROS GASTOS",
+     "pia": 272004.0,
+     "pim": 450822.0,
+     "cert": 438476.0,
+     "comp_anual": 436576.0,
+     "comp_mensual": 434776.0,
+     "dev": 419443.0,
+     "gir": 419443.0,
+     "avance_pct": 93.0
+    },
+    {
+     "code": "6-26",
+     "name": "ADQUISICION DE ACTIVOS NO FINANCIEROS",
+     "pia": 0.0,
+     "pim": 66000.0,
+     "cert": 50444.0,
+     "comp_anual": 48844.0,
+     "comp_mensual": 48844.0,
+     "dev": 48844.0,
+     "gir": 48844.0,
+     "avance_pct": 74.0
+    }
+   ],
+   "pliego_alimentos_detalle": [
+    {
+     "code": "2",
+     "name": "TRANSPORTE Y TRASLADO DE CARGA, BIENES Y MATERIALES",
+     "pia": 5630.0,
+     "pim": 22841.0,
+     "cert": 22443.0,
+     "comp_anual": 20526.0,
+     "comp_mensual": 20526.0,
+     "dev": 20526.0,
+     "gir": 20526.0,
+     "avance_pct": 89.9
+    },
+    {
+     "code": "3",
+     "name": "SERVICIOS RELACIONADOS CON FLORERIA, JARDINERIA Y OTRAS ACTIVIDADES SIMILARES",
+     "pia": 2920.0,
+     "pim": 24564.0,
+     "cert": 24564.0,
+     "comp_anual": 22514.0,
+     "comp_mensual": 22514.0,
+     "dev": 22514.0,
+     "gir": 22514.0,
+     "avance_pct": 91.7
+    },
+    {
+     "code": "5",
+     "name": "SERVICIOS DE ALIMENTACION DE CONSUMO HUMANO",
+     "pia": 0.0,
+     "pim": 54184.0,
+     "cert": 54184.0,
+     "comp_anual": 54184.0,
+     "comp_mensual": 54184.0,
+     "dev": 54184.0,
+     "gir": 54184.0,
+     "avance_pct": 100.0
+    },
+    {
+     "code": "6",
+     "name": "SERVICIO DE IMPRESIONES, ENCUADERNACION Y EMPASTADO",
+     "pia": 296179.0,
+     "pim": 334772.0,
+     "cert": 303552.0,
+     "comp_anual": 303552.0,
+     "comp_mensual": 303552.0,
+     "dev": 303552.0,
+     "gir": 303552.0,
+     "avance_pct": 90.7
+    },
+    {
+     "code": "99",
+     "name": "SERVICIOS DIVERSOS",
+     "pia": 5525326.0,
+     "pim": 7819327.0,
+     "cert": 6167401.0,
+     "comp_anual": 6039491.0,
+     "comp_mensual": 6037150.0,
+     "dev": 6037150.0,
+     "gir": 6036890.0,
+     "avance_pct": 77.2
+    }
+   ]
+  },
+  "2020": {
+   "year": 2020,
+   "actividades_apoyo_estudiante": [
+    {
+     "code": "5005862",
+     "name": "APOYO ACADEMICO",
+     "pia": 1123008.0,
+     "pim": 1162818.0,
+     "cert": 718039.0,
+     "comp_anual": 718039.0,
+     "comp_mensual": 718039.0,
+     "dev": 718039.0,
+     "gir": 717999.0,
+     "avance_pct": 61.8
+    },
+    {
+     "code": "5005863",
+     "name": "BIENESTAR Y ASISTENCIA SOCIAL",
+     "pia": 6099534.0,
+     "pim": 3631663.0,
+     "cert": 2798100.0,
+     "comp_anual": 2724052.0,
+     "comp_mensual": 2724052.0,
+     "dev": 2724052.0,
+     "gir": 2724052.0,
+     "avance_pct": 75.0
+    },
+    {
+     "code": "5005864",
+     "name": "SERVICIOS EDUCACIONALES COMPLEMENTARIOS",
+     "pia": 2146611.0,
+     "pim": 2538712.0,
+     "cert": 2362877.0,
+     "comp_anual": 2344383.0,
+     "comp_mensual": 2344383.0,
+     "dev": 2344383.0,
+     "gir": 2344383.0,
+     "avance_pct": 92.3
+    }
+   ],
+   "producto_apoyo_estudiante": {
+    "code": "3000786",
+    "name": "SERVICIOS ADECUADOS DE APOYO AL ESTUDIANTE",
+    "pia": 9369153.0,
+    "pim": 7333193.0,
+    "cert": 5879015.0,
+    "comp_anual": 5786474.0,
+    "comp_mensual": 5786474.0,
+    "dev": 5786474.0,
+    "gir": 5786434.0,
+    "avance_pct": 78.9
+   },
+   "bienestar_alimentos_detalle": [
+    {
+     "code": "99",
+     "name": "SERVICIOS DIVERSOS",
+     "pia": 3377477.0,
+     "pim": 510509.0,
+     "cert": 32028.0,
+     "comp_anual": 26108.0,
+     "comp_mensual": 26108.0,
+     "dev": 26108.0,
+     "gir": 26108.0,
+     "avance_pct": 5.1
+    }
+   ],
+   "bienestar_alimentos_mes": [],
+   "bienestar_mes": [
+    {
+     "mes": 1,
+     "nombre": "Enero",
+     "cert": 4621783.0,
+     "comp_anual": 1777449.0,
+     "comp_mensual": 227625.0,
+     "dev": 222379.0,
+     "gir": 90295.0
+    },
+    {
+     "mes": 2,
+     "nombre": "Febrero",
+     "cert": 214542.0,
+     "comp_anual": 47576.0,
+     "comp_mensual": 727306.0,
+     "dev": 86895.0,
+     "gir": 218957.0
+    },
+    {
+     "mes": 3,
+     "nombre": "Marzo",
+     "cert": 94627.0,
+     "comp_anual": 244917.0,
+     "comp_mensual": 174669.0,
+     "dev": 101359.0,
+     "gir": 72945.0
+    },
+    {
+     "mes": 4,
+     "nombre": "Abril",
+     "cert": 27135.0,
+     "comp_anual": 29693.0,
+     "comp_mensual": 111183.0,
+     "dev": 87101.0,
+     "gir": 108692.0
+    },
+    {
+     "mes": 5,
+     "nombre": "Mayo",
+     "cert": 40390.0,
+     "comp_anual": 51466.0,
+     "comp_mensual": 134081.0,
+     "dev": 457489.0,
+     "gir": 91844.0
+    },
+    {
+     "mes": 6,
+     "nombre": "Junio",
+     "cert": -2621597.0,
+     "comp_anual": 39018.0,
+     "comp_mensual": 123916.0,
+     "dev": 158048.0,
+     "gir": 434650.0
+    },
+    {
+     "mes": 7,
+     "nombre": "Julio",
+     "cert": 431622.0,
+     "comp_anual": 308778.0,
+     "comp_mensual": 99171.0,
+     "dev": 100070.0,
+     "gir": 185279.0
+    },
+    {
+     "mes": 8,
+     "nombre": "Agosto",
+     "cert": -246945.0,
+     "comp_anual": -261437.0,
+     "comp_mensual": 109386.0,
+     "dev": 146849.0,
+     "gir": 91234.0
+    },
+    {
+     "mes": 9,
+     "nombre": "Setiembre",
+     "cert": 480.0,
+     "comp_anual": 15423.0,
+     "comp_mensual": 78318.0,
+     "dev": 362191.0,
+     "gir": 111943.0
+    },
+    {
+     "mes": 10,
+     "nombre": "Octubre",
+     "cert": 149581.0,
+     "comp_anual": 323106.0,
+     "comp_mensual": 347144.0,
+     "dev": 181669.0,
+     "gir": 470153.0
+    },
+    {
+     "mes": 11,
+     "nombre": "Noviembre",
+     "cert": 119722.0,
+     "comp_anual": 89028.0,
+     "comp_mensual": 200266.0,
+     "dev": 210836.0,
+     "gir": 233970.0
+    },
+    {
+     "mes": 12,
+     "nombre": "Diciembre",
+     "cert": -33241.0,
+     "comp_anual": 59034.0,
+     "comp_mensual": 390987.0,
+     "dev": 609166.0,
+     "gir": 614091.0
+    }
+   ],
+   "bienestar_generica": [
+    {
+     "code": "5-21",
+     "name": "PERSONAL Y OBLIGACIONES SOCIALES",
+     "pia": 448339.0,
+     "pim": 441203.0,
+     "cert": 414144.0,
+     "comp_anual": 414144.0,
+     "comp_mensual": 414144.0,
+     "dev": 414144.0,
+     "gir": 414144.0,
+     "avance_pct": 93.9
+    },
+    {
+     "code": "5-23",
+     "name": "BIENES Y SERVICIOS",
+     "pia": 5371929.0,
+     "pim": 2723292.0,
+     "cert": 1941189.0,
+     "comp_anual": 1867141.0,
+     "comp_mensual": 1867141.0,
+     "dev": 1867141.0,
+     "gir": 1867141.0,
+     "avance_pct": 68.6
+    },
+    {
+     "code": "5-25",
+     "name": "OTROS GASTOS",
+     "pia": 279266.0,
+     "pim": 304668.0,
+     "cert": 282750.0,
+     "comp_anual": 282750.0,
+     "comp_mensual": 282750.0,
+     "dev": 282750.0,
+     "gir": 282750.0,
+     "avance_pct": 92.8
+    },
+    {
+     "code": "6-26",
+     "name": "ADQUISICION DE ACTIVOS NO FINANCIEROS",
+     "pia": 162500.0,
+     "pim": 160017.0,
+     "cert": 160017.0,
+     "comp_anual": 160017.0,
+     "comp_mensual": 160017.0,
+     "dev": 160017.0,
+     "gir": 98.5
+    }
+   ],
+   "pliego_alimentos_detalle": [
+    {
+     "code": "2",
+     "name": "TRANSPORTE Y TRASLADO DE CARGA, BIENES Y MATERIALES",
+     "pia": 14185.0,
+     "pim": 26415.0,
+     "cert": 15812.0,
+     "comp_anual": 15812.0,
+     "comp_mensual": 15812.0,
+     "dev": 15812.0,
+     "gir": 15412.0,
+     "avance_pct": 59.9
+    },
+    {
+     "code": "3",
+     "name": "SERVICIOS RELACIONADOS CON FLORERIA, JARDINERIA Y OTRAS ACTIVIDADES SIMILARES",
+     "pia": 7920.0,
+     "pim": 13800.0,
+     "cert": 3004.0,
+     "comp_anual": 3004.0,
+     "comp_mensual": 3004.0,
+     "dev": 3004.0,
+     "gir": 3004.0,
+     "avance_pct": 21.8
+    },
+    {
+     "code": "5",
+     "name": "SERVICIOS DE ALIMENTACION DE CONSUMO HUMANO",
+     "pia": 36531.0,
+     "pim": 22317.0,
+     "cert": 22317.0,
+     "comp_anual": 22317.0,
+     "comp_mensual": 22317.0,
+     "dev": 22317.0,
+     "gir": 61.1
+    },
+    {
+     "code": "6",
+     "name": "SERVICIO DE IMPRESIONES, ENCUADERNACION Y EMPASTADO",
+     "pia": 254575.0,
+     "pim": 242303.0,
+     "cert": 66101.0,
+     "comp_anual": 66101.0,
+     "comp_mensual": 66101.0,
+     "dev": 66101.0,
+     "gir": 66101.0,
+     "avance_pct": 27.3
+    },
+    {
+     "code": "99",
+     "name": "SERVICIOS DIVERSOS",
+     "pia": 6649319.0,
+     "pim": 6127087.0,
+     "cert": 4569408.0,
+     "comp_anual": 4518323.0,
+     "comp_mensual": 4514323.0,
+     "dev": 4514323.0,
+     "gir": 4510577.0,
+     "avance_pct": 73.7
+    }
+   ]
+  },
+  "2021": {
+   "year": 2021,
+   "actividades_apoyo_estudiante": [
+    {
+     "code": "5005862",
+     "name": "APOYO ACADEMICO",
+     "pia": 1089879.0,
+     "pim": 2231750.0,
+     "cert": 1925865.0,
+     "comp_anual": 1925865.0,
+     "comp_mensual": 1925865.0,
+     "dev": 1925865.0,
+     "gir": 1925865.0,
+     "avance_pct": 86.3
+    },
+    {
+     "code": "5005863",
+     "name": "BIENESTAR Y ASISTENCIA SOCIAL",
+     "pia": 6388882.0,
+     "pim": 4273297.0,
+     "cert": 3600574.0,
+     "comp_anual": 3591063.0,
+     "comp_mensual": 3591063.0,
+     "dev": 3591063.0,
+     "gir": 3590388.0,
+     "avance_pct": 84.0
+    },
+    {
+     "code": "5005864",
+     "name": "SERVICIOS EDUCACIONALES COMPLEMENTARIOS",
+     "pia": 1725876.0,
+     "pim": 2760446.0,
+     "cert": 2422408.0,
+     "comp_anual": 2422408.0,
+     "comp_mensual": 2422408.0,
+     "dev": 2422408.0,
+     "gir": 2422237.0,
+     "avance_pct": 87.8
+    }
+   ],
+   "producto_apoyo_estudiante": {
+    "code": "3000786",
+    "name": "SERVICIOS ADECUADOS DE APOYO AL ESTUDIANTE",
+    "pia": 9204637.0,
+    "pim": 9265493.0,
+    "cert": 7948847.0,
+    "comp_anual": 7939336.0,
+    "comp_mensual": 7939336.0,
+    "dev": 7939336.0,
+    "gir": 7938490.0,
+    "avance_pct": 85.7
+   },
+   "bienestar_alimentos_detalle": [
+    {
+     "code": "5",
+     "name": "SERVICIOS DE ALIMENTACION DE CONSUMO HUMANO",
+     "pia": 3222235.0,
+     "pim": 367938.0,
+     "cert": 0.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 0.0,
+     "gir": 0.0,
+     "avance_pct": 0.0
+    },
+    {
+     "code": "99",
+     "name": "SERVICIOS DIVERSOS",
+     "pia": 0.0,
+     "pim": 26281.0,
+     "cert": 26281.0,
+     "comp_anual": 26281.0,
+     "comp_mensual": 26281.0,
+     "dev": 26281.0,
+     "gir": 26281.0,
+     "avance_pct": 100.0
+    }
+   ],
+   "bienestar_alimentos_mes": [],
+   "bienestar_mes": [
+    {
+     "mes": 1,
+     "nombre": "Enero",
+     "cert": 1426688.0,
+     "comp_anual": 1041765.0,
+     "comp_mensual": 101611.0,
+     "dev": 101611.0,
+     "gir": 80761.0
+    },
+    {
+     "mes": 2,
+     "nombre": "Febrero",
+     "cert": 176172.0,
+     "comp_anual": 473569.0,
+     "comp_mensual": 431699.0,
+     "dev": 78928.0,
+     "gir": 99778.0
+    },
+    {
+     "mes": 3,
+     "nombre": "Marzo",
+     "cert": 80083.0,
+     "comp_anual": 1808.0,
+     "comp_mensual": 81326.0,
+     "dev": 280220.0,
+     "gir": 278560.0
+    },
+    {
+     "mes": 4,
+     "nombre": "Abril",
+     "cert": 324125.0,
+     "comp_anual": 413053.0,
+     "comp_mensual": 402908.0,
+     "dev": 301739.0,
+     "gir": 200192.0
+    },
+    {
+     "mes": 5,
+     "nombre": "Mayo",
+     "cert": 88811.0,
+     "comp_anual": 88261.0,
+     "comp_mensual": 166968.0,
+     "dev": 316077.0,
+     "gir": 313967.0
+    },
+    {
+     "mes": 6,
+     "nombre": "Junio",
+     "cert": 3806.0,
+     "comp_anual": 4206.0,
+     "comp_mensual": 84251.0,
+     "dev": 90850.0,
+     "gir": 156556.0
+    },
+    {
+     "mes": 7,
+     "nombre": "Julio",
+     "cert": 224565.0,
+     "comp_anual": -102380.0,
+     "comp_mensual": 109465.0,
+     "dev": 113126.0,
+     "gir": 143536.0
+    },
+    {
+     "mes": 8,
+     "nombre": "Agosto",
+     "cert": 90314.0,
+     "comp_anual": 416863.0,
+     "comp_mensual": 478602.0,
+     "dev": 257683.0,
+     "gir": 263187.0
+    },
+    {
+     "mes": 9,
+     "nombre": "Setiembre",
+     "cert": 214226.0,
+     "comp_anual": 214772.0,
+     "comp_mensual": 286748.0,
+     "dev": 426773.0,
+     "gir": 328628.0
+    },
+    {
+     "mes": 10,
+     "nombre": "Octubre",
+     "cert": 38679.0,
+     "comp_anual": 44869.0,
+     "comp_mensual": 118121.0,
+     "dev": 165312.0,
+     "gir": 126407.0
+    },
+    {
+     "mes": 11,
+     "nombre": "Noviembre",
+     "cert": 173075.0,
+     "comp_anual": 190592.0,
+     "comp_mensual": 279012.0,
+     "dev": 213574.0,
+     "gir": 343836.0
+    },
+    {
+     "mes": 12,
+     "nombre": "Diciembre",
+     "cert": 760031.0,
+     "comp_anual": 803686.0,
+     "comp_mensual": 1050354.0,
+     "dev": 1245172.0,
+     "gir": 1254980.0
+    }
+   ],
+   "bienestar_generica": [
+    {
+     "code": "5-21",
+     "name": "PERSONAL Y OBLIGACIONES SOCIALES",
+     "pia": 434132.0,
+     "pim": 452495.0,
+     "cert": 417300.0,
+     "comp_anual": 417300.0,
+     "comp_mensual": 417300.0,
+     "dev": 417300.0,
+     "gir": 416625.0,
+     "avance_pct": 92.2
+    },
+    {
+     "code": "5-23",
+     "name": "BIENES Y SERVICIOS",
+     "pia": 5684124.0,
+     "pim": 2901746.0,
+     "cert": 2267294.0,
+     "comp_anual": 2257783.0,
+     "comp_mensual": 2257783.0,
+     "dev": 2257783.0,
+     "gir": 2257783.0,
+     "avance_pct": 77.8
+    },
+    {
+     "code": "5-25",
+     "name": "OTROS GASTOS",
+     "pia": 270626.0,
+     "pim": 552321.0,
+     "cert": 550726.0,
+     "comp_anual": 550726.0,
+     "comp_mensual": 550726.0,
+     "dev": 550726.0,
+     "gir": 550726.0,
+     "avance_pct": 99.7
+    },
+    {
+     "code": "6-26",
+     "name": "ADQUISICION DE ACTIVOS NO FINANCIEROS",
+     "pia": 0.0,
+     "pim": 366735.0,
+     "cert": 365254.0,
+     "comp_anual": 365254.0,
+     "comp_mensual": 365254.0,
+     "dev": 365254.0,
+     "gir": 365254.0,
+     "avance_pct": 99.6
+    }
+   ],
+   "pliego_alimentos_detalle": [
+    {
+     "code": "1",
+     "name": "EMBALAJE Y ALMACENAJE",
+     "pia": 0.0,
+     "pim": 7652.0,
+     "cert": 7651.0,
+     "comp_anual": 7651.0,
+     "comp_mensual": 7651.0,
+     "dev": 7651.0,
+     "gir": 7651.0,
+     "avance_pct": 100.0
+    },
+    {
+     "code": "2",
+     "name": "TRANSPORTE Y TRASLADO DE CARGA, BIENES Y MATERIALES",
+     "pia": 17630.0,
+     "pim": 53942.0,
+     "cert": 42830.0,
+     "comp_anual": 42830.0,
+     "comp_mensual": 42830.0,
+     "dev": 42830.0,
+     "gir": 42830.0,
+     "avance_pct": 79.4
+    },
+    {
+     "code": "3",
+     "name": "SERVICIOS RELACIONADOS CON FLORERIA, JARDINERIA Y OTRAS ACTIVIDADES SIMILARES",
+     "pia": 8920.0,
+     "pim": 8920.0,
+     "cert": 0.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 0.0,
+     "gir": 0.0,
+     "avance_pct": 0.0
+    },
+    {
+     "code": "5",
+     "name": "SERVICIOS DE ALIMENTACION DE CONSUMO HUMANO",
+     "pia": 3261521.0,
+     "pim": 420186.0,
+     "cert": 26071.0,
+     "comp_anual": 26071.0,
+     "comp_mensual": 26071.0,
+     "dev": 26071.0,
+     "gir": 26071.0,
+     "avance_pct": 6.2
+    },
+    {
+     "code": "6",
+     "name": "SERVICIO DE IMPRESIONES, ENCUADERNACION Y EMPASTADO",
+     "pia": 263095.0,
+     "pim": 174306.0,
+     "cert": 107900.0,
+     "comp_anual": 107900.0,
+     "comp_mensual": 107900.0,
+     "dev": 107900.0,
+     "gir": 107890.0,
+     "avance_pct": 61.9
+    },
+    {
+     "code": "99",
+     "name": "SERVICIOS DIVERSOS",
+     "pia": 1401927.0,
+     "pim": 1361677.0,
+     "cert": 1281030.0,
+     "comp_anual": 1277112.0,
+     "comp_mensual": 1277112.0,
+     "dev": 1277112.0,
+     "gir": 1273463.0,
+     "avance_pct": 93.8
+    }
+   ]
+  },
+  "2022": {
+   "year": 2022,
+   "actividades_apoyo_estudiante": [
+    {
+     "code": "5005862",
+     "name": "APOYO ACADEMICO",
+     "pia": 1457204.0,
+     "pim": 2489961.0,
+     "cert": 1962041.0,
+     "comp_anual": 1962041.0,
+     "comp_mensual": 1962041.0,
+     "dev": 1962041.0,
+     "gir": 1961731.0,
+     "avance_pct": 78.8
+    },
+    {
+     "code": "5005863",
+     "name": "BIENESTAR Y ASISTENCIA SOCIAL",
+     "pia": 5719338.0,
+     "pim": 5817062.0,
+     "cert": 5597438.0,
+     "comp_anual": 5597417.0,
+     "comp_mensual": 5595104.0,
+     "dev": 5594885.0,
+     "gir": 5593257.0,
+     "avance_pct": 96.2
+    },
+    {
+     "code": "5005864",
+     "name": "SERVICIOS EDUCACIONALES COMPLEMENTARIOS",
+     "pia": 1630507.0,
+     "pim": 3160864.0,
+     "cert": 2838395.0,
+     "comp_anual": 2838395.0,
+     "comp_mensual": 2838395.0,
+     "dev": 2838395.0,
+     "gir": 2827259.0,
+     "avance_pct": 89.8
+    }
+   ],
+   "producto_apoyo_estudiante": {
+    "code": "3000786",
+    "name": "SERVICIOS ADECUADOS DE APOYO AL ESTUDIANTE",
+    "pia": 8807049.0,
+    "pim": 11467887.0,
+    "cert": 10397874.0,
+    "comp_anual": 10397853.0,
+    "comp_mensual": 10395540.0,
+    "dev": 10395321.0,
+    "gir": 10382247.0,
+    "avance_pct": 90.6
+   },
+   "bienestar_alimentos_detalle": [
+    {
+     "code": "5",
+     "name": "SERVICIOS DE ALIMENTACION DE CONSUMO HUMANO",
+     "pia": 2842131.0,
+     "pim": 2100302.0,
+     "cert": 2100301.0,
+     "comp_anual": 2100300.0,
+     "comp_mensual": 2100300.0,
+     "dev": 2100300.0,
+     "gir": 2100300.0,
+     "avance_pct": 100.0
+    },
+    {
+     "code": "6",
+     "name": "SERVICIO DE IMPRESIONES, ENCUADERNACION Y EMPASTADO",
+     "pia": 0.0,
+     "pim": 133.0,
+     "cert": 132.0,
+     "comp_anual": 132.0,
+     "comp_mensual": 132.0,
+     "dev": 132.0,
+     "gir": 132.0,
+     "avance_pct": 99.3
+    },
+    {
+     "code": "99",
+     "name": "SERVICIOS DIVERSOS",
+     "pia": 26760.0,
+     "pim": 14011.0,
+     "cert": 14011.0,
+     "comp_anual": 14011.0,
+     "comp_mensual": 14011.0,
+     "dev": 14011.0,
+     "gir": 14011.0,
+     "avance_pct": 100.0
+    }
+   ],
+   "bienestar_alimentos_mes": [
+    {
+     "mes": 4,
+     "nombre": "Abril",
+     "cert": 2545960.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 0.0,
+     "gir": 0.0
+    },
+    {
+     "mes": 5,
+     "nombre": "Mayo",
+     "cert": -321270.0,
+     "comp_anual": 632560.0,
+     "comp_mensual": 427471.0,
+     "dev": 0.0,
+     "gir": 0.0
+    },
+    {
+     "mes": 6,
+     "nombre": "Junio",
+     "cert": 0.0,
+     "comp_anual": 1592130.0,
+     "comp_mensual": 1592129.0,
+     "dev": 320130.0,
+     "gir": 320130.0
+    },
+    {
+     "mes": 7,
+     "nombre": "Julio",
+     "cert": -205089.0,
+     "comp_anual": -205089.0,
+     "comp_mensual": 0.0,
+     "dev": 214004.0,
+     "gir": 214004.0
+    },
+    {
+     "mes": 8,
+     "nombre": "Agosto",
+     "cert": 0.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 342446.0,
+     "gir": 342446.0
+    },
+    {
+     "mes": 10,
+     "nombre": "Octubre",
+     "cert": 0.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 170598.0,
+     "gir": 170598.0
+    },
+    {
+     "mes": 11,
+     "nombre": "Noviembre",
+     "cert": 119900.0,
+     "comp_anual": 119900.0,
+     "comp_mensual": 80701.0,
+     "dev": 0.0,
+     "gir": 0.0
+    },
+    {
+     "mes": 12,
+     "nombre": "Diciembre",
+     "cert": -39199.0,
+     "comp_anual": -39200.0,
+     "comp_mensual": 0.0,
+     "dev": 1053122.0,
+     "gir": 1053122.0
+    }
+   ],
+   "bienestar_mes": [
+    {
+     "mes": 1,
+     "nombre": "Enero",
+     "cert": 1472032.0,
+     "comp_anual": 713737.0,
+     "comp_mensual": 166443.0,
+     "dev": 137826.0,
+     "gir": 137691.0
+    },
+    {
+     "mes": 2,
+     "nombre": "Febrero",
+     "cert": 403589.0,
+     "comp_anual": 929055.0,
+     "comp_mensual": 531417.0,
+     "dev": 227689.0,
+     "gir": 226689.0
+    },
+    {
+     "mes": 3,
+     "nombre": "Marzo",
+     "cert": 264155.0,
+     "comp_anual": 230496.0,
+     "comp_mensual": 277691.0,
+     "dev": 313654.0,
+     "gir": 312389.0
+    },
+    {
+     "mes": 4,
+     "nombre": "Abril",
+     "cert": 3234359.0,
+     "comp_anual": 860950.0,
+     "comp_mensual": 424390.0,
+     "dev": 336956.0,
+     "gir": 318657.0
+    },
+    {
+     "mes": 5,
+     "nombre": "Mayo",
+     "cert": -240461.0,
+     "comp_anual": 774845.0,
+     "comp_mensual": 669618.0,
+     "dev": 390085.0,
+     "gir": 387886.0
+    },
+    {
+     "mes": 6,
+     "nombre": "Junio",
+     "cert": 86453.0,
+     "comp_anual": 1679963.0,
+     "comp_mensual": 1770836.0,
+     "dev": 548363.0,
+     "gir": 479129.0
+    },
+    {
+     "mes": 7,
+     "nombre": "Julio",
+     "cert": -176754.0,
+     "comp_anual": -176622.0,
+     "comp_mensual": 138716.0,
+     "dev": 397072.0,
+     "gir": 482400.0
+    },
+    {
+     "mes": 8,
+     "nombre": "Agosto",
+     "cert": 93150.0,
+     "comp_anual": 79342.0,
+     "comp_mensual": 176014.0,
+     "dev": 503124.0,
+     "gir": 509097.0
+    },
+    {
+     "mes": 9,
+     "nombre": "Setiembre",
+     "cert": 65713.0,
+     "comp_anual": 60801.0,
+     "comp_mensual": 408057.0,
+     "dev": 344536.0,
+     "gir": 193020.0
+    },
+    {
+     "mes": 10,
+     "nombre": "Octubre",
+     "cert": 154285.0,
+     "comp_anual": 130151.0,
+     "comp_mensual": 206510.0,
+     "dev": 400107.0,
+     "gir": 541130.0
+    },
+    {
+     "mes": 11,
+     "nombre": "Noviembre",
+     "cert": 229294.0,
+     "comp_anual": 226520.0,
+     "comp_mensual": 366809.0,
+     "dev": 258173.0,
+     "gir": 190588.0
+    },
+    {
+     "mes": 12,
+     "nombre": "Diciembre",
+     "cert": 11623.0,
+     "comp_anual": 88180.0,
+     "comp_mensual": 458605.0,
+     "dev": 1737300.0,
+     "gir": 1814581.0
+    }
+   ],
+   "bienestar_generica": [
+    {
+     "code": "5-21",
+     "name": "PERSONAL Y OBLIGACIONES SOCIALES",
+     "pia": 482629.0,
+     "pim": 663278.0,
+     "cert": 552245.0,
+     "comp_anual": 552245.0,
+     "comp_mensual": 552245.0,
+     "dev": 552245.0,
+     "gir": 552245.0,
+     "avance_pct": 83.3
+    },
+    {
+     "code": "5-23",
+     "name": "BIENES Y SERVICIOS",
+     "pia": 4975093.0,
+     "pim": 4598218.0,
+     "cert": 4495877.0,
+     "comp_anual": 4495856.0,
+     "comp_mensual": 4495856.0,
+     "dev": 4495637.0,
+     "gir": 4494009.0,
+     "avance_pct": 97.8
+    },
+    {
+     "code": "5-25",
+     "name": "OTROS GASTOS",
+     "pia": 261616.0,
+     "pim": 507921.0,
+     "cert": 507921.0,
+     "comp_anual": 507921.0,
+     "comp_mensual": 507921.0,
+     "dev": 507921.0,
+     "gir": 507921.0,
+     "avance_pct": 100.0
+    },
+    {
+     "code": "6-26",
+     "name": "ADQUISICION DE ACTIVOS NO FINANCIEROS",
+     "pia": 0.0,
+     "pim": 47645.0,
+     "cert": 41395.0,
+     "comp_anual": 41395.0,
+     "comp_mensual": 39083.0,
+     "dev": 39083.0,
+     "gir": 39083.0,
+     "avance_pct": 82.0
+    }
+   ],
+   "pliego_alimentos_detalle": [
+    {
+     "code": "2",
+     "name": "TRANSPORTE Y TRASLADO DE CARGA, BIENES Y MATERIALES",
+     "pia": 3000.0,
+     "pim": 12668.0,
+     "cert": 8064.0,
+     "comp_anual": 8064.0,
+     "comp_mensual": 8064.0,
+     "dev": 8064.0,
+     "gir": 8064.0,
+     "avance_pct": 63.7
+    },
+    {
+     "code": "3",
+     "name": "SERVICIOS RELACIONADOS CON FLORERIA, JARDINERIA Y OTRAS ACTIVIDADES SIMILARES",
+     "pia": 2920.0,
+     "pim": 1900.0,
+     "cert": 1900.0,
+     "comp_anual": 1900.0,
+     "comp_mensual": 1900.0,
+     "dev": 1900.0,
+     "gir": 1900.0,
+     "avance_pct": 100.0
+    },
+    {
+     "code": "5",
+     "name": "SERVICIOS DE ALIMENTACION DE CONSUMO HUMANO",
+     "pia": 2884217.0,
+     "pim": 2142229.0,
+     "cert": 2142226.0,
+     "comp_anual": 2142225.0,
+     "comp_mensual": 2142225.0,
+     "dev": 2142225.0,
+     "gir": 2142225.0,
+     "avance_pct": 100.0
+    },
+    {
+     "code": "6",
+     "name": "SERVICIO DE IMPRESIONES, ENCUADERNACION Y EMPASTADO",
+     "pia": 230943.0,
+     "pim": 223591.0,
+     "cert": 220405.0,
+     "comp_anual": 220405.0,
+     "comp_mensual": 220405.0,
+     "dev": 220405.0,
+     "gir": 220405.0,
+     "avance_pct": 98.6
+    },
+    {
+     "code": "99",
+     "name": "SERVICIOS DIVERSOS",
+     "pia": 1417340.0,
+     "pim": 1119550.0,
+     "cert": 1071551.0,
+     "comp_anual": 1069051.0,
+     "comp_mensual": 1069051.0,
+     "dev": 1069051.0,
+     "gir": 1068194.0,
+     "avance_pct": 95.5
+    }
+   ]
+  },
+  "2023": {
+   "year": 2023,
+   "actividades_apoyo_estudiante": [
+    {
+     "code": "5005862",
+     "name": "APOYO ACADEMICO",
+     "pia": 981190.0,
+     "pim": 1555894.0,
+     "cert": 1498272.0,
+     "comp_anual": 1490617.0,
+     "comp_mensual": 1490617.0,
+     "dev": 1490617.0,
+     "gir": 1490319.0,
+     "avance_pct": 95.8
+    },
+    {
+     "code": "5005863",
+     "name": "BIENESTAR Y ASISTENCIA SOCIAL",
+     "pia": 7661284.0,
+     "pim": 7814188.0,
+     "cert": 7803921.0,
+     "comp_anual": 7795247.0,
+     "comp_mensual": 7794592.0,
+     "dev": 7792265.0,
+     "gir": 7792139.0,
+     "avance_pct": 99.7
+    },
+    {
+     "code": "5005864",
+     "name": "SERVICIOS EDUCACIONALES COMPLEMENTARIOS",
+     "pia": 2779157.0,
+     "pim": 2420982.0,
+     "cert": 2401618.0,
+     "comp_anual": 2391280.0,
+     "comp_mensual": 2391280.0,
+     "dev": 2391280.0,
+     "gir": 2389910.0,
+     "avance_pct": 98.8
+    }
+   ],
+   "producto_apoyo_estudiante": {
+    "code": "3000786",
+    "name": "SERVICIOS ADECUADOS DE APOYO AL ESTUDIANTE",
+    "pia": 11421631.0,
+    "pim": 11791064.0,
+    "cert": 11703812.0,
+    "comp_anual": 11677144.0,
+    "comp_mensual": 11676488.0,
+    "dev": 11674162.0,
+    "gir": 11672368.0,
+    "avance_pct": 99.0
+   },
+   "bienestar_alimentos_detalle": [
+    {
+     "code": "5",
+     "name": "SERVICIOS DE ALIMENTACION DE CONSUMO HUMANO",
+     "pia": 4013030.0,
+     "pim": 3845207.0,
+     "cert": 3845206.0,
+     "comp_anual": 3845206.0,
+     "comp_mensual": 3845206.0,
+     "dev": 3845206.0,
+     "gir": 3845206.0,
+     "avance_pct": 100.0
+    },
+    {
+     "code": "99",
+     "name": "SERVICIOS DIVERSOS",
+     "pia": 52494.0,
+     "pim": 32320.0,
+     "cert": 32320.0,
+     "comp_anual": 32320.0,
+     "comp_mensual": 32320.0,
+     "dev": 32320.0,
+     "gir": 32320.0,
+     "avance_pct": 100.0
+    }
+   ],
+   "bienestar_alimentos_mes": [
+    {
+     "mes": 1,
+     "nombre": "Enero",
+     "cert": 94150.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 0.0,
+     "gir": 0.0
+    },
+    {
+     "mes": 3,
+     "nombre": "Marzo",
+     "cert": 4092475.0,
+     "comp_anual": 78086.0,
+     "comp_mensual": 78086.0,
+     "dev": 78086.0,
+     "gir": 78086.0
+    },
+    {
+     "mes": 4,
+     "nombre": "Abril",
+     "cert": 0.0,
+     "comp_anual": 477639.0,
+     "comp_mensual": 477639.0,
+     "dev": 299791.0,
+     "gir": 299791.0
+    },
+    {
+     "mes": 5,
+     "nombre": "Mayo",
+     "cert": 0.0,
+     "comp_anual": 3630900.0,
+     "comp_mensual": 3289481.0,
+     "dev": 365112.0,
+     "gir": 365112.0
+    },
+    {
+     "mes": 6,
+     "nombre": "Junio",
+     "cert": 0.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 512573.0,
+     "gir": 512573.0
+    },
+    {
+     "mes": 7,
+     "nombre": "Julio",
+     "cert": 0.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 623218.0,
+     "gir": 623218.0
+    },
+    {
+     "mes": 9,
+     "nombre": "Setiembre",
+     "cert": 0.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 192143.0,
+     "gir": 192143.0
+    },
+    {
+     "mes": 10,
+     "nombre": "Octubre",
+     "cert": 0.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 474957.0,
+     "gir": 474957.0
+    },
+    {
+     "mes": 11,
+     "nombre": "Noviembre",
+     "cert": 0.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 368817.0,
+     "gir": 368817.0
+    },
+    {
+     "mes": 12,
+     "nombre": "Diciembre",
+     "cert": -341419.0,
+     "comp_anual": -341419.0,
+     "comp_mensual": 0.0,
+     "dev": 930510.0,
+     "gir": 930510.0
+    }
+   ],
+   "bienestar_mes": [
+    {
+     "mes": 1,
+     "nombre": "Enero",
+     "cert": 762713.0,
+     "comp_anual": 668404.0,
+     "comp_mensual": 133552.0,
+     "dev": 94726.0,
+     "gir": 94726.0
+    },
+    {
+     "mes": 2,
+     "nombre": "Febrero",
+     "cert": 1413005.0,
+     "comp_anual": 170171.0,
+     "comp_mensual": 198721.0,
+     "dev": 222101.0,
+     "gir": 220066.0
+    },
+    {
+     "mes": 3,
+     "nombre": "Marzo",
+     "cert": 4476853.0,
+     "comp_anual": 1458000.0,
+     "comp_mensual": 971266.0,
+     "dev": 259075.0,
+     "gir": 250645.0
+    },
+    {
+     "mes": 4,
+     "nombre": "Abril",
+     "cert": 137184.0,
+     "comp_anual": 678965.0,
+     "comp_mensual": 863681.0,
+     "dev": 476183.0,
+     "gir": 473822.0
+    },
+    {
+     "mes": 5,
+     "nombre": "Mayo",
+     "cert": 171986.0,
+     "comp_anual": 3981084.0,
+     "comp_mensual": 3657182.0,
+     "dev": 811282.0,
+     "gir": 795092.0
+    },
+    {
+     "mes": 6,
+     "nombre": "Junio",
+     "cert": 212976.0,
+     "comp_anual": 217352.0,
+     "comp_mensual": 215079.0,
+     "dev": 966769.0,
+     "gir": 817972.0
+    },
+    {
+     "mes": 7,
+     "nombre": "Julio",
+     "cert": 780858.0,
+     "comp_anual": 755889.0,
+     "comp_mensual": 273369.0,
+     "dev": 877164.0,
+     "gir": 989208.0
+    },
+    {
+     "mes": 8,
+     "nombre": "Agosto",
+     "cert": 205430.0,
+     "comp_anual": 188992.0,
+     "comp_mensual": 416395.0,
+     "dev": 390942.0,
+     "gir": 332478.0
+    },
+    {
+     "mes": 9,
+     "nombre": "Setiembre",
+     "cert": 154361.0,
+     "comp_anual": 195089.0,
+     "comp_mensual": 243108.0,
+     "dev": 693059.0,
+     "gir": 784122.0
+    },
+    {
+     "mes": 10,
+     "nombre": "Octubre",
+     "cert": -199147.0,
+     "comp_anual": -220716.0,
+     "comp_mensual": 109800.0,
+     "dev": 768767.0,
+     "gir": 718012.0
+    },
+    {
+     "mes": 11,
+     "nombre": "Noviembre",
+     "cert": 291860.0,
+     "comp_anual": 302158.0,
+     "comp_mensual": 473138.0,
+     "dev": 759724.0,
+     "gir": 696726.0
+    },
+    {
+     "mes": 12,
+     "nombre": "Diciembre",
+     "cert": -604159.0,
+     "comp_anual": -600142.0,
+     "comp_mensual": 239300.0,
+     "dev": 1472474.0,
+     "gir": 1619270.0
+    }
+   ],
+   "bienestar_generica": [
+    {
+     "code": "5-21",
+     "name": "PERSONAL Y OBLIGACIONES SOCIALES",
+     "pia": 842062.0,
+     "pim": 621505.0,
+     "cert": 613056.0,
+     "comp_anual": 613056.0,
+     "comp_mensual": 613056.0,
+     "dev": 613056.0,
+     "gir": 613056.0,
+     "avance_pct": 98.6
+    },
+    {
+     "code": "5-23",
+     "name": "BIENES Y SERVICIOS",
+     "pia": 6545833.0,
+     "pim": 6854886.0,
+     "cert": 6853075.0,
+     "comp_anual": 6844401.0,
+     "comp_mensual": 6843745.0,
+     "dev": 6843745.0,
+     "gir": 6843619.0,
+     "avance_pct": 99.8
+    },
+    {
+     "code": "5-25",
+     "name": "OTROS GASTOS",
+     "pia": 273389.0,
+     "pim": 313257.0,
+     "cert": 313253.0,
+     "comp_anual": 313253.0,
+     "comp_mensual": 313253.0,
+     "dev": 310927.0,
+     "gir": 310927.0,
+     "avance_pct": 99.3
+    },
+    {
+     "code": "6-26",
+     "name": "ADQUISICION DE ACTIVOS NO FINANCIEROS",
+     "pia": 0.0,
+     "pim": 24540.0,
+     "cert": 24537.0,
+     "comp_anual": 24537.0,
+     "comp_mensual": 24537.0,
+     "dev": 24537.0,
+     "gir": 24537.0,
+     "avance_pct": 100.0
+    }
+   ],
+   "pliego_alimentos_detalle": [
+    {
+     "code": "1",
+     "name": "EMBALAJE Y ALMACENAJE",
+     "pia": 0.0,
+     "pim": 180.0,
+     "cert": 180.0,
+     "comp_anual": 180.0,
+     "comp_mensual": 180.0,
+     "dev": 180.0,
+     "gir": 180.0,
+     "avance_pct": 100.0
+    },
+    {
+     "code": "2",
+     "name": "TRANSPORTE Y TRASLADO DE CARGA, BIENES Y MATERIALES",
+     "pia": 23780.0,
+     "pim": 57026.0,
+     "cert": 57024.0,
+     "comp_anual": 52625.0,
+     "comp_mensual": 52625.0,
+     "dev": 52625.0,
+     "gir": 52210.0,
+     "avance_pct": 92.3
+    },
+    {
+     "code": "3",
+     "name": "SERVICIOS RELACIONADOS CON FLORERIA, JARDINERIA Y OTRAS ACTIVIDADES SIMILARES",
+     "pia": 3946.0,
+     "pim": 28214.0,
+     "cert": 28214.0,
+     "comp_anual": 28214.0,
+     "comp_mensual": 28214.0,
+     "dev": 28214.0,
+     "gir": 28214.0,
+     "avance_pct": 100.0
+    },
+    {
+     "code": "5",
+     "name": "SERVICIOS DE ALIMENTACION DE CONSUMO HUMANO",
+     "pia": 4071316.0,
+     "pim": 3915343.0,
+     "cert": 3915341.0,
+     "comp_anual": 3915341.0,
+     "comp_mensual": 3915341.0,
+     "dev": 3915341.0,
+     "gir": 3915341.0,
+     "avance_pct": 100.0
+    },
+    {
+     "code": "6",
+     "name": "SERVICIO DE IMPRESIONES, ENCUADERNACION Y EMPASTADO",
+     "pia": 110033.0,
+     "pim": 197331.0,
+     "cert": 197328.0,
+     "comp_anual": 197328.0,
+     "comp_mensual": 197328.0,
+     "dev": 197328.0,
+     "gir": 195128.0,
+     "avance_pct": 100.0
+    },
+    {
+     "code": "99",
+     "name": "SERVICIOS DIVERSOS",
+     "pia": 1765350.0,
+     "pim": 1171378.0,
+     "cert": 1100703.0,
+     "comp_anual": 1097218.0,
+     "comp_mensual": 1097218.0,
+     "dev": 1097218.0,
+     "gir": 1094263.0,
+     "avance_pct": 93.7
+    }
+   ]
+  },
+  "2024": {
+   "year": 2024,
+   "actividades_apoyo_estudiante": [
+    {
+     "code": "5005862",
+     "name": "APOYO ACADEMICO",
+     "pia": 842741.0,
+     "pim": 4029993.0,
+     "cert": 4016304.0,
+     "comp_anual": 4006725.0,
+     "comp_mensual": 4006467.0,
+     "dev": 4006467.0,
+     "gir": 3995939.0,
+     "avance_pct": 99.4
+    },
+    {
+     "code": "5005863",
+     "name": "BIENESTAR Y ASISTENCIA SOCIAL",
+     "pia": 10166113.0,
+     "pim": 8386639.0,
+     "cert": 8371744.0,
+     "comp_anual": 8177175.0,
+     "comp_mensual": 8161040.0,
+     "dev": 8160717.0,
+     "gir": 8160717.0,
+     "avance_pct": 97.3
+    },
+    {
+     "code": "5005864",
+     "name": "SERVICIOS EDUCACIONALES COMPLEMENTARIOS",
+     "pia": 2554007.0,
+     "pim": 2737402.0,
+     "cert": 2722273.0,
+     "comp_anual": 2711300.0,
+     "comp_mensual": 2710699.0,
+     "dev": 2710699.0,
+     "gir": 2701429.0,
+     "avance_pct": 99.0
+    }
+   ],
+   "producto_apoyo_estudiante": {
+    "code": "3000786",
+    "name": "SERVICIOS ADECUADOS DE APOYO AL ESTUDIANTE",
+    "pia": 13562861.0,
+    "pim": 15154034.0,
+    "cert": 15110321.0,
+    "comp_anual": 14895199.0,
+    "comp_mensual": 14878206.0,
+    "dev": 14877883.0,
+    "gir": 14858085.0,
+    "avance_pct": 98.2
+   },
+   "bienestar_alimentos_detalle": [
+    {
+     "code": "5",
+     "name": "SERVICIOS DE ALIMENTACION DE CONSUMO HUMANO",
+     "pia": 6641039.0,
+     "pim": 4159937.0,
+     "cert": 4159636.0,
+     "comp_anual": 4159636.0,
+     "comp_mensual": 4159636.0,
+     "dev": 4159636.0,
+     "gir": 4159636.0,
+     "avance_pct": 100.0
+    },
+    {
+     "code": "99",
+     "name": "SERVICIOS DIVERSOS",
+     "pia": 0.0,
+     "pim": 37868.0,
+     "cert": 37868.0,
+     "comp_anual": 37868.0,
+     "comp_mensual": 37868.0,
+     "dev": 37868.0,
+     "gir": 37868.0,
+     "avance_pct": 100.0
+    }
+   ],
+   "bienestar_alimentos_mes": [
+    {
+     "mes": 2,
+     "nombre": "Febrero",
+     "cert": 2905299.0,
+     "comp_anual": 227715.0,
+     "comp_mensual": 227715.0,
+     "dev": 227715.0,
+     "gir": 227715.0
+    },
+    {
+     "mes": 3,
+     "nombre": "Marzo",
+     "cert": 0.0,
+     "comp_anual": 2677583.0,
+     "comp_mensual": 2533251.0,
+     "dev": 0.0,
+     "gir": 0.0
+    },
+    {
+     "mes": 4,
+     "nombre": "Abril",
+     "cert": 2775347.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 173125.0,
+     "gir": 173125.0
+    },
+    {
+     "mes": 5,
+     "nombre": "Mayo",
+     "cert": 0.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 528603.0,
+     "gir": 0.0
+    },
+    {
+     "mes": 6,
+     "nombre": "Junio",
+     "cert": 0.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 501355.0,
+     "gir": 528603.0
+    },
+    {
+     "mes": 7,
+     "nombre": "Julio",
+     "cert": 0.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 452328.0,
+     "gir": 953683.0
+    },
+    {
+     "mes": 8,
+     "nombre": "Agosto",
+     "cert": 0.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 314745.0,
+     "gir": 0.0
+    },
+    {
+     "mes": 9,
+     "nombre": "Setiembre",
+     "cert": 0.0,
+     "comp_anual": 2775347.0,
+     "comp_mensual": 1398670.0,
+     "dev": 211768.0,
+     "gir": 526514.0
+    },
+    {
+     "mes": 10,
+     "nombre": "Octubre",
+     "cert": 0.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 118234.0,
+     "gir": 118234.0
+    },
+    {
+     "mes": 11,
+     "nombre": "Noviembre",
+     "cert": -144332.0,
+     "comp_anual": -144332.0,
+     "comp_mensual": 0.0,
+     "dev": 824800.0,
+     "gir": 824800.0
+    },
+    {
+     "mes": 12,
+     "nombre": "Diciembre",
+     "cert": -1376678.0,
+     "comp_anual": -1376678.0,
+     "comp_mensual": 0.0,
+     "dev": 806963.0,
+     "gir": 806963.0
+    }
+   ],
+   "bienestar_mes": [
+    {
+     "mes": 1,
+     "nombre": "Enero",
+     "cert": 1888780.0,
+     "comp_anual": 1888780.0,
+     "comp_mensual": 101718.0,
+     "dev": 101928.0,
+     "gir": 100703.0
+    },
+    {
+     "mes": 2,
+     "nombre": "Febrero",
+     "cert": 3997098.0,
+     "comp_anual": 371051.0,
+     "comp_mensual": 409649.0,
+     "dev": 339224.0,
+     "gir": 340449.0
+    },
+    {
+     "mes": 3,
+     "nombre": "Marzo",
+     "cert": 70711.0,
+     "comp_anual": 3311422.0,
+     "comp_mensual": 3134150.0,
+     "dev": 155871.0,
+     "gir": 155871.0
+    },
+    {
+     "mes": 4,
+     "nombre": "Abril",
+     "cert": 2817358.0,
+     "comp_anual": 423201.0,
+     "comp_mensual": 325038.0,
+     "dev": 644385.0,
+     "gir": 591055.0
+    },
+    {
+     "mes": 5,
+     "nombre": "Mayo",
+     "cert": 482193.0,
+     "comp_anual": 26798.0,
+     "comp_mensual": 188120.0,
+     "dev": 779908.0,
+     "gir": 296467.0
+    },
+    {
+     "mes": 6,
+     "nombre": "Junio",
+     "cert": 140287.0,
+     "comp_anual": 87948.0,
+     "comp_mensual": 247414.0,
+     "dev": 793184.0,
+     "gir": 750987.0
+    },
+    {
+     "mes": 7,
+     "nombre": "Julio",
+     "cert": -290258.0,
+     "comp_anual": 215723.0,
+     "comp_mensual": 360370.0,
+     "dev": 729008.0,
+     "gir": 1301844.0
+    },
+    {
+     "mes": 8,
+     "nombre": "Agosto",
+     "cert": 156884.0,
+     "comp_anual": 152047.0,
+     "comp_mensual": 293860.0,
+     "dev": 535954.0,
+     "gir": 208772.0
+    },
+    {
+     "mes": 9,
+     "nombre": "Setiembre",
+     "cert": 9780.0,
+     "comp_anual": 2561038.0,
+     "comp_mensual": 1723301.0,
+     "dev": 777021.0,
+     "gir": 1054041.0
+    },
+    {
+     "mes": 10,
+     "nombre": "Octubre",
+     "cert": 449907.0,
+     "comp_anual": 158567.0,
+     "comp_mensual": 342522.0,
+     "dev": 446716.0,
+     "gir": 426862.0
+    },
+    {
+     "mes": 11,
+     "nombre": "Noviembre",
+     "cert": 540302.0,
+     "comp_anual": 200790.0,
+     "comp_mensual": 429184.0,
+     "dev": 1087880.0,
+     "gir": 1130083.0
+    },
+    {
+     "mes": 12,
+     "nombre": "Diciembre",
+     "cert": -1891297.0,
+     "comp_anual": -1220189.0,
+     "comp_mensual": 605715.0,
+     "dev": 1769638.0,
+     "gir": 1803585.0
+    }
+   ],
+   "bienestar_generica": [
+    {
+     "code": "5-21",
+     "name": "PERSONAL Y OBLIGACIONES SOCIALES",
+     "pia": 1857739.0,
+     "pim": 1584998.0,
+     "cert": 1575365.0,
+     "comp_anual": 1575090.0,
+     "comp_mensual": 1575090.0,
+     "dev": 1575090.0,
+     "gir": 1575090.0,
+     "avance_pct": 99.4
+    },
+    {
+     "code": "5-23",
+     "name": "BIENES Y SERVICIOS",
+     "pia": 8148374.0,
+     "pim": 6432330.0,
+     "cert": 6430450.0,
+     "comp_anual": 6316155.0,
+     "comp_mensual": 6300020.0,
+     "dev": 6300020.0,
+     "gir": 6300020.0,
+     "avance_pct": 97.9
+    },
+    {
+     "code": "5-25",
+     "name": "OTROS GASTOS",
+     "pia": 150000.0,
+     "pim": 189375.0,
+     "cert": 185995.0,
+     "comp_anual": 185995.0,
+     "comp_mensual": 185995.0,
+     "dev": 185672.0,
+     "gir": 185672.0,
+     "avance_pct": 98.0
+    },
+    {
+     "code": "6-26",
+     "name": "ADQUISICION DE ACTIVOS NO FINANCIEROS",
+     "pia": 10000.0,
+     "pim": 179936.0,
+     "cert": 179935.0,
+     "comp_anual": 99935.0,
+     "comp_mensual": 99935.0,
+     "dev": 99935.0,
+     "gir": 99935.0,
+     "avance_pct": 55.5
+    }
+   ],
+   "pliego_alimentos_detalle": [
+    {
+     "code": "2",
+     "name": "TRANSPORTE Y TRASLADO DE CARGA, BIENES Y MATERIALES",
+     "pia": 0.0,
+     "pim": 37487.0,
+     "cert": 36994.0,
+     "comp_anual": 33688.0,
+     "comp_mensual": 33688.0,
+     "dev": 33688.0,
+     "gir": 33688.0,
+     "avance_pct": 89.9
+    },
+    {
+     "code": "3",
+     "name": "SERVICIOS RELACIONADOS CON FLORERIA, JARDINERIA Y OTRAS ACTIVIDADES SIMILARES",
+     "pia": 0.0,
+     "pim": 85377.0,
+     "cert": 82275.0,
+     "comp_anual": 82275.0,
+     "comp_mensual": 82275.0,
+     "dev": 82275.0,
+     "gir": 82275.0,
+     "avance_pct": 96.4
+    },
+    {
+     "code": "5",
+     "name": "SERVICIOS DE ALIMENTACION DE CONSUMO HUMANO",
+     "pia": 6641039.0,
+     "pim": 4344707.0,
+     "cert": 4338917.0,
+     "comp_anual": 4338917.0,
+     "comp_mensual": 4338917.0,
+     "dev": 4338917.0,
+     "gir": 4338917.0,
+     "avance_pct": 99.9
+    },
+    {
+     "code": "6",
+     "name": "SERVICIO DE IMPRESIONES, ENCUADERNACION Y EMPASTADO",
+     "pia": 250000.0,
+     "pim": 392634.0,
+     "cert": 327763.0,
+     "comp_anual": 327763.0,
+     "comp_mensual": 327763.0,
+     "dev": 327763.0,
+     "gir": 327763.0,
+     "avance_pct": 83.5
+    },
+    {
+     "code": "99",
+     "name": "SERVICIOS DIVERSOS",
+     "pia": 1117016.0,
+     "pim": 1789815.0,
+     "cert": 1615362.0,
+     "comp_anual": 1605255.0,
+     "comp_mensual": 1599732.0,
+     "dev": 1599732.0,
+     "gir": 1596543.0,
+     "avance_pct": 89.4
+    }
+   ]
+  },
+  "2025": {
+   "year": 2025,
+   "actividades_apoyo_estudiante": [
+    {
+     "code": "5005862",
+     "name": "APOYO ACADEMICO",
+     "pia": 2032881.0,
+     "pim": 3913090.0,
+     "cert": 3635652.0,
+     "comp_anual": 3437252.0,
+     "comp_mensual": 3437252.0,
+     "dev": 3428052.0,
+     "gir": 3406942.0,
+     "avance_pct": 87.6
+    },
+    {
+     "code": "5005863",
+     "name": "BIENESTAR Y ASISTENCIA SOCIAL",
+     "pia": 11251018.0,
+     "pim": 11911905.0,
+     "cert": 10527320.0,
+     "comp_anual": 10343028.0,
+     "comp_mensual": 10343022.0,
+     "dev": 10319998.0,
+     "gir": 10319461.0,
+     "avance_pct": 86.6
+    },
+    {
+     "code": "5005864",
+     "name": "SERVICIOS EDUCACIONALES COMPLEMENTARIOS",
+     "pia": 2327121.0,
+     "pim": 3420692.0,
+     "cert": 3236353.0,
+     "comp_anual": 3142578.0,
+     "comp_mensual": 3142578.0,
+     "dev": 3140833.0,
+     "gir": 3140633.0,
+     "avance_pct": 91.8
+    }
+   ],
+   "producto_apoyo_estudiante": {
+    "code": "3000786",
+    "name": "SERVICIOS ADECUADOS DE APOYO AL ESTUDIANTE",
+    "pia": 15611020.0,
+    "pim": 19245687.0,
+    "cert": 17399326.0,
+    "comp_anual": 16922858.0,
+    "comp_mensual": 16922852.0,
+    "dev": 16888883.0,
+    "gir": 16867036.0,
+    "avance_pct": 87.8
+   },
+   "bienestar_alimentos_detalle": [
+    {
+     "code": "5",
+     "name": "SERVICIOS DE ALIMENTACION DE CONSUMO HUMANO",
+     "pia": 7725280.0,
+     "pim": 5807352.0,
+     "cert": 5499441.0,
+     "comp_anual": 5499441.0,
+     "comp_mensual": 5499441.0,
+     "dev": 5499441.0,
+     "gir": 5499441.0,
+     "avance_pct": 94.7
+    },
+    {
+     "code": "6",
+     "name": "SERVICIO DE IMPRESIONES, ENCUADERNACION Y EMPASTADO",
+     "pia": 0.0,
+     "pim": 1222.0,
+     "cert": 1222.0,
+     "comp_anual": 1222.0,
+     "comp_mensual": 1222.0,
+     "dev": 1222.0,
+     "gir": 1222.0,
+     "avance_pct": 100.0
+    }
+   ],
+   "bienestar_alimentos_mes": [
+    {
+     "mes": 2,
+     "nombre": "Febrero",
+     "cert": 6927927.0,
+     "comp_anual": 6927927.0,
+     "comp_mensual": 5499441.0,
+     "dev": 0.0,
+     "gir": 0.0
+    },
+    {
+     "mes": 4,
+     "nombre": "Abril",
+     "cert": 0.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 433095.0,
+     "gir": 433095.0
+    },
+    {
+     "mes": 5,
+     "nombre": "Mayo",
+     "cert": 0.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 324365.0,
+     "gir": 324365.0
+    },
+    {
+     "mes": 6,
+     "nombre": "Junio",
+     "cert": 0.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 502525.0,
+     "gir": 502525.0
+    },
+    {
+     "mes": 7,
+     "nombre": "Julio",
+     "cert": 0.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 512489.0,
+     "gir": 512489.0
+    },
+    {
+     "mes": 8,
+     "nombre": "Agosto",
+     "cert": 0.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 526407.0,
+     "gir": 526407.0
+    },
+    {
+     "mes": 9,
+     "nombre": "Setiembre",
+     "cert": 0.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 349619.0,
+     "gir": 349619.0
+    },
+    {
+     "mes": 10,
+     "nombre": "Octubre",
+     "cert": -1120576.0,
+     "comp_anual": -1120576.0,
+     "comp_mensual": 0.0,
+     "dev": 811070.0,
+     "gir": 811070.0
+    },
+    {
+     "mes": 11,
+     "nombre": "Noviembre",
+     "cert": 0.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 742302.0,
+     "gir": 742302.0
+    },
+    {
+     "mes": 12,
+     "nombre": "Diciembre",
+     "cert": -307910.0,
+     "comp_anual": -307910.0,
+     "comp_mensual": 0.0,
+     "dev": 1297568.0,
+     "gir": 1297568.0
+    }
+   ],
+   "bienestar_mes": [
+    {
+     "mes": 1,
+     "nombre": "Enero",
+     "cert": 2025698.0,
+     "comp_anual": 2069507.0,
+     "comp_mensual": 145662.0,
+     "dev": 145685.0,
+     "gir": 145685.0
+    },
+    {
+     "mes": 2,
+     "nombre": "Febrero",
+     "cert": 7887690.0,
+     "comp_anual": 7886053.0,
+     "comp_mensual": 6419885.0,
+     "dev": 183619.0,
+     "gir": 183619.0
+    },
+    {
+     "mes": 3,
+     "nombre": "Marzo",
+     "cert": 504105.0,
+     "comp_anual": 135731.0,
+     "comp_mensual": 224404.0,
+     "dev": 547745.0,
+     "gir": 547745.0
+    },
+    {
+     "mes": 4,
+     "nombre": "Abril",
+     "cert": 26077.0,
+     "comp_anual": 295230.0,
+     "comp_mensual": 310315.0,
+     "dev": 669935.0,
+     "gir": 642613.0
+    },
+    {
+     "mes": 5,
+     "nombre": "Mayo",
+     "cert": 172887.0,
+     "comp_anual": 157171.0,
+     "comp_mensual": 327880.0,
+     "dev": 669194.0,
+     "gir": 675456.0
+    },
+    {
+     "mes": 6,
+     "nombre": "Junio",
+     "cert": 94646.0,
+     "comp_anual": 148743.0,
+     "comp_mensual": 283628.0,
+     "dev": 738663.0,
+     "gir": 737099.0
+    },
+    {
+     "mes": 7,
+     "nombre": "Julio",
+     "cert": 508844.0,
+     "comp_anual": 38362.0,
+     "comp_mensual": 273873.0,
+     "dev": 890380.0,
+     "gir": 881181.0
+    },
+    {
+     "mes": 8,
+     "nombre": "Agosto",
+     "cert": 754525.0,
+     "comp_anual": 172529.0,
+     "comp_mensual": 341467.0,
+     "dev": 872766.0,
+     "gir": 871010.0
+    },
+    {
+     "mes": 9,
+     "nombre": "Setiembre",
+     "cert": 266042.0,
+     "comp_anual": 157340.0,
+     "comp_mensual": 315051.0,
+     "dev": 842723.0,
+     "gir": 863429.0
+    },
+    {
+     "mes": 10,
+     "nombre": "Octubre",
+     "cert": -1067091.0,
+     "comp_anual": -1048407.0,
+     "comp_mensual": 229314.0,
+     "dev": 1076091.0,
+     "gir": 1079751.0
+    },
+    {
+     "mes": 11,
+     "nombre": "Noviembre",
+     "cert": 28631.0,
+     "comp_anual": 533031.0,
+     "comp_mensual": 700358.0,
+     "dev": 1023202.0,
+     "gir": 1011942.0
+    },
+    {
+     "mes": 12,
+     "nombre": "Diciembre",
+     "cert": -674733.0,
+     "comp_anual": -202261.0,
+     "comp_mensual": 771184.0,
+     "dev": 2659996.0,
+     "gir": 2679932.0
+    }
+   ],
+   "bienestar_generica": [
+    {
+     "code": "5-21",
+     "name": "PERSONAL Y OBLIGACIONES SOCIALES",
+     "pia": 2037738.0,
+     "pim": 1814437.0,
+     "cert": 1728901.0,
+     "comp_anual": 1728435.0,
+     "comp_mensual": 1728435.0,
+     "dev": 1728435.0,
+     "gir": 1727899.0,
+     "avance_pct": 95.3
+    },
+    {
+     "code": "5-23",
+     "name": "BIENES Y SERVICIOS",
+     "pia": 9063280.0,
+     "pim": 8574088.0,
+     "cert": 7902183.0,
+     "comp_anual": 7875145.0,
+     "comp_mensual": 7875139.0,
+     "dev": 7855789.0,
+     "gir": 7855789.0,
+     "avance_pct": 91.6
+    },
+    {
+     "code": "5-25",
+     "name": "OTROS GASTOS",
+     "pia": 150000.0,
+     "pim": 118346.0,
+     "cert": 118346.0,
+     "comp_anual": 118346.0,
+     "comp_mensual": 118346.0,
+     "dev": 114671.0,
+     "gir": 114671.0,
+     "avance_pct": 96.9
+    },
+    {
+     "code": "6-26",
+     "name": "ADQUISICION DE ACTIVOS NO FINANCIEROS",
+     "pia": 0.0,
+     "pim": 1405034.0,
+     "cert": 777890.0,
+     "comp_anual": 621102.0,
+     "comp_mensual": 621102.0,
+     "dev": 621102.0,
+     "gir": 621102.0,
+     "avance_pct": 44.2
+    }
+   ],
+   "pliego_alimentos_detalle": [
+    {
+     "code": "2",
+     "name": "TRANSPORTE Y TRASLADO DE CARGA, BIENES Y MATERIALES",
+     "pia": 0.0,
+     "pim": 27493.0,
+     "cert": 22542.0,
+     "comp_anual": 21993.0,
+     "comp_mensual": 21833.0,
+     "dev": 21833.0,
+     "gir": 21833.0,
+     "avance_pct": 79.4
+    },
+    {
+     "code": "3",
+     "name": "SERVICIOS RELACIONADOS CON FLORERIA, JARDINERIA Y OTRAS ACTIVIDADES SIMILARES",
+     "pia": 0.0,
+     "pim": 98540.0,
+     "cert": 96740.0,
+     "comp_anual": 96740.0,
+     "comp_mensual": 96740.0,
+     "dev": 96740.0,
+     "gir": 96740.0,
+     "avance_pct": 98.2
+    },
+    {
+     "code": "5",
+     "name": "SERVICIOS DE ALIMENTACION DE CONSUMO HUMANO",
+     "pia": 7775280.0,
+     "pim": 6007264.0,
+     "cert": 5688753.0,
+     "comp_anual": 5683773.0,
+     "comp_mensual": 5683773.0,
+     "dev": 5683773.0,
+     "gir": 5683773.0,
+     "avance_pct": 94.6
+    },
+    {
+     "code": "6",
+     "name": "SERVICIO DE IMPRESIONES, ENCUADERNACION Y EMPASTADO",
+     "pia": 250000.0,
+     "pim": 555532.0,
+     "cert": 524664.0,
+     "comp_anual": 517485.0,
+     "comp_mensual": 517485.0,
+     "dev": 517485.0,
+     "gir": 517471.0,
+     "avance_pct": 93.2
+    },
+    {
+     "code": "99",
+     "name": "SERVICIOS DIVERSOS",
+     "pia": 749703.0,
+     "pim": 830712.0,
+     "cert": 703844.0,
+     "comp_anual": 688295.0,
+     "comp_mensual": 688295.0,
+     "dev": 688295.0,
+     "gir": 687690.0,
+     "avance_pct": 82.9
+    }
+   ]
+  },
+  "2026": {
+   "year": 2026,
+   "actividades_apoyo_estudiante": [
+    {
+     "code": "5005862",
+     "name": "APOYO ACADEMICO",
+     "pia": 1086576.0,
+     "pim": 2439703.0,
+     "cert": 2403761.0,
+     "comp_anual": 2264076.0,
+     "comp_mensual": 2062746.0,
+     "dev": 1487880.0,
+     "gir": 1429244.0,
+     "avance_pct": 61.0
+    },
+    {
+     "code": "5005863",
+     "name": "BIENESTAR Y ASISTENCIA SOCIAL",
+     "pia": 9475334.0,
+     "pim": 11097444.0,
+     "cert": 10373094.0,
+     "comp_anual": 9511805.0,
+     "comp_mensual": 9222019.0,
+     "dev": 7443721.0,
+     "gir": 7237412.0,
+     "avance_pct": 67.1
+    },
+    {
+     "code": "5005864",
+     "name": "SERVICIOS EDUCACIONALES COMPLEMENTARIOS",
+     "pia": 2134293.0,
+     "pim": 2755315.0,
+     "cert": 2389520.0,
+     "comp_anual": 2374738.0,
+     "comp_mensual": 2176349.0,
+     "dev": 1869074.0,
+     "gir": 1769059.0,
+     "avance_pct": 67.8
+    }
+   ],
+   "producto_apoyo_estudiante": {
+    "code": "3000786",
+    "name": "SERVICIOS ADECUADOS DE APOYO AL ESTUDIANTE",
+    "pia": 12696203.0,
+    "pim": 16292462.0,
+    "cert": 15166374.0,
+    "comp_anual": 14150619.0,
+    "comp_mensual": 13461114.0,
+    "dev": 10800675.0,
+    "gir": 10435715.0,
+    "avance_pct": 66.3
+   },
+   "bienestar_alimentos_detalle": [
+    {
+     "code": "5",
+     "name": "SERVICIOS DE ALIMENTACION DE CONSUMO HUMANO",
+     "pia": 6752476.0,
+     "pim": 5582318.0,
+     "cert": 5572895.0,
+     "comp_anual": 5572895.0,
+     "comp_mensual": 5572895.0,
+     "dev": 4191036.0,
+     "gir": 4191036.0,
+     "avance_pct": 75.1
+    },
+    {
+     "code": "6",
+     "name": "SERVICIO DE IMPRESIONES, ENCUADERNACION Y EMPASTADO",
+     "pia": 0.0,
+     "pim": 859.0,
+     "cert": 859.0,
+     "comp_anual": 859.0,
+     "comp_mensual": 859.0,
+     "dev": 859.0,
+     "gir": 859.0,
+     "avance_pct": 100.0
+    }
+   ],
+   "bienestar_alimentos_mes": [
+    {
+     "mes": 2,
+     "nombre": "Febrero",
+     "cert": 7281879.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 0.0,
+     "gir": 0.0
+    },
+    {
+     "mes": 3,
+     "nombre": "Marzo",
+     "cert": 150000.0,
+     "comp_anual": 1387766.0,
+     "comp_mensual": 969273.0,
+     "dev": 0.0,
+     "gir": 0.0
+    },
+    {
+     "mes": 4,
+     "nombre": "Abril",
+     "cert": 0.0,
+     "comp_anual": 5894113.0,
+     "comp_mensual": 1355984.0,
+     "dev": 482336.0,
+     "gir": 482336.0
+    },
+    {
+     "mes": 5,
+     "nombre": "Mayo",
+     "cert": 1.0,
+     "comp_anual": -418493.0,
+     "comp_mensual": 0.0,
+     "dev": 486938.0,
+     "gir": 486938.0
+    },
+    {
+     "mes": 6,
+     "nombre": "Junio",
+     "cert": 671969.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 1264639.0,
+     "gir": 660451.0
+    },
+    {
+     "mes": 7,
+     "nombre": "Julio",
+     "cert": 0.0,
+     "comp_anual": -4538128.0,
+     "comp_mensual": 0.0,
+     "dev": 91346.0,
+     "gir": 0.0
+    },
+    {
+     "mes": 8,
+     "nombre": "Agosto",
+     "cert": -1196250.0,
+     "comp_anual": 3257249.0,
+     "comp_mensual": 3247637.0,
+     "dev": 365180.0,
+     "gir": 604187.0
+    },
+    {
+     "mes": 9,
+     "nombre": "Setiembre",
+     "cert": -1124612.0,
+     "comp_anual": -9611.0,
+     "comp_mensual": 0.0,
+     "dev": 0.0,
+     "gir": 0.0
+    },
+    {
+     "mes": 10,
+     "nombre": "Octubre",
+     "cert": -210092.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 1500598.0,
+     "gir": 1243092.0
+    },
+    {
+     "mes": 11,
+     "nombre": "Noviembre",
+     "cert": 0.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 0.0,
+     "gir": 714032.0
+    }
+   ],
+   "bienestar_mes": [
+    {
+     "mes": 1,
+     "nombre": "Enero",
+     "cert": 1863878.0,
+     "comp_anual": 1863794.0,
+     "comp_mensual": 139795.0,
+     "dev": 140202.0,
+     "gir": 139895.0
+    },
+    {
+     "mes": 2,
+     "nombre": "Febrero",
+     "cert": 8943432.0,
+     "comp_anual": 92546.0,
+     "comp_mensual": 230990.0,
+     "dev": 197464.0,
+     "gir": 178680.0
+    },
+    {
+     "mes": 3,
+     "nombre": "Marzo",
+     "cert": 513337.0,
+     "comp_anual": 1827694.0,
+     "comp_mensual": 1396651.0,
+     "dev": 180018.0,
+     "gir": 194793.0
+    },
+    {
+     "mes": 4,
+     "nombre": "Abril",
+     "cert": 49168.0,
+     "comp_anual": 6431998.0,
+     "comp_mensual": 1876655.0,
+     "dev": 950032.0,
+     "gir": 892699.0
+    },
+    {
+     "mes": 5,
+     "nombre": "Mayo",
+     "cert": -171504.0,
+     "comp_anual": -582140.0,
+     "comp_mensual": 180899.0,
+     "dev": 864057.0,
+     "gir": 755509.0
+    },
+    {
+     "mes": 6,
+     "nombre": "Junio",
+     "cert": 777705.0,
+     "comp_anual": 80064.0,
+     "comp_mensual": 244963.0,
+     "dev": 1472391.0,
+     "gir": 849068.0
+    },
+    {
+     "mes": 7,
+     "nombre": "Julio",
+     "cert": 179914.0,
+     "comp_anual": -3772037.0,
+     "comp_mensual": 527006.0,
+     "dev": 352803.0,
+     "gir": 439496.0
+    },
+    {
+     "mes": 8,
+     "nombre": "Agosto",
+     "cert": -1157016.0,
+     "comp_anual": 3290891.0,
+     "comp_mensual": 3469280.0,
+     "dev": 602407.0,
+     "gir": 841139.0
+    },
+    {
+     "mes": 9,
+     "nombre": "Setiembre",
+     "cert": -955903.0,
+     "comp_anual": 16678.0,
+     "comp_mensual": 253186.0,
+     "dev": 321251.0,
+     "gir": 272421.0
+    },
+    {
+     "mes": 10,
+     "nombre": "Octubre",
+     "cert": 213520.0,
+     "comp_anual": 117485.0,
+     "comp_mensual": 666947.0,
+     "dev": 2074964.0,
+     "gir": 1704671.0
+    },
+    {
+     "mes": 11,
+     "nombre": "Noviembre",
+     "cert": 116562.0,
+     "comp_anual": 144832.0,
+     "comp_mensual": 235647.0,
+     "dev": 288132.0,
+     "gir": 969040.0
+    }
+   ],
+   "bienestar_generica": [
+    {
+     "code": "5-21",
+     "name": "PERSONAL Y OBLIGACIONES SOCIALES",
+     "pia": 1776198.0,
+     "pim": 1863082.0,
+     "cert": 1693296.0,
+     "comp_anual": 1692284.0,
+     "comp_mensual": 1419241.0,
+     "dev": 1419241.0,
+     "gir": 1388695.0,
+     "avance_pct": 76.2
+    },
+    {
+     "code": "5-23",
+     "name": "BIENES Y SERVICIOS",
+     "pia": 7699136.0,
+     "pim": 7790837.0,
+     "cert": 7349986.0,
+     "comp_anual": 7266921.0,
+     "comp_mensual": 7250178.0,
+     "dev": 5692904.0,
+     "gir": 5625364.0,
+     "avance_pct": 73.1
+    },
+    {
+     "code": "5-25",
+     "name": "OTROS GASTOS",
+     "pia": 0.0,
+     "pim": 12044.0,
+     "cert": 9794.0,
+     "comp_anual": 9794.0,
+     "comp_mensual": 9794.0,
+     "dev": 9794.0,
+     "gir": 9794.0,
+     "avance_pct": 81.3
+    },
+    {
+     "code": "6-26",
+     "name": "ADQUISICION DE ACTIVOS NO FINANCIEROS",
+     "pia": 0.0,
+     "pim": 1431481.0,
+     "cert": 1320018.0,
+     "comp_anual": 542806.0,
+     "comp_mensual": 542806.0,
+     "dev": 321782.0,
+     "gir": 213559.0,
+     "avance_pct": 22.5
+    }
+   ],
+   "pliego_alimentos_detalle": [
+    {
+     "code": "2",
+     "name": "TRANSPORTE Y TRASLADO DE CARGA, BIENES Y MATERIALES",
+     "pia": 0.0,
+     "pim": 16504.0,
+     "cert": 14934.0,
+     "comp_anual": 14034.0,
+     "comp_mensual": 14034.0,
+     "dev": 14034.0,
+     "gir": 14034.0,
+     "avance_pct": 85.0
+    },
+    {
+     "code": "3",
+     "name": "SERVICIOS RELACIONADOS CON FLORERIA, JARDINERIA Y OTRAS ACTIVIDADES SIMILARES",
+     "pia": 0.0,
+     "pim": 17733.0,
+     "cert": 17732.0,
+     "comp_anual": 17732.0,
+     "comp_mensual": 17732.0,
+     "dev": 17732.0,
+     "gir": 17732.0,
+     "avance_pct": 100.0
+    },
+    {
+     "code": "5",
+     "name": "SERVICIOS DE ALIMENTACION DE CONSUMO HUMANO",
+     "pia": 6802476.0,
+     "pim": 5720630.0,
+     "cert": 5711038.0,
+     "comp_anual": 5710681.0,
+     "comp_mensual": 5710681.0,
+     "dev": 4301141.0,
+     "gir": 4296344.0,
+     "avance_pct": 75.2
+    },
+    {
+     "code": "6",
+     "name": "SERVICIO DE IMPRESIONES, ENCUADERNACION Y EMPASTADO",
+     "pia": 150000.0,
+     "pim": 356526.0,
+     "cert": 303248.0,
+     "comp_anual": 303248.0,
+     "comp_mensual": 303248.0,
+     "dev": 190998.0,
+     "gir": 190998.0,
+     "avance_pct": 53.6
+    },
+    {
+     "code": "99",
+     "name": "SERVICIOS DIVERSOS",
+     "pia": 0.0,
+     "pim": 3021504.0,
+     "cert": 369128.0,
+     "comp_anual": 360756.0,
+     "comp_mensual": 360756.0,
+     "dev": 302292.0,
+     "gir": 297092.0,
+     "avance_pct": 10.0
+    }
+   ],
+   "pliego_alimentos_por_actividad": [
+    {
+     "producto": "3000001 ACCIONES COMUNES",
+     "code": "5000276",
+     "name": "GESTION DEL PROGRAMA",
+     "pia": 0.0,
+     "pim": 25300.0,
+     "cert": 25300.0,
+     "comp_anual": 25300.0,
+     "comp_mensual": 25300.0,
+     "dev": 15175.0,
+     "gir": 15175.0,
+     "avance_pct": 60.0
+    },
+    {
+     "producto": "3000785 PROGRAMAS CURRICULARES ADECUADOS",
+     "code": "5005860",
+     "name": "GESTION CURRICULAR",
+     "pia": 0.0,
+     "pim": 1200.0,
+     "cert": 1200.0,
+     "comp_anual": 1200.0,
+     "comp_mensual": 1200.0,
+     "dev": 300.0,
+     "gir": 300.0,
+     "avance_pct": 25.0
+    },
+    {
+     "producto": "3000785 PROGRAMAS CURRICULARES ADECUADOS",
+     "code": "5005861",
+     "name": "FOMENTO DE LA INVESTIGACION FORMATIVA",
+     "pia": 0.0,
+     "pim": 5002.0,
+     "cert": 5002.0,
+     "comp_anual": 5002.0,
+     "comp_mensual": 5002.0,
+     "dev": 502.0,
+     "gir": 502.0,
+     "avance_pct": 10.0
+    },
+    {
+     "producto": "3000786 SERVICIOS ADECUADOS DE APOYO AL ESTUDIANTE",
+     "code": "5005863",
+     "name": "BIENESTAR Y ASISTENCIA SOCIAL",
+     "pia": 6752476.0,
+     "pim": 5582318.0,
+     "cert": 5572895.0,
+     "comp_anual": 5572895.0,
+     "comp_mensual": 5572895.0,
+     "dev": 4191036.0,
+     "gir": 4191036.0,
+     "avance_pct": 75.1
+    },
+    {
+     "producto": "3000797 INFRAESTRUCTURA Y EQUIPAMIENTO ADECUADOS",
+     "code": "5006047",
+     "name": "MANTENIMIENTO Y OPERACION DE LA INFRAESTRUCTURA Y EQUIPAMIENTO",
+     "pia": 0.0,
+     "pim": 154.0,
+     "cert": 154.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 0.0,
+     "gir": 0.0,
+     "avance_pct": 0.0
+    },
+    {
+     "producto": "3999999 SIN PRODUCTO",
+     "code": "5000002",
+     "name": "CONDUCCION Y ORIENTACION SUPERIOR",
+     "pia": 0.0,
+     "pim": 76970.0,
+     "cert": 76803.0,
+     "comp_anual": 76683.0,
+     "comp_mensual": 76683.0,
+     "dev": 71012.0,
+     "gir": 67216.0,
+     "avance_pct": 92.3
+    },
+    {
+     "producto": "3999999 SIN PRODUCTO",
+     "code": "5000003",
+     "name": "GESTION ADMINISTRATIVA",
+     "pia": 0.0,
+     "pim": 1345.0,
+     "cert": 1345.0,
+     "comp_anual": 1262.0,
+     "comp_mensual": 1262.0,
+     "dev": 1262.0,
+     "gir": 1262.0,
+     "avance_pct": 93.8
+    },
+    {
+     "producto": "3999999 SIN PRODUCTO",
+     "code": "5000004",
+     "name": "ASESORAMIENTO TECNICO Y JURIDICO",
+     "pia": 0.0,
+     "pim": 1193.0,
+     "cert": 1192.0,
+     "comp_anual": 1192.0,
+     "comp_mensual": 1192.0,
+     "dev": 1192.0,
+     "gir": 192.0,
+     "avance_pct": 99.9
+    },
+    {
+     "producto": "3999999 SIN PRODUCTO",
+     "code": "5003195",
+     "name": "INCORPORACION DE NUEVOS ESTUDIANTES DE ACUERDO AL PERFIL DEL INGRESANTE",
+     "pia": 50000.0,
+     "pim": 27148.0,
+     "cert": 27148.0,
+     "comp_anual": 27148.0,
+     "comp_mensual": 27148.0,
+     "dev": 20663.0,
+     "gir": 20663.0,
+     "avance_pct": 76.1
+    }
+   ],
+   "bienestar_fuente": [
+    {
+     "code": "1",
+     "name": "RECURSOS ORDINARIOS",
+     "pia": 9248674.0,
+     "pim": 8517351.0,
+     "cert": 8104297.0,
+     "comp_anual": 7326141.0,
+     "comp_mensual": 7076320.0,
+     "dev": 5360558.0,
+     "gir": 5166607.0,
+     "avance_pct": 62.9
+    },
+    {
+     "code": "2",
+     "name": "RECURSOS DIRECTAMENTE RECAUDADOS",
+     "pia": 226660.0,
+     "pim": 2580093.0,
+     "cert": 2268797.0,
+     "comp_anual": 2185663.0,
+     "comp_mensual": 2145699.0,
+     "dev": 2083163.0,
+     "gir": 2070804.0,
+     "avance_pct": 80.7
+    }
+   ],
+   "bienestar_arbol": [
+    {
+     "code": "5-21",
+     "name": "PERSONAL Y OBLIGACIONES SOCIALES",
+     "pia": 1776198.0,
+     "pim": 1863082.0,
+     "cert": 1693296.0,
+     "comp_anual": 1692284.0,
+     "comp_mensual": 1419241.0,
+     "dev": 1419241.0,
+     "gir": 1388695.0,
+     "avance_pct": 76.2,
+     "hijos": [
+      {
+       "code": "1",
+       "name": "RETRIBUCIONES Y COMPLEMENTOS EN EFECTIVO",
+       "pia": 1692312.0,
+       "pim": 1762267.0,
+       "cert": 1592481.0,
+       "comp_anual": 1591469.0,
+       "comp_mensual": 1332691.0,
+       "dev": 1332691.0,
+       "gir": 1306286.0,
+       "avance_pct": 75.6,
+       "hijos": [
+        {
+         "code": "1",
+         "name": "PERSONAL ADMINISTRATIVO",
+         "pia": 747784.0,
+         "pim": 730784.0,
+         "cert": 604854.0,
+         "comp_anual": 604854.0,
+         "comp_mensual": 497114.0,
+         "dev": 497114.0,
+         "gir": 486691.0,
+         "avance_pct": 68.0,
+         "hijos": [
+          {
+           "code": "1",
+           "name": "PERSONAL ADMINISTRATIVO",
+           "pia": 380344.0,
+           "pim": 363344.0,
+           "cert": 308348.0,
+           "comp_anual": 308348.0,
+           "comp_mensual": 273257.0,
+           "dev": 273257.0,
+           "gir": 262835.0,
+           "avance_pct": 75.2,
+           "hijos": [
+            {
+             "code": "2",
+             "name": "PERSONAL ADMINISTRATIVO NOMBRADO (REGIMEN PUBLICO)",
+             "pia": 245520.0,
+             "pim": 228520.0,
+             "cert": 202602.0,
+             "comp_anual": 202602.0,
+             "comp_mensual": 185719.0,
+             "dev": 185719.0,
+             "gir": 177451.0,
+             "avance_pct": 81.3
+            },
+            {
+             "code": "3",
+             "name": "PERSONAL CON CONTRATO A PLAZO FIJO (REGIMEN LABORAL PUBLICO)",
+             "pia": 97660.0,
+             "pim": 97660.0,
+             "cert": 96455.0,
+             "comp_anual": 96455.0,
+             "comp_mensual": 87539.0,
+             "dev": 87539.0,
+             "gir": 85384.0,
+             "avance_pct": 89.6
+            },
+            {
+             "code": "9",
+             "name": "PERSONAL DE CONFIANZA (RÉGIMEN LABORAL PÚBLICO)",
+             "pia": 37164.0,
+             "pim": 37164.0,
+             "cert": 9291.0,
+             "comp_anual": 9291.0,
+             "comp_mensual": 0.0,
+             "dev": 0.0,
+             "gir": 0.0,
+             "avance_pct": 0.0
+            }
+           ]
+          },
+          {
+           "code": "2",
+           "name": "OTRAS RETRIBUCIONES Y COMPLEMENTOS",
+           "pia": 367440.0,
+           "pim": 367440.0,
+           "cert": 296506.0,
+           "comp_anual": 296506.0,
+           "comp_mensual": 223856.0,
+           "dev": 223856.0,
+           "gir": 223856.0,
+           "avance_pct": 60.9,
+           "hijos": [
+            {
+             "code": "1",
+             "name": "ASIGNACION A FONDOS PARA PERSONAL",
+             "pia": 367440.0,
+             "pim": 367440.0,
+             "cert": 296506.0,
+             "comp_anual": 296506.0,
+             "comp_mensual": 223856.0,
+             "dev": 223856.0,
+             "gir": 223856.0,
+             "avance_pct": 60.9
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "code": "9",
+         "name": "GASTOS VARIABLES Y OCASIONALES",
+         "pia": 35400.0,
+         "pim": 39000.0,
+         "cert": 35860.0,
+         "comp_anual": 35860.0,
+         "comp_mensual": 19704.0,
+         "dev": 19704.0,
+         "gir": 19704.0,
+         "avance_pct": 50.5,
+         "hijos": [
+          {
+           "code": "1",
+           "name": "ESCOLARIDAD, AGUINALDOS Y GRATIFICACIONES",
+           "pia": 35400.0,
+           "pim": 39000.0,
+           "cert": 35860.0,
+           "comp_anual": 35860.0,
+           "comp_mensual": 19704.0,
+           "dev": 19704.0,
+           "gir": 19704.0,
+           "avance_pct": 50.5,
+           "hijos": [
+            {
+             "code": "1",
+             "name": "GRATIFICACIONES",
+             "pia": 0.0,
+             "pim": 18000.0,
+             "cert": 18000.0,
+             "comp_anual": 18000.0,
+             "comp_mensual": 8744.0,
+             "dev": 8744.0,
+             "gir": 8744.0,
+             "avance_pct": 48.6
+            },
+            {
+             "code": "2",
+             "name": "AGUINALDOS",
+             "pia": 13800.0,
+             "pim": 13800.0,
+             "cert": 11700.0,
+             "comp_anual": 11700.0,
+             "comp_mensual": 4800.0,
+             "dev": 4800.0,
+             "gir": 4800.0,
+             "avance_pct": 34.8
+            },
+            {
+             "code": "3",
+             "name": "BONIFICACION POR ESCOLARIDAD",
+             "pia": 7200.0,
+             "pim": 7200.0,
+             "cert": 6160.0,
+             "comp_anual": 6160.0,
+             "comp_mensual": 6160.0,
+             "dev": 6160.0,
+             "gir": 6160.0,
+             "avance_pct": 85.6
+            },
+            {
+             "code": "4",
+             "name": "AGUINALDOS DE CONTRATO ADMINISTRATIVO DE SERVICIOS",
+             "pia": 14400.0,
+             "pim": 0.0,
+             "cert": 0.0,
+             "comp_anual": 0.0,
+             "comp_mensual": 0.0,
+             "dev": 0.0,
+             "gir": 0.0,
+             "avance_pct": 0.0
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "code": "13",
+         "name": "CONTRATO ADMINISTRATIVO DE SERVICIOS",
+         "pia": 909128.0,
+         "pim": 992483.0,
+         "cert": 951767.0,
+         "comp_anual": 950755.0,
+         "comp_mensual": 815874.0,
+         "dev": 815874.0,
+         "gir": 799891.0,
+         "avance_pct": 82.2,
+         "hijos": [
+          {
+           "code": "1",
+           "name": "CONTRATO ADMINISTRATIVO DE SERVICIOS",
+           "pia": 909128.0,
+           "pim": 992483.0,
+           "cert": 951767.0,
+           "comp_anual": 950755.0,
+           "comp_mensual": 815874.0,
+           "dev": 815874.0,
+           "gir": 799891.0,
+           "avance_pct": 82.2,
+           "hijos": [
+            {
+             "code": "1",
+             "name": "CONTRATO ADMINISTRATIVO DE SERVICIOS - INDETERMINADO",
+             "pia": 909128.0,
+             "pim": 992483.0,
+             "cert": 951767.0,
+             "comp_anual": 950755.0,
+             "comp_mensual": 815874.0,
+             "dev": 815874.0,
+             "gir": 799891.0,
+             "avance_pct": 82.2
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "code": "3",
+       "name": "CONTRIBUCIONES A LA SEGURIDAD SOCIAL",
+       "pia": 83886.0,
+       "pim": 94719.0,
+       "cert": 94719.0,
+       "comp_anual": 94719.0,
+       "comp_mensual": 80454.0,
+       "dev": 80454.0,
+       "gir": 76313.0,
+       "avance_pct": 84.9,
+       "hijos": [
+        {
+         "code": "1",
+         "name": "OBLIGACIONES DEL EMPLEADOR",
+         "pia": 83886.0,
+         "pim": 94719.0,
+         "cert": 94719.0,
+         "comp_anual": 94719.0,
+         "comp_mensual": 80454.0,
+         "dev": 80454.0,
+         "gir": 76313.0,
+         "avance_pct": 84.9,
+         "hijos": [
+          {
+           "code": "1",
+           "name": "OBLIGACIONES DEL EMPLEADOR",
+           "pia": 83886.0,
+           "pim": 94719.0,
+           "cert": 94719.0,
+           "comp_anual": 94719.0,
+           "comp_mensual": 80454.0,
+           "dev": 80454.0,
+           "gir": 76313.0,
+           "avance_pct": 84.9,
+           "hijos": [
+            {
+             "code": "13",
+             "name": "CONTRIBUCIONES A ESSALUD DEL PERSONAL ADMINISTRATIVO",
+             "pia": 28169.0,
+             "pim": 28169.0,
+             "cert": 28169.0,
+             "comp_anual": 28169.0,
+             "comp_mensual": 22791.0,
+             "dev": 22791.0,
+             "gir": 22791.0,
+             "avance_pct": 80.9
+            },
+            {
+             "code": "15",
+             "name": "CONTRIBUCIONES A ESSALUD DE CONTRATO ADMINISTRATIVO DE SERVICIOS",
+             "pia": 55717.0,
+             "pim": 66550.0,
+             "cert": 66550.0,
+             "comp_anual": 66550.0,
+             "comp_mensual": 57663.0,
+             "dev": 57663.0,
+             "gir": 53522.0,
+             "avance_pct": 86.6
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "code": "4",
+       "name": "RETRIBUCIONES Y COMPLEMENTOS EN EFECTIVO VARIABLES",
+       "pia": 0.0,
+       "pim": 6096.0,
+       "cert": 6096.0,
+       "comp_anual": 6096.0,
+       "comp_mensual": 6096.0,
+       "dev": 6096.0,
+       "gir": 6096.0,
+       "avance_pct": 100.0,
+       "hijos": [
+        {
+         "code": "1",
+         "name": "GASTOS VARIABLES Y OCASIONALES",
+         "pia": 0.0,
+         "pim": 6096.0,
+         "cert": 6096.0,
+         "comp_anual": 6096.0,
+         "comp_mensual": 6096.0,
+         "dev": 6096.0,
+         "gir": 6096.0,
+         "avance_pct": 100.0,
+         "hijos": [
+          {
+           "code": "1",
+           "name": "GASTOS VARIABLES Y OCASIONALES",
+           "pia": 0.0,
+           "pim": 6096.0,
+           "cert": 6096.0,
+           "comp_anual": 6096.0,
+           "comp_mensual": 6096.0,
+           "dev": 6096.0,
+           "gir": 6096.0,
+           "avance_pct": 100.0,
+           "hijos": [
+            {
+             "code": "7",
+             "name": "VACACIONES TRUNCAS PERSONAL CAS",
+             "pia": 0.0,
+             "pim": 6096.0,
+             "cert": 6096.0,
+             "comp_anual": 6096.0,
+             "comp_mensual": 6096.0,
+             "dev": 6096.0,
+             "gir": 6096.0,
+             "avance_pct": 100.0
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "code": "5-23",
+     "name": "BIENES Y SERVICIOS",
+     "pia": 7699136.0,
+     "pim": 7790837.0,
+     "cert": 7349986.0,
+     "comp_anual": 7266921.0,
+     "comp_mensual": 7250178.0,
+     "dev": 5692904.0,
+     "gir": 5625364.0,
+     "avance_pct": 73.1,
+     "hijos": [
+      {
+       "code": "1",
+       "name": "COMPRA DE BIENES",
+       "pia": 570000.0,
+       "pim": 756523.0,
+       "cert": 636441.0,
+       "comp_anual": 555785.0,
+       "comp_mensual": 539042.0,
+       "dev": 535633.0,
+       "gir": 502133.0,
+       "avance_pct": 70.8,
+       "hijos": [
+        {
+         "code": "1",
+         "name": "ALIMENTOS Y BEBIDAS",
+         "pia": 0.0,
+         "pim": 1114.0,
+         "cert": 1114.0,
+         "comp_anual": 1114.0,
+         "comp_mensual": 1114.0,
+         "dev": 1114.0,
+         "gir": 1114.0,
+         "avance_pct": 100.0,
+         "hijos": [
+          {
+           "code": "1",
+           "name": "ALIMENTOS Y BEBIDAS",
+           "pia": 0.0,
+           "pim": 1114.0,
+           "cert": 1114.0,
+           "comp_anual": 1114.0,
+           "comp_mensual": 1114.0,
+           "dev": 1114.0,
+           "gir": 1114.0,
+           "avance_pct": 100.0,
+           "hijos": [
+            {
+             "code": "1",
+             "name": "ALIMENTOS Y BEBIDAS PARA CONSUMO HUMANO",
+             "pia": 0.0,
+             "pim": 1114.0,
+             "cert": 1114.0,
+             "comp_anual": 1114.0,
+             "comp_mensual": 1114.0,
+             "dev": 1114.0,
+             "gir": 1114.0,
+             "avance_pct": 100.0
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "code": "2",
+         "name": "VESTUARIOS Y TEXTILES",
+         "pia": 0.0,
+         "pim": 5000.0,
+         "cert": 0.0,
+         "comp_anual": 0.0,
+         "comp_mensual": 0.0,
+         "dev": 0.0,
+         "gir": 0.0,
+         "avance_pct": 0.0,
+         "hijos": [
+          {
+           "code": "1",
+           "name": "VESTUARIO, ZAPATERIA Y ACCESORIOS, TALABARTERIA Y MATERIALES TEXTILES",
+           "pia": 0.0,
+           "pim": 5000.0,
+           "cert": 0.0,
+           "comp_anual": 0.0,
+           "comp_mensual": 0.0,
+           "dev": 0.0,
+           "gir": 0.0,
+           "avance_pct": 0.0,
+           "hijos": [
+            {
+             "code": "2",
+             "name": "TEXTILES Y ACABADOS TEXTILES",
+             "pia": 0.0,
+             "pim": 5000.0,
+             "cert": 0.0,
+             "comp_anual": 0.0,
+             "comp_mensual": 0.0,
+             "dev": 0.0,
+             "gir": 0.0,
+             "avance_pct": 0.0
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "code": "3",
+         "name": "COMBUSTIBLES, CARBURANTES, LUBRICANTES Y AFINES",
+         "pia": 470000.0,
+         "pim": 459793.0,
+         "cert": 446147.0,
+         "comp_anual": 365490.0,
+         "comp_mensual": 348747.0,
+         "dev": 345738.0,
+         "gir": 345738.0,
+         "avance_pct": 75.2,
+         "hijos": [
+          {
+           "code": "1",
+           "name": "COMBUSTIBLES, CARBURANTES, LUBRICANTES Y AFINES",
+           "pia": 470000.0,
+           "pim": 459793.0,
+           "cert": 446147.0,
+           "comp_anual": 365490.0,
+           "comp_mensual": 348747.0,
+           "dev": 345738.0,
+           "gir": 345738.0,
+           "avance_pct": 75.2,
+           "hijos": [
+            {
+             "code": "1",
+             "name": "COMBUSTIBLES Y CARBURANTES",
+             "pia": 300000.0,
+             "pim": 441400.0,
+             "cert": 427754.0,
+             "comp_anual": 347097.0,
+             "comp_mensual": 330354.0,
+             "dev": 327345.0,
+             "gir": 327345.0,
+             "avance_pct": 74.2
+            },
+            {
+             "code": "2",
+             "name": "GASES",
+             "pia": 170000.0,
+             "pim": 0.0,
+             "cert": 0.0,
+             "comp_anual": 0.0,
+             "comp_mensual": 0.0,
+             "dev": 0.0,
+             "gir": 0.0,
+             "avance_pct": 0.0
+            },
+            {
+             "code": "3",
+             "name": "LUBRICANTES, GRASAS Y AFINES",
+             "pia": 0.0,
+             "pim": 18393.0,
+             "cert": 18393.0,
+             "comp_anual": 18393.0,
+             "comp_mensual": 18393.0,
+             "dev": 18393.0,
+             "gir": 18393.0,
+             "avance_pct": 100.0
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "code": "5",
+         "name": "MATERIALES Y  UTILES",
+         "pia": 0.0,
+         "pim": 75523.0,
+         "cert": 75519.0,
+         "comp_anual": 75519.0,
+         "comp_mensual": 75519.0,
+         "dev": 75119.0,
+         "gir": 41619.0,
+         "avance_pct": 99.5,
+         "hijos": [
+          {
+           "code": "1",
+           "name": "DE OFICINA",
+           "pia": 0.0,
+           "pim": 13656.0,
+           "cert": 13655.0,
+           "comp_anual": 13655.0,
+           "comp_mensual": 13655.0,
+           "dev": 13655.0,
+           "gir": 13655.0,
+           "avance_pct": 100.0,
+           "hijos": [
+            {
+             "code": "2",
+             "name": "PAPELERIA EN GENERAL, UTILES Y MATERIALES DE OFICINA",
+             "pia": 0.0,
+             "pim": 13656.0,
+             "cert": 13655.0,
+             "comp_anual": 13655.0,
+             "comp_mensual": 13655.0,
+             "dev": 13655.0,
+             "gir": 13655.0,
+             "avance_pct": 100.0
+            }
+           ]
+          },
+          {
+           "code": "3",
+           "name": "ASEO, LIMPIEZA Y COCINA",
+           "pia": 0.0,
+           "pim": 60246.0,
+           "cert": 60244.0,
+           "comp_anual": 60244.0,
+           "comp_mensual": 60244.0,
+           "dev": 59844.0,
+           "gir": 26344.0,
+           "avance_pct": 99.3,
+           "hijos": [
+            {
+             "code": "1",
+             "name": "ASEO, LIMPIEZA Y TOCADOR",
+             "pia": 0.0,
+             "pim": 26746.0,
+             "cert": 26744.0,
+             "comp_anual": 26744.0,
+             "comp_mensual": 26744.0,
+             "dev": 26344.0,
+             "gir": 26344.0,
+             "avance_pct": 98.5
+            },
+            {
+             "code": "2",
+             "name": "DE COCINA, COMEDOR Y CAFETERIA",
+             "pia": 0.0,
+             "pim": 33500.0,
+             "cert": 33500.0,
+             "comp_anual": 33500.0,
+             "comp_mensual": 33500.0,
+             "dev": 33500.0,
+             "gir": 0.0,
+             "avance_pct": 100.0
+            }
+           ]
+          },
+          {
+           "code": "4",
+           "name": "ELECTRICIDAD, ILUMINACION Y ELECTRONICA",
+           "pia": 0.0,
+           "pim": 1621.0,
+           "cert": 1620.0,
+           "comp_anual": 1620.0,
+           "comp_mensual": 1620.0,
+           "dev": 1620.0,
+           "gir": 1620.0,
+           "avance_pct": 99.9,
+           "hijos": [
+            {
+             "code": "1",
+             "name": "ELECTRICIDAD, ILUMINACION Y ELECTRONICA",
+             "pia": 0.0,
+             "pim": 1621.0,
+             "cert": 1620.0,
+             "comp_anual": 1620.0,
+             "comp_mensual": 1620.0,
+             "dev": 1620.0,
+             "gir": 1620.0,
+             "avance_pct": 99.9
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "code": "6",
+         "name": "REPUESTOS Y ACCESORIOS",
+         "pia": 0.0,
+         "pim": 55335.0,
+         "cert": 55334.0,
+         "comp_anual": 55334.0,
+         "comp_mensual": 55334.0,
+         "dev": 55334.0,
+         "gir": 55334.0,
+         "avance_pct": 100.0,
+         "hijos": [
+          {
+           "code": "1",
+           "name": "REPUESTOS Y ACCESORIOS",
+           "pia": 0.0,
+           "pim": 55335.0,
+           "cert": 55334.0,
+           "comp_anual": 55334.0,
+           "comp_mensual": 55334.0,
+           "dev": 55334.0,
+           "gir": 55334.0,
+           "avance_pct": 100.0,
+           "hijos": [
+            {
+             "code": "1",
+             "name": "DE VEHICULOS",
+             "pia": 0.0,
+             "pim": 55335.0,
+             "cert": 55334.0,
+             "comp_anual": 55334.0,
+             "comp_mensual": 55334.0,
+             "dev": 55334.0,
+             "gir": 55334.0,
+             "avance_pct": 100.0
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "code": "7",
+         "name": "ENSERES",
+         "pia": 20000.0,
+         "pim": 0.0,
+         "cert": 0.0,
+         "comp_anual": 0.0,
+         "comp_mensual": 0.0,
+         "dev": 0.0,
+         "gir": 0.0,
+         "avance_pct": 0.0,
+         "hijos": [
+          {
+           "code": "1",
+           "name": "ENSERES",
+           "pia": 20000.0,
+           "pim": 0.0,
+           "cert": 0.0,
+           "comp_anual": 0.0,
+           "comp_mensual": 0.0,
+           "dev": 0.0,
+           "gir": 0.0,
+           "avance_pct": 0.0,
+           "hijos": [
+            {
+             "code": "1",
+             "name": "ENSERES",
+             "pia": 20000.0,
+             "pim": 0.0,
+             "cert": 0.0,
+             "comp_anual": 0.0,
+             "comp_mensual": 0.0,
+             "dev": 0.0,
+             "gir": 0.0,
+             "avance_pct": 0.0
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "code": "8",
+         "name": "SUMINISTROS MEDICOS",
+         "pia": 50000.0,
+         "pim": 151755.0,
+         "cert": 52803.0,
+         "comp_anual": 52803.0,
+         "comp_mensual": 52803.0,
+         "dev": 52803.0,
+         "gir": 52803.0,
+         "avance_pct": 34.8,
+         "hijos": [
+          {
+           "code": "1",
+           "name": "PRODUCTOS FARMACEUTICOS",
+           "pia": 20000.0,
+           "pim": 128050.0,
+           "cert": 29099.0,
+           "comp_anual": 29099.0,
+           "comp_mensual": 29099.0,
+           "dev": 29099.0,
+           "gir": 29099.0,
+           "avance_pct": 22.7,
+           "hijos": [
+            {
+             "code": "2",
+             "name": "MEDICAMENTOS",
+             "pia": 20000.0,
+             "pim": 128050.0,
+             "cert": 29099.0,
+             "comp_anual": 29099.0,
+             "comp_mensual": 29099.0,
+             "dev": 29099.0,
+             "gir": 29099.0,
+             "avance_pct": 22.7
+            }
+           ]
+          },
+          {
+           "code": "2",
+           "name": "MATERIAL,INSUMOS,INSTRUMENTAL Y ACCESORIOS MEDICOS,QUIRURGICOS, ODONTOLOGICOS Y DE LABORATORIO",
+           "pia": 30000.0,
+           "pim": 23705.0,
+           "cert": 23704.0,
+           "comp_anual": 23704.0,
+           "comp_mensual": 23704.0,
+           "dev": 23704.0,
+           "gir": 23704.0,
+           "avance_pct": 100.0,
+           "hijos": [
+            {
+             "code": "1",
+             "name": "MATERIAL, INSUMOS, INSTRUMENTAL Y ACCESORIOS  MEDICOS, QUIRURGICOS, ODONTOLOGICOS Y DE LABORATORIO",
+             "pia": 30000.0,
+             "pim": 23705.0,
+             "cert": 23704.0,
+             "comp_anual": 23704.0,
+             "comp_mensual": 23704.0,
+             "dev": 23704.0,
+             "gir": 23704.0,
+             "avance_pct": 100.0
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "code": "9",
+         "name": "MATERIALES Y UTILES DE ENSEÑANZA",
+         "pia": 30000.0,
+         "pim": 0.0,
+         "cert": 0.0,
+         "comp_anual": 0.0,
+         "comp_mensual": 0.0,
+         "dev": 0.0,
+         "gir": 0.0,
+         "avance_pct": 0.0,
+         "hijos": [
+          {
+           "code": "1",
+           "name": "MATERIALES Y UTILES DE ENSEÑANZA",
+           "pia": 30000.0,
+           "pim": 0.0,
+           "cert": 0.0,
+           "comp_anual": 0.0,
+           "comp_mensual": 0.0,
+           "dev": 0.0,
+           "gir": 0.0,
+           "avance_pct": 0.0,
+           "hijos": [
+            {
+             "code": "2",
+             "name": "MATERIAL DIDACTICO, ACCESORIOS Y UTILES DE ENSEÑANZA",
+             "pia": 30000.0,
+             "pim": 0.0,
+             "cert": 0.0,
+             "comp_anual": 0.0,
+             "comp_mensual": 0.0,
+             "dev": 0.0,
+             "gir": 0.0,
+             "avance_pct": 0.0
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "code": "11",
+         "name": "SUMINISTROS PARA MANTENIMIENTO Y REPARACION",
+         "pia": 0.0,
+         "pim": 8003.0,
+         "cert": 5525.0,
+         "comp_anual": 5525.0,
+         "comp_mensual": 5525.0,
+         "dev": 5525.0,
+         "gir": 5525.0,
+         "avance_pct": 69.0,
+         "hijos": [
+          {
+           "code": "1",
+           "name": "SUMINISTROS PARA MANTENIMIENTO Y REPARACION",
+           "pia": 0.0,
+           "pim": 8003.0,
+           "cert": 5525.0,
+           "comp_anual": 5525.0,
+           "comp_mensual": 5525.0,
+           "dev": 5525.0,
+           "gir": 5525.0,
+           "avance_pct": 69.0,
+           "hijos": [
+            {
+             "code": "4",
+             "name": "PARA MAQUINARIAS Y EQUIPOS",
+             "pia": 0.0,
+             "pim": 480.0,
+             "cert": 480.0,
+             "comp_anual": 480.0,
+             "comp_mensual": 480.0,
+             "dev": 480.0,
+             "gir": 480.0,
+             "avance_pct": 100.0
+            },
+            {
+             "code": "5",
+             "name": "OTROS MATERIALES DE MANTENIMIENTO",
+             "pia": 0.0,
+             "pim": 4945.0,
+             "cert": 4945.0,
+             "comp_anual": 4945.0,
+             "comp_mensual": 4945.0,
+             "dev": 4945.0,
+             "gir": 4945.0,
+             "avance_pct": 100.0
+            },
+            {
+             "code": "6",
+             "name": "MATERIALES DE  ACONDICIONAMIENTO",
+             "pia": 0.0,
+             "pim": 2578.0,
+             "cert": 100.0,
+             "comp_anual": 100.0,
+             "comp_mensual": 100.0,
+             "dev": 100.0,
+             "gir": 100.0,
+             "avance_pct": 3.9
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "code": "2",
+       "name": "CONTRATACION DE SERVICIOS",
+       "pia": 7129136.0,
+       "pim": 7034314.0,
+       "cert": 6713545.0,
+       "comp_anual": 6711136.0,
+       "comp_mensual": 6711136.0,
+       "dev": 5157271.0,
+       "gir": 5123231.0,
+       "avance_pct": 73.3,
+       "hijos": [
+        {
+         "code": "1",
+         "name": "VIAJES",
+         "pia": 0.0,
+         "pim": 32713.0,
+         "cert": 30423.0,
+         "comp_anual": 28014.0,
+         "comp_mensual": 28014.0,
+         "dev": 28014.0,
+         "gir": 28014.0,
+         "avance_pct": 85.6,
+         "hijos": [
+          {
+           "code": "2",
+           "name": "VIAJES DOMESTICOS",
+           "pia": 0.0,
+           "pim": 32713.0,
+           "cert": 30423.0,
+           "comp_anual": 28014.0,
+           "comp_mensual": 28014.0,
+           "dev": 28014.0,
+           "gir": 28014.0,
+           "avance_pct": 85.6,
+           "hijos": [
+            {
+             "code": "99",
+             "name": "OTROS GASTOS",
+             "pia": 0.0,
+             "pim": 32713.0,
+             "cert": 30423.0,
+             "comp_anual": 28014.0,
+             "comp_mensual": 28014.0,
+             "dev": 28014.0,
+             "gir": 28014.0,
+             "avance_pct": 85.6
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "code": "3",
+         "name": "SERVICIOS DE LIMPIEZA, SEGURIDAD Y VIGILANCIA",
+         "pia": 0.0,
+         "pim": 4082.0,
+         "cert": 4082.0,
+         "comp_anual": 4082.0,
+         "comp_mensual": 4082.0,
+         "dev": 4082.0,
+         "gir": 4082.0,
+         "avance_pct": 100.0,
+         "hijos": [
+          {
+           "code": "1",
+           "name": "SERVICIOS DE LIMPIEZA, SEGURIDAD Y VIGILANCIA",
+           "pia": 0.0,
+           "pim": 4082.0,
+           "cert": 4082.0,
+           "comp_anual": 4082.0,
+           "comp_mensual": 4082.0,
+           "dev": 4082.0,
+           "gir": 4082.0,
+           "avance_pct": 100.0,
+           "hijos": [
+            {
+             "code": "1",
+             "name": "SERVICIOS DE LIMPIEZA E HIGIENE",
+             "pia": 0.0,
+             "pim": 4082.0,
+             "cert": 4082.0,
+             "comp_anual": 4082.0,
+             "comp_mensual": 4082.0,
+             "dev": 4082.0,
+             "gir": 4082.0,
+             "avance_pct": 100.0
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "code": "4",
+         "name": "SERVICIO DE MANTENIMIENTO, ACONDICIONAMIENTO Y  REPARACIONES",
+         "pia": 0.0,
+         "pim": 555324.0,
+         "cert": 264329.0,
+         "comp_anual": 264329.0,
+         "comp_mensual": 264329.0,
+         "dev": 158045.0,
+         "gir": 124005.0,
+         "avance_pct": 28.5,
+         "hijos": [
+          {
+           "code": "2",
+           "name": "DE EDIFICACIONES, OFICINAS Y ESTRUCTURAS",
+           "pia": 0.0,
+           "pim": 317136.0,
+           "cert": 153377.0,
+           "comp_anual": 153377.0,
+           "comp_mensual": 153377.0,
+           "dev": 63664.0,
+           "gir": 30374.0,
+           "avance_pct": 20.1,
+           "hijos": [
+            {
+             "code": "1",
+             "name": "DE EDIFICACIONES, OFICINAS Y ESTRUCTURAS",
+             "pia": 0.0,
+             "pim": 317136.0,
+             "cert": 153377.0,
+             "comp_anual": 153377.0,
+             "comp_mensual": 153377.0,
+             "dev": 63664.0,
+             "gir": 30374.0,
+             "avance_pct": 20.1
+            }
+           ]
+          },
+          {
+           "code": "5",
+           "name": "DE VEHICULOS",
+           "pia": 0.0,
+           "pim": 5761.0,
+           "cert": 5761.0,
+           "comp_anual": 5761.0,
+           "comp_mensual": 5761.0,
+           "dev": 5761.0,
+           "gir": 5761.0,
+           "avance_pct": 100.0,
+           "hijos": [
+            {
+             "code": "1",
+             "name": "DE VEHICULOS",
+             "pia": 0.0,
+             "pim": 5761.0,
+             "cert": 5761.0,
+             "comp_anual": 5761.0,
+             "comp_mensual": 5761.0,
+             "dev": 5761.0,
+             "gir": 5761.0,
+             "avance_pct": 100.0
+            }
+           ]
+          },
+          {
+           "code": "6",
+           "name": "DE MOBILIARIO Y SIMILARES",
+           "pia": 0.0,
+           "pim": 1000.0,
+           "cert": 0.0,
+           "comp_anual": 0.0,
+           "comp_mensual": 0.0,
+           "dev": 0.0,
+           "gir": 0.0,
+           "avance_pct": 0.0,
+           "hijos": [
+            {
+             "code": "1",
+             "name": "DE MOBILIARIO Y SIMILARES",
+             "pia": 0.0,
+             "pim": 1000.0,
+             "cert": 0.0,
+             "comp_anual": 0.0,
+             "comp_mensual": 0.0,
+             "dev": 0.0,
+             "gir": 0.0,
+             "avance_pct": 0.0
+            }
+           ]
+          },
+          {
+           "code": "7",
+           "name": "DE MAQUINARIAS Y EQUIPOS",
+           "pia": 0.0,
+           "pim": 231427.0,
+           "cert": 105191.0,
+           "comp_anual": 105191.0,
+           "comp_mensual": 105191.0,
+           "dev": 88620.0,
+           "gir": 87870.0,
+           "avance_pct": 38.3,
+           "hijos": [
+            {
+             "code": "1",
+             "name": "DE MAQUINARIAS Y EQUIPOS",
+             "pia": 0.0,
+             "pim": 231427.0,
+             "cert": 105191.0,
+             "comp_anual": 105191.0,
+             "comp_mensual": 105191.0,
+             "dev": 88620.0,
+             "gir": 87870.0,
+             "avance_pct": 38.3
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "code": "6",
+         "name": "SERVICIOS ADMINISTRATIVOS, FINANCIEROS Y DE SEGUROS",
+         "pia": 376660.0,
+         "pim": 488164.0,
+         "cert": 488163.0,
+         "comp_anual": 488163.0,
+         "comp_mensual": 488163.0,
+         "dev": 477095.0,
+         "gir": 477095.0,
+         "avance_pct": 97.7,
+         "hijos": [
+          {
+           "code": "3",
+           "name": "SEGUROS",
+           "pia": 376660.0,
+           "pim": 424168.0,
+           "cert": 424167.0,
+           "comp_anual": 424167.0,
+           "comp_mensual": 424167.0,
+           "dev": 423627.0,
+           "gir": 423627.0,
+           "avance_pct": 99.9,
+           "hijos": [
+            {
+             "code": "3",
+             "name": "SEGURO OBLIGATORIO ACCIDENTES DE TRANSITO (SOAT)",
+             "pia": 0.0,
+             "pim": 15410.0,
+             "cert": 15410.0,
+             "comp_anual": 15410.0,
+             "comp_mensual": 15410.0,
+             "dev": 14870.0,
+             "gir": 14870.0,
+             "avance_pct": 96.5
+            },
+            {
+             "code": "4",
+             "name": "OTROS SEGUROS PERSONALES",
+             "pia": 376660.0,
+             "pim": 408758.0,
+             "cert": 408757.0,
+             "comp_anual": 408757.0,
+             "comp_mensual": 408757.0,
+             "dev": 408757.0,
+             "gir": 408757.0,
+             "avance_pct": 100.0
+            }
+           ]
+          },
+          {
+           "code": "4",
+           "name": "SERVICIOS DE SALUD",
+           "pia": 0.0,
+           "pim": 63996.0,
+           "cert": 63996.0,
+           "comp_anual": 63996.0,
+           "comp_mensual": 63996.0,
+           "dev": 53468.0,
+           "gir": 53468.0,
+           "avance_pct": 83.5,
+           "hijos": [
+            {
+             "code": "1",
+             "name": "GASTOS POR PRESTACIONES DE SALUD",
+             "pia": 0.0,
+             "pim": 63996.0,
+             "cert": 63996.0,
+             "comp_anual": 63996.0,
+             "comp_mensual": 63996.0,
+             "dev": 53468.0,
+             "gir": 53468.0,
+             "avance_pct": 83.5
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "code": "7",
+         "name": "SERVICIOS PROFESIONALES Y TECNICOS",
+         "pia": 6752476.0,
+         "pim": 5619472.0,
+         "cert": 5610048.0,
+         "comp_anual": 5610048.0,
+         "comp_mensual": 5610048.0,
+         "dev": 4221834.0,
+         "gir": 4221834.0,
+         "avance_pct": 75.1,
+         "hijos": [
+          {
+           "code": "11",
+           "name": "OTROS SERVICIOS",
+           "pia": 6752476.0,
+           "pim": 5583177.0,
+           "cert": 5573753.0,
+           "comp_anual": 5573753.0,
+           "comp_mensual": 5573753.0,
+           "dev": 4191894.0,
+           "gir": 4191894.0,
+           "avance_pct": 75.1,
+           "hijos": [
+            {
+             "code": "5",
+             "name": "SERVICIOS DE ALIMENTACION DE CONSUMO HUMANO",
+             "pia": 6752476.0,
+             "pim": 5582318.0,
+             "cert": 5572895.0,
+             "comp_anual": 5572895.0,
+             "comp_mensual": 5572895.0,
+             "dev": 4191036.0,
+             "gir": 4191036.0,
+             "avance_pct": 75.1
+            },
+            {
+             "code": "6",
+             "name": "SERVICIO DE IMPRESIONES, ENCUADERNACION Y EMPASTADO",
+             "pia": 0.0,
+             "pim": 859.0,
+             "cert": 859.0,
+             "comp_anual": 859.0,
+             "comp_mensual": 859.0,
+             "dev": 859.0,
+             "gir": 859.0,
+             "avance_pct": 100.0
+            }
+           ]
+          },
+          {
+           "code": "13",
+           "name": "SERVICIOS TÉCNICOS Y PROFESIONALES DESARROLLADOS POR PERSONAS JURÍDICAS",
+           "pia": 0.0,
+           "pim": 16945.0,
+           "cert": 16945.0,
+           "comp_anual": 16945.0,
+           "comp_mensual": 16945.0,
+           "dev": 10591.0,
+           "gir": 10591.0,
+           "avance_pct": 62.5,
+           "hijos": [
+            {
+             "code": "98",
+             "name": "OTROS SERVICIOS TÉCNICOS Y PROFESIONALES DESARROLLADOS POR PERSONAS JURÍDICAS",
+             "pia": 0.0,
+             "pim": 16945.0,
+             "cert": 16945.0,
+             "comp_anual": 16945.0,
+             "comp_mensual": 16945.0,
+             "dev": 10591.0,
+             "gir": 10591.0,
+             "avance_pct": 62.5
+            }
+           ]
+          },
+          {
+           "code": "14",
+           "name": "SERVICIOS TÉCNICOS Y PROFESIONALES DESARROLLADOS POR PERSONAS NATURALES",
+           "pia": 0.0,
+           "pim": 19350.0,
+           "cert": 19350.0,
+           "comp_anual": 19350.0,
+           "comp_mensual": 19350.0,
+           "dev": 19350.0,
+           "gir": 19350.0,
+           "avance_pct": 100.0,
+           "hijos": [
+            {
+             "code": "98",
+             "name": "OTROS SERVICIOS TÉCNICOS Y PROFESIONALES DESARROLLADOS POR PERSONAS NATURALES",
+             "pia": 0.0,
+             "pim": 19350.0,
+             "cert": 19350.0,
+             "comp_anual": 19350.0,
+             "comp_mensual": 19350.0,
+             "dev": 19350.0,
+             "gir": 19350.0,
+             "avance_pct": 100.0
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "code": "9",
+         "name": "LOCACIÓN DE SERVICIOS REALIZADOS POR PERSONA NATURAL",
+         "pia": 0.0,
+         "pim": 334559.0,
+         "cert": 316500.0,
+         "comp_anual": 316500.0,
+         "comp_mensual": 316500.0,
+         "dev": 268200.0,
+         "gir": 268200.0,
+         "avance_pct": 80.2,
+         "hijos": [
+          {
+           "code": "1",
+           "name": "LOCACIÓN DE SERVICIOS REALIZADOS POR PERSONA NATURAL",
+           "pia": 0.0,
+           "pim": 334559.0,
+           "cert": 316500.0,
+           "comp_anual": 316500.0,
+           "comp_mensual": 316500.0,
+           "dev": 268200.0,
+           "gir": 268200.0,
+           "avance_pct": 80.2,
+           "hijos": [
+            {
+             "code": "1",
+             "name": "LOCACIÓN DE SERVICIOS REALIZADOS POR PERSONA NATURAL",
+             "pia": 0.0,
+             "pim": 334559.0,
+             "cert": 316500.0,
+             "comp_anual": 316500.0,
+             "comp_mensual": 316500.0,
+             "dev": 268200.0,
+             "gir": 268200.0,
+             "avance_pct": 80.2
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "code": "5-25",
+     "name": "OTROS GASTOS",
+     "pia": 0.0,
+     "pim": 12044.0,
+     "cert": 9794.0,
+     "comp_anual": 9794.0,
+     "comp_mensual": 9794.0,
+     "dev": 9794.0,
+     "gir": 9794.0,
+     "avance_pct": 81.3,
+     "hijos": [
+      {
+       "code": "3",
+       "name": "SUBVENCIONES A PERSONAS NATURALES",
+       "pia": 0.0,
+       "pim": 12044.0,
+       "cert": 9794.0,
+       "comp_anual": 9794.0,
+       "comp_mensual": 9794.0,
+       "dev": 9794.0,
+       "gir": 9794.0,
+       "avance_pct": 81.3,
+       "hijos": [
+        {
+         "code": "1",
+         "name": "SUBVENCIONES FINANCIERAS",
+         "pia": 0.0,
+         "pim": 12044.0,
+         "cert": 9794.0,
+         "comp_anual": 9794.0,
+         "comp_mensual": 9794.0,
+         "dev": 9794.0,
+         "gir": 9794.0,
+         "avance_pct": 81.3,
+         "hijos": [
+          {
+           "code": "1",
+           "name": "SUBVENCIONES FINANCIERAS",
+           "pia": 0.0,
+           "pim": 12044.0,
+           "cert": 9794.0,
+           "comp_anual": 9794.0,
+           "comp_mensual": 9794.0,
+           "dev": 9794.0,
+           "gir": 9794.0,
+           "avance_pct": 81.3,
+           "hijos": [
+            {
+             "code": "1",
+             "name": "A ESTUDIANTES",
+             "pia": 0.0,
+             "pim": 12044.0,
+             "cert": 9794.0,
+             "comp_anual": 9794.0,
+             "comp_mensual": 9794.0,
+             "dev": 9794.0,
+             "gir": 9794.0,
+             "avance_pct": 81.3
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "code": "6-26",
+     "name": "ADQUISICION DE ACTIVOS NO FINANCIEROS",
+     "pia": 0.0,
+     "pim": 1431481.0,
+     "cert": 1320018.0,
+     "comp_anual": 542806.0,
+     "comp_mensual": 542806.0,
+     "dev": 321782.0,
+     "gir": 213559.0,
+     "avance_pct": 22.5,
+     "hijos": [
+      {
+       "code": "3",
+       "name": "ADQUISICION DE VEHICULOS, MAQUINARIAS Y OTROS",
+       "pia": 0.0,
+       "pim": 1431481.0,
+       "cert": 1320018.0,
+       "comp_anual": 542806.0,
+       "comp_mensual": 542806.0,
+       "dev": 321782.0,
+       "gir": 213559.0,
+       "avance_pct": 22.5,
+       "hijos": [
+        {
+         "code": "2",
+         "name": "ADQUISICION DE MAQUINARIAS, EQUIPO Y MOBILIARIO",
+         "pia": 0.0,
+         "pim": 1431481.0,
+         "cert": 1320018.0,
+         "comp_anual": 542806.0,
+         "comp_mensual": 542806.0,
+         "dev": 321782.0,
+         "gir": 213559.0,
+         "avance_pct": 22.5,
+         "hijos": [
+          {
+           "code": "1",
+           "name": "PARA OFICINA",
+           "pia": 0.0,
+           "pim": 275881.0,
+           "cert": 261593.0,
+           "comp_anual": 217589.0,
+           "comp_mensual": 217589.0,
+           "dev": 61593.0,
+           "gir": 61593.0,
+           "avance_pct": 22.3,
+           "hijos": [
+            {
+             "code": "1",
+             "name": "MAQUINAS Y EQUIPOS",
+             "pia": 0.0,
+             "pim": 74175.0,
+             "cert": 61593.0,
+             "comp_anual": 61593.0,
+             "comp_mensual": 61593.0,
+             "dev": 61593.0,
+             "gir": 61593.0,
+             "avance_pct": 83.0
+            },
+            {
+             "code": "2",
+             "name": "MOBILIARIO",
+             "pia": 0.0,
+             "pim": 201706.0,
+             "cert": 200000.0,
+             "comp_anual": 155996.0,
+             "comp_mensual": 155996.0,
+             "dev": 0.0,
+             "gir": 0.0,
+             "avance_pct": 0.0
+            }
+           ]
+          },
+          {
+           "code": "2",
+           "name": "PARA INSTALACIONES EDUCATIVAS",
+           "pia": 0.0,
+           "pim": 15951.0,
+           "cert": 2061.0,
+           "comp_anual": 2061.0,
+           "comp_mensual": 2061.0,
+           "dev": 2061.0,
+           "gir": 2061.0,
+           "avance_pct": 12.9,
+           "hijos": [
+            {
+             "code": "1",
+             "name": "MAQUINAS Y EQUIPOS",
+             "pia": 0.0,
+             "pim": 13890.0,
+             "cert": 0.0,
+             "comp_anual": 0.0,
+             "comp_mensual": 0.0,
+             "dev": 0.0,
+             "gir": 0.0,
+             "avance_pct": 0.0
+            },
+            {
+             "code": "2",
+             "name": "MOBILIARIO",
+             "pia": 0.0,
+             "pim": 2061.0,
+             "cert": 2061.0,
+             "comp_anual": 2061.0,
+             "comp_mensual": 2061.0,
+             "dev": 2061.0,
+             "gir": 2061.0,
+             "avance_pct": 100.0
+            }
+           ]
+          },
+          {
+           "code": "3",
+           "name": "ADQUISICION DE EQUIPOS INFORMATICOS Y DE COMUNICACIONES",
+           "pia": 0.0,
+           "pim": 70152.0,
+           "cert": 35960.0,
+           "comp_anual": 35624.0,
+           "comp_mensual": 35624.0,
+           "dev": 29905.0,
+           "gir": 0.0,
+           "avance_pct": 42.6,
+           "hijos": [
+            {
+             "code": "1",
+             "name": "EQUIPOS COMPUTACIONALES Y PERIFERICOS",
+             "pia": 0.0,
+             "pim": 44112.0,
+             "cert": 35960.0,
+             "comp_anual": 35624.0,
+             "comp_mensual": 35624.0,
+             "dev": 29905.0,
+             "gir": 0.0,
+             "avance_pct": 67.8
+            },
+            {
+             "code": "3",
+             "name": "EQUIPOS DE TELECOMUNICACIONES",
+             "pia": 0.0,
+             "pim": 26040.0,
+             "cert": 0.0,
+             "comp_anual": 0.0,
+             "comp_mensual": 0.0,
+             "dev": 0.0,
+             "gir": 0.0,
+             "avance_pct": 0.0
+            }
+           ]
+          },
+          {
+           "code": "4",
+           "name": "ADQUISICION DE MOBILIARIO, EQUIPOS Y APARATOS MEDICOS",
+           "pia": 0.0,
+           "pim": 3512.0,
+           "cert": 3512.0,
+           "comp_anual": 3512.0,
+           "comp_mensual": 3512.0,
+           "dev": 3512.0,
+           "gir": 3512.0,
+           "avance_pct": 100.0,
+           "hijos": [
+            {
+             "code": "2",
+             "name": "EQUIPOS",
+             "pia": 0.0,
+             "pim": 3512.0,
+             "cert": 3512.0,
+             "comp_anual": 3512.0,
+             "comp_mensual": 3512.0,
+             "dev": 3512.0,
+             "gir": 3512.0,
+             "avance_pct": 100.0
+            }
+           ]
+          },
+          {
+           "code": "9",
+           "name": "ADQUISICION DE MAQUINARIA Y EQUIPO DIVERSOS",
+           "pia": 0.0,
+           "pim": 1065985.0,
+           "cert": 1016892.0,
+           "comp_anual": 284021.0,
+           "comp_mensual": 284021.0,
+           "dev": 224711.0,
+           "gir": 146394.0,
+           "avance_pct": 21.1,
+           "hijos": [
+            {
+             "code": "1",
+             "name": "AIRE ACONDICIONADO Y REFRIGERACION",
+             "pia": 0.0,
+             "pim": 133777.0,
+             "cert": 97323.0,
+             "comp_anual": 93375.0,
+             "comp_mensual": 93375.0,
+             "dev": 86461.0,
+             "gir": 8144.0,
+             "avance_pct": 64.6
+            },
+            {
+             "code": "2",
+             "name": "ASEO,  LIMPIEZA Y COCINA",
+             "pia": 0.0,
+             "pim": 932208.0,
+             "cert": 919569.0,
+             "comp_anual": 190645.0,
+             "comp_mensual": 190645.0,
+             "dev": 138250.0,
+             "gir": 138250.0,
+             "avance_pct": 14.8
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "pliego_mes_alimentos": [
+    {
+     "mes": 2,
+     "nombre": "Febrero",
+     "cert": 7281879.0,
+     "comp_anual": 0.0,
+     "comp_mensual": 0.0,
+     "dev": 0.0,
+     "gir": 0.0
+    },
+    {
+     "mes": 3,
+     "nombre": "Marzo",
+     "cert": 203972.0,
+     "comp_anual": 1439738.0,
+     "comp_mensual": 1021245.0,
+     "dev": 27822.0,
+     "gir": 27822.0
+    },
+    {
+     "mes": 4,
+     "nombre": "Abril",
+     "cert": 39651.0,
+     "comp_anual": 5928764.0,
+     "comp_mensual": 1385213.0,
+     "dev": 503377.0,
+     "gir": 503377.0
+    },
+    {
+     "mes": 5,
+     "nombre": "Mayo",
+     "cert": 10834.0,
+     "comp_anual": -401593.0,
+     "comp_mensual": 16900.0,
+     "dev": 489515.0,
+     "gir": 489515.0
+    },
+    {
+     "mes": 6,
+     "nombre": "Junio",
+     "cert": 684792.0,
+     "comp_anual": 13256.0,
+     "comp_mensual": 13256.0,
+     "dev": 1277103.0,
+     "gir": 670055.0
+    },
+    {
+     "mes": 7,
+     "nombre": "Julio",
+     "cert": 7096.0,
+     "comp_anual": -4531028.0,
+     "comp_mensual": 7101.0,
+     "dev": 104047.0,
+     "gir": 8911.0
+    },
+    {
+     "mes": 8,
+     "nombre": "Agosto",
+     "cert": -1195975.0,
+     "comp_anual": 3257744.0,
+     "comp_mensual": 3248132.0,
+     "dev": 375325.0,
+     "gir": 619497.0
+    },
+    {
+     "mes": 9,
+     "nombre": "Setiembre",
+     "cert": -1128788.0,
+     "comp_anual": -14432.0,
+     "comp_mensual": 601.0,
+     "dev": 9868.0,
+     "gir": 2786.0
+    },
+    {
+     "mes": 10,
+     "nombre": "Octubre",
+     "cert": -196733.0,
+     "comp_anual": 14280.0,
+     "comp_mensual": 14280.0,
+     "dev": 1505042.0,
+     "gir": 1253317.0
+    },
+    {
+     "mes": 11,
+     "nombre": "Noviembre",
+     "cert": 4311.0,
+     "comp_anual": 3954.0,
+     "comp_mensual": 3954.0,
+     "dev": 9045.0,
+     "gir": 721066.0
+    }
+   ]
+  }
+ },
+ "proyeccion_2026": {
+  "alimentos_bienestar": {
+   "pim": 5582318.0,
+   "certificado": 5572895.0,
+   "compromiso_anual": 5572895.0,
+   "devengado": 4191036.0,
+   "avance_pct": 75.1,
+   "devengado_ene_oct": 4191037.0,
+   "promedio_mensual_ene_oct": 419103.7,
+   "promedio_mensual_meses_con_gasto": 698506.17,
+   "saldo_pim_menos_devengado": 1391282.0,
+   "saldo_certificado_por_devengar": 1381859.0,
+   "compromisos_por_devengar": 1381859.0,
+   "pim_sin_certificar": 9423.0,
+   "necesidad_estimada_16nov_31dic": 628655.55,
+   "meses_cubiertos_por_saldo_pim": 3.3,
+   "necesidad_nov_dic_rango_patron_historico": [
+    2139834.6,
+    4207834.74
+   ],
+   "necesidad_ritmo_meses_con_gasto_x1_5": 1047759.26,
+   "alcanza_a_diciembre_en_papel": false,
+   "alcanza_nota": "true solo si el saldo PIM cubre el máximo del rango histórico nov+dic; false si no cubre ni el mínimo; 'incierto' en los demás casos. necesidad_estimada_16nov_31dic (promedio ene-oct x 1.5) subestima: el contrato empezó en abril y nov+dic concentran históricamente un tercio o más del devengado anual.",
+   "patron_historico_nov_dic": [
+    {
+     "year": 2022,
+     "dev_anual": 2100300.0,
+     "dev_nov_dic": 1053122.0,
+     "pct_nov_dic": 50.1
+    },
+    {
+     "year": 2023,
+     "dev_anual": 3845207.0,
+     "dev_nov_dic": 1299327.0,
+     "pct_nov_dic": 33.8
+    },
+    {
+     "year": 2024,
+     "dev_anual": 4159636.0,
+     "dev_nov_dic": 1631763.0,
+     "pct_nov_dic": 39.2
+    },
+    {
+     "year": 2025,
+     "dev_anual": 5499440.0,
+     "dev_nov_dic": 2039870.0,
+     "pct_nov_dic": 37.1
+    }
+   ]
+  },
+  "bienestar_total": {
+   "pim": 11097444.0,
+   "certificado": 10373094.0,
+   "compromiso_anual": 9511805.0,
+   "devengado": 7443721.0,
+   "avance_pct": 67.1,
+   "devengado_ene_oct": 7155589.0,
+   "promedio_mensual_ene_oct": 715558.9,
+   "promedio_mensual_meses_con_gasto": 715558.9,
+   "saldo_pim_menos_devengado": 3653723.0,
+   "saldo_certificado_por_devengar": 2929373.0,
+   "compromisos_por_devengar": 2068084.0,
+   "pim_sin_certificar": 724350.0,
+   "necesidad_estimada_16nov_31dic": 1073338.35,
+   "meses_cubiertos_por_saldo_pim": 5.1,
+   "necesidad_nov_dic_rango_patron_historico": [
+    2838250.39,
+    4890857.13
+   ],
+   "necesidad_ritmo_meses_con_gasto_x1_5": 1073338.35,
+   "alcanza_a_diciembre_en_papel": "incierto",
+   "alcanza_nota": "true solo si el saldo PIM cubre el máximo del rango histórico nov+dic; false si no cubre ni el mínimo; 'incierto' en los demás casos. necesidad_estimada_16nov_31dic (promedio ene-oct x 1.5) subestima: el contrato empezó en abril y nov+dic concentran históricamente un tercio o más del devengado anual.",
+   "patron_historico_nov_dic": [
+    {
+     "year": 2018,
+     "dev_anual": 6225279.0,
+     "dev_nov_dic": 1920960.0,
+     "pct_nov_dic": 30.9
+    },
+    {
+     "year": 2019,
+     "dev_anual": 6620811.0,
+     "dev_nov_dic": 1880764.0,
+     "pct_nov_dic": 28.4
+    },
+    {
+     "year": 2020,
+     "dev_anual": 2724052.0,
+     "dev_nov_dic": 820002.0,
+     "pct_nov_dic": 30.1
+    },
+    {
+     "year": 2021,
+     "dev_anual": 3591065.0,
+     "dev_nov_dic": 1458746.0,
+     "pct_nov_dic": 40.6
+    },
+    {
+     "year": 2022,
+     "dev_anual": 5594885.0,
+     "dev_nov_dic": 1995473.0,
+     "pct_nov_dic": 35.7
+    },
+    {
+     "year": 2023,
+     "dev_anual": 7792266.0,
+     "dev_nov_dic": 2232198.0,
+     "pct_nov_dic": 28.6
+    },
+    {
+     "year": 2024,
+     "dev_anual": 8160717.0,
+     "dev_nov_dic": 2857518.0,
+     "pct_nov_dic": 35.0
+    },
+    {
+     "year": 2025,
+     "dev_anual": 10319999.0,
+     "dev_nov_dic": 3683198.0,
+     "pct_nov_dic": 35.7
+    }
+   ]
+  }
+ },
+ "noticias": []
+}

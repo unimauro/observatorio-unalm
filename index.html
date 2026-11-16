@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://www.googletagmanager.com 'unsafe-inline'; connect-src 'self' https://ai.tunky.net https://www.google-analytics.com https://*.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://raw.githubusercontent.com; base-uri 'self'; form-action 'self'">
+<!-- Google Analytics: TODO crear una propiedad GA4 propia para este sitio y poner su ID aquí.
+     No reutilizar el ID de otro observatorio.
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+-->
+<title>Observatorio UNALM · Presupuesto, gasto, proveedores, planilla e investigación de la Universidad Nacional Agraria La Molina</title>
+<meta name="description" content="Portal ciudadano de transparencia de la Universidad Nacional Agraria La Molina (UNALM, pliego 518, Lima): presupuesto y ejecución del gasto (MEF/SIAF), proveedores (OECE/CONOSCE), comedor universitario, planilla (Portal de Transparencia Estándar), TUPA y producción científica (OpenAlex). Solo datos públicos.">
+<link rel="canonical" href="https://unimauro.github.io/observatorio-unalm/">
+<meta property="og:title" content="Observatorio UNALM: seguir el dinero de la Universidad Nacional Agraria La Molina">
+<meta property="og:description" content="Presupuesto, ejecución del gasto, proveedores, comedor, planilla, TUPA e investigación de la UNALM (Lima). Solo datos públicos (MEF, OECE, PTE, OpenAlex).">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://unimauro.github.io/observatorio-unalm/">
+<meta property="og:image" content="https://unimauro.github.io/observatorio-unalm/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#06361a">
+<link rel="icon" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" integrity="sha384-9nhczxUqK87bcKHh20fSQcTGD4qq5GhayNYSYWqwBkINBhOfQLg/P5HG5lF1urn4" crossorigin="anonymous"></script>
+<style>
+/* Paleta "guerrera" agraria: verde selva + girasol + terracota (nombres de variables heredados del template) */
+:root{
+  --granate:#06361a; --granate2:#0b6b2e; --granate3:#0a7a33; --oro:#e0a100; --terra:#d9481c; --lima:#c6f135;
+  --tinta:#0e1a11; --bg:#f6f8ef; --card:#fff; --line:#d9e3cf; --muted:#4f6152;
+  --shadow:0 2px 0 rgba(6,54,26,.08), 0 10px 30px rgba(6,54,26,.09);
+  --serif:"Archivo","Hanken Grotesk",Impact,sans-serif; --sans:"Hanken Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
+:root[data-theme="dark"]{
+  --tinta:#eef6e8; --bg:#07120a; --card:#0f1f13; --line:#23402b; --muted:#a6c2aa; --oro:#ffc21a; --terra:#ff6a3d; --granate3:#3ddc72;
+  --shadow:0 2px 0 rgba(0,0,0,.4), 0 12px 32px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box}
+html{overflow-x:hidden}
+body{margin:0;font-family:var(--sans);
+  background:var(--bg);color:var(--tinta);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+a{color:var(--granate3)}
+:root[data-theme="dark"] a{color:var(--oro)}
+h1,h2,h3{font-family:var(--serif);line-height:1.05;margin:0 0 .3em;letter-spacing:-.02em;font-weight:800}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+
+/* barra de apoyo */
+.support{background:#031d0d;color:#fff;font-size:13px;border-bottom:3px solid var(--oro)}
+.support .wrap{display:flex;gap:14px;align-items:center;flex-wrap:wrap;padding:7px 16px}
+.support a{color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:5px;opacity:.92}
+.support a:hover{opacity:1}
+.support .sp{margin-left:auto;display:flex;gap:10px;align-items:center}
+.tgl{background:rgba(255,255,255,.15);border:0;color:#fff;border-radius:20px;padding:4px 11px;cursor:pointer;font-size:13px}
+
+/* navbar */
+header.nav{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;gap:8px;padding:11px 16px;position:relative}
+.brand{font-family:var(--serif);font-weight:900;font-size:20px;color:var(--granate);text-transform:uppercase;letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
+:root[data-theme="dark"] .brand{color:var(--oro)}
+.brand small{display:block;font-size:11px;color:var(--muted);font-weight:400;font-family:inherit}
+nav.links{margin-left:auto;display:flex;gap:2px;flex-wrap:wrap;justify-content:flex-end}
+nav.links a{font-size:13px;color:var(--muted);text-decoration:none;padding:6px 8px;border-radius:8px}
+nav.links a:hover,nav.links a.on{color:var(--granate3);background:color-mix(in srgb,var(--granate3) 10%,transparent)}
+:root[data-theme="dark"] nav.links a:hover,:root[data-theme="dark"] nav.links a.on{color:var(--oro);background:rgba(217,180,74,.12)}
+.burger{display:none;margin-left:auto;background:none;border:0;font-size:24px;color:var(--tinta);cursor:pointer}
+
+/* hero */
+.hero{position:relative;overflow:hidden;color:#fff;padding:64px 0 52px;
+  background:radial-gradient(1200px 500px at 85% -10%,rgba(224,161,0,.35),transparent 60%),
+  radial-gradient(900px 420px at -10% 120%,rgba(217,72,28,.35),transparent 60%),
+  linear-gradient(150deg,#031d0d 0%,#06361a 40%,#0b6b2e 100%)}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:8px;
+  background:repeating-linear-gradient(90deg,var(--oro) 0 40px,var(--terra) 40px 80px,var(--lima) 80px 120px)}
+.hero h1{color:#fff;font-size:clamp(34px,7.2vw,72px);font-weight:900;text-transform:uppercase;letter-spacing:-.03em;max-width:15ch}
+.hero h1 em{font-style:normal;color:var(--oro);background:linear-gradient(transparent 62%,rgba(217,72,28,.55) 62%)}
+.hero p{max-width:720px;color:#e3f3dd;font-size:clamp(16px,2.2vw,19px)}
+.hero p strong{color:#fff}
+.hero .ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-flex;align-items:center;gap:6px;font-weight:800;font-family:var(--serif);text-transform:uppercase;letter-spacing:.03em;
+  font-size:14px;padding:12px 18px;border-radius:10px;text-decoration:none;border:2px solid transparent}
+.hero a.btn.pri,:root[data-theme="dark"] .hero a.btn.pri{background:var(--oro);color:#1a1200;box-shadow:4px 4px 0 var(--terra)}
+.btn.pri:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--terra)}
+.hero a.btn.sec,:root[data-theme="dark"] .hero a.btn.sec{border-color:rgba(255,255,255,.6);color:#fff}
+.btn.sec:hover{background:rgba(255,255,255,.1)}
+.tag{display:inline-block;background:var(--terra);color:#fff;font-weight:800;text-transform:uppercase;
+  border-radius:6px;padding:5px 12px;font-size:12px;margin-bottom:18px;letter-spacing:.08em;transform:rotate(-1.5deg)}
+
+/* secciones */
+section{padding:48px 0;border-bottom:1px solid var(--line)}
+section h2{font-size:clamp(26px,4.6vw,42px);color:var(--granate);text-transform:uppercase}
+:root[data-theme="dark"] section h2{color:#fff}
+.lead{color:var(--muted);max-width:760px;margin:.2em 0 1.4em}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;color:var(--terra);font-weight:800;margin-bottom:8px;display:inline-flex;align-items:center;gap:7px}
+.eyebrow::before{content:"";width:26px;height:4px;background:var(--terra);display:inline-block}
+
+/* kpis */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:14px}
+.kpi{background:var(--card);border:2px solid var(--granate);border-radius:14px;padding:20px 16px;box-shadow:var(--shadow);position:relative;overflow:hidden;transition:transform .15s ease,box-shadow .15s ease}
+.kpi::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--granate3),var(--oro) 60%,var(--terra))}
+:root[data-theme="dark"] .kpi{border-color:var(--line)}
+.kpi:hover{transform:translateY(-2px);box-shadow:0 2px 4px rgba(20,60,30,.05),0 14px 36px rgba(20,60,30,.1)}
+.kpi .v{font-family:var(--serif);font-size:clamp(26px,2.2vw,29px);line-height:1.1;font-weight:900;color:var(--granate);letter-spacing:-.02em;overflow-wrap:anywhere}
+:root[data-theme="dark"] .kpi .v{color:var(--oro)}
+.kpi .l{font-size:12.5px;color:var(--tinta);margin-top:2px;font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+.kpi .s{font-size:11.5px;color:var(--muted);margin-top:4px;opacity:.85}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid2>*{min-width:0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow);transition:box-shadow .15s ease;min-width:0}
+.card:hover{box-shadow:0 2px 4px rgba(20,60,30,.05),0 14px 40px rgba(20,60,30,.1)}
+.card h3{font-size:16px}
+.chart-box{position:relative;height:300px}
+.chart-box.tall{height:360px}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.scroll{max-height:340px;overflow:auto}
+.pill{display:inline-block;font-size:11px;padding:2px 8px;border-radius:20px;background:color-mix(in srgb,var(--oro) 22%,transparent);color:var(--tinta)}
+.note{font-size:12.5px;color:var(--muted);margin-top:10px}
+.soon{background:repeating-linear-gradient(45deg,transparent,transparent 10px,color-mix(in srgb,var(--oro) 8%,transparent) 10px,color-mix(in srgb,var(--oro) 8%,transparent) 20px);
+  border:1px dashed var(--oro);border-radius:14px;padding:20px}
+.soon h3{color:var(--oro)}
+.search{width:100%;padding:10px 12px;margin:8px 0 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--tinta);font-size:14px}
+.links-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.links-grid a.card{text-decoration:none;color:var(--tinta);display:block}
+.links-grid a.card strong{color:var(--granate3);display:block;margin-bottom:4px}
+:root[data-theme="dark"] .links-grid a.card strong{color:var(--oro)}
+.links-grid a.card span{font-size:13px;color:var(--muted)}
+
+/* asistente */
+.fab{position:fixed;right:16px;bottom:16px;z-index:60;background:var(--terra);color:#fff;border:0;border-radius:50%;
+  width:56px;height:56px;font-size:24px;cursor:pointer;box-shadow:0 8px 24px rgba(20,70,35,.4)}
+.chat{position:fixed;right:16px;bottom:84px;z-index:60;width:min(360px,calc(100vw - 32px));height:min(520px,72vh);
+  background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);display:none;flex-direction:column;overflow:hidden}
+.chat.open{display:flex}
+.chat .top{background:var(--granate);color:#fff;padding:12px 14px;font-weight:600;font-size:14px}
+.chat .msgs{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:9px}
+.chat .m{padding:8px 11px;border-radius:12px;font-size:13.5px;max-width:85%;overflow-wrap:anywhere}
+.chat .m.u{background:var(--granate2);color:#fff;align-self:flex-end}
+.chat .m.a{background:color-mix(in srgb,var(--oro) 14%,transparent);align-self:flex-start}
+.chat .in{display:flex;border-top:1px solid var(--line)}
+.chat input{flex:1;min-width:0;border:0;padding:12px;background:transparent;color:var(--tinta);font-size:14px;outline:none}
+.chat button.send{background:none;border:0;color:var(--granate3);font-weight:700;padding:0 14px;cursor:pointer}
+
+footer{padding:34px 0;color:var(--muted);font-size:13px}
+@media(max-width:980px){
+  nav.links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;padding:10px;border-bottom:1px solid var(--line)}
+  nav.links.show{display:flex}
+  .burger{display:block}
+}
+@media(max-width:820px){
+  .grid2{grid-template-columns:1fr}
+  .chart-box.tall{height:420px}
+}
+/* modal yape */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:80;display:none;align-items:center;justify-content:center}
+.modal.open{display:flex}
+.modal .box{background:var(--card);border-radius:16px;padding:22px;max-width:320px;text-align:center}
+.modal img{max-width:230px;border-radius:10px}
+</style>
+</head>
+<body>
+
+<!-- barra de apoyo -->
+<div class="support"><div class="wrap">
+  <span>🌱 Portal ciudadano · datos públicos</span>
+  <a href="https://wa.me/51940584307" target="_blank" rel="noopener">💬 WhatsApp</a>
+  <a href="#" onclick="document.getElementById('yape').classList.add('open');return false">💜 Yape</a>
+  <a href="https://buymeacoffee.com/unimauro" target="_blank" rel="noopener">☕ Apóyanos</a>
+  <span class="sp">
+    <button class="tgl" onclick="toggleTheme()" id="tglBtn">🌙 Tema</button>
+  </span>
+</div></div>
+
+<!-- navbar -->
+<header class="nav"><div class="wrap">
+  <a class="brand" href="#top">Observatorio UNALM<small>U.N. Agraria La Molina · transparencia</small></a>
+  <button class="burger" aria-label="Menú" onclick="document.getElementById('nav').classList.toggle('show')">☰</button>
+  <nav class="links" id="nav">
+    <a href="#resumen">Resumen</a>
+    <a href="#presupuesto">Presupuesto</a>
+    <a href="#proveedores">Proveedores</a>
+    <a href="#comedor">🍲 Comedor</a>
+    <a href="#investigacion">Investigación</a>
+    <a href="#valor">Gasto↔valor</a>
+    <a href="#planilla">Planilla</a>
+    <a href="#gasto">En qué se gasta</a>
+    <a href="#tupa">TUPA</a>
+    <a href="#transparencia">Transparencia</a>
+    <a href="#metodo">Metodología</a>
+  </nav>
+</div></header>
+
+<a id="top"></a>
+<div class="hero"><div class="wrap">
+  <span class="tag">🔎 Seguir el dinero · datos públicos</span>
+  <h1>La plata de La Molina, <em>a la vista</em></h1>
+  <p>Es <strong>plata pública</strong>, y tenemos derecho a saber <strong>en qué se gasta cada sol</strong>,
+  <strong>a quién se le paga</strong>, <strong>cuánto gana quién</strong>, <strong>cuánto cuesta cada trámite</strong>
+  y <strong>qué produce la universidad en investigación</strong>. Todo sale de fuentes oficiales (MEF, OECE, Portal de Transparencia, OpenAlex) y cada cifra dice de dónde viene.</p>
+  <div class="ctas">
+    <a class="btn pri" href="#presupuesto">💰 Ver el presupuesto</a>
+    <a class="btn sec" href="#proveedores">¿A quién le pagan?</a>
+    <a class="btn sec" href="#comedor">🍲 Comedor</a>
+    <a class="btn sec" href="#tupa">TUPA</a>
+  </div>
+</div></div>
+
+<!-- RESUMEN -->
+<section id="resumen"><div class="wrap">
+  <div class="eyebrow">Panorama</div>
+  <h2>La UNALM en cifras</h2>
+  <p class="lead">Indicadores clave. El presupuesto se muestra para el <strong>último año cerrado</strong>; cada tarjeta indica su periodo. Fuentes: MEF/SIAF (presupuesto), OECE/CONOSCE (proveedores), OpenAlex (investigación), Portal de Transparencia Estándar (personal).</p>
+  <div class="kpis" id="kpis"></div>
+</div></section>
+
+<!-- PRESUPUESTO -->
+<section id="presupuesto"><div class="wrap">
+  <div class="eyebrow">Dinero público</div>
+  <h2>Presupuesto y ejecución</h2>
+  <p class="lead">Pliego <strong>518 · U.N. AGRARIA LA MOLINA</strong> (una sola unidad ejecutora, 001-96). PIA = presupuesto de apertura, PIM = modificado, Devengado = gasto reconocido. Fuente: MEF, Consulta Amigable del SIAF.</p>
+  <div class="grid2">
+    <div class="card"><h3>Serie histórica (S/ millones)</h3><div class="chart-box"><canvas id="cSerie"></canvas></div></div>
+    <div class="card"><h3>Ejecución del gasto (Devengado / PIM, años cerrados)</h3><div class="chart-box"><canvas id="cEjec"></canvas></div></div>
+  </div>
+  <p class="note" id="presupNote"></p>
+</div></section>
+
+<!-- PROVEEDORES -->
+<section id="proveedores"><div class="wrap">
+  <div class="eyebrow">Seguir el dinero</div>
+  <h2>Proveedores y dueños</h2>
+  <p class="lead">¿Quién recibe el dinero de la UNALM? Sumamos las adjudicaciones (buena pro) del OECE/CONOSCE por proveedor y, <strong>cuando es posible</strong>, mostramos sus integrantes, representantes o socios según fuentes públicas.</p>
+  <div class="kpis" id="provKpis" style="margin-bottom:20px"></div>
+  <div class="grid2">
+    <div class="card"><h3>Top proveedores por monto adjudicado (S/ millones)</h3><div class="chart-box tall"><canvas id="cProv"></canvas></div></div>
+    <div class="card"><h3>Empresas vs. personas naturales (monto)</h3><div class="chart-box tall"><canvas id="cProvTipo"></canvas></div></div>
+  </div>
+  <div id="provWrap" style="margin-top:20px"></div>
+  <div id="provPersonas" style="margin-top:20px"></div>
+</div></section>
+
+<!-- COMEDOR UNIVERSITARIO -->
+<section id="comedor"><div class="wrap">
+  <div class="eyebrow">Bienestar estudiantil</div>
+  <h2>🍲 Comedor universitario</h2>
+  <p class="lead">En la UNALM el comedor es un <strong>servicio de alimentación tercerizado</strong>: la universidad no compra víveres, contrata a una empresa que prepara y sirve las raciones. ¿Con quién, por cuánto y hasta cuándo? Cruzamos procesos de selección (OECE/CONOSCE + OCDS), órdenes de compra y servicio, y el presupuesto (MEF). Cada cifra lleva su fuente.</p>
+  <div class="kpis" id="comKpis" style="margin-bottom:20px"></div>
+  <div id="comCobertura"></div>
+  <div class="grid2" style="margin-top:20px">
+    <div class="card"><h3>Servicio de alimentación: adjudicado vs. desierto por año (S/)</h3><div class="chart-box"><canvas id="cComAnio"></canvas></div><p class="note">Monto adjudicado en procesos de selección del servicio de alimentación del comedor. El monto de un contrato cubre toda su vigencia (puede abarcar más de un año). "Desierto" = monto referencial de ítems que nadie ganó.</p></div>
+    <div class="card"><h3>Órdenes vinculadas al comedor por mes (S/)</h3><div class="chart-box"><canvas id="cComMes"></canvas></div><p class="note" id="comMesNote"></p></div>
+  </div>
+  <div id="comPresu" style="margin-top:20px"></div>
+  <div id="comProv" style="margin-top:20px"></div>
+  <div id="comAlertas" style="margin-top:20px"></div>
+  <div id="comProcesos" style="margin-top:20px"></div>
+  <div id="comOrdenes" style="margin-top:20px"></div>
+</div></section>
+
+<!-- INVESTIGACIÓN -->
+<section id="investigacion"><div class="wrap">
+  <div class="eyebrow">Valor público</div>
+  <h2>Producción científica</h2>
+  <p class="lead">Publicaciones y citas de la UNALM en el tiempo, su impacto normalizado y la comparación con otras universidades peruanas. Fuente: OpenAlex (abierto, CC0). Indicadores exploratorios, no un ranking oficial.</p>
+  <div class="kpis" id="invKpis" style="margin-bottom:20px"></div>
+  <div class="grid2">
+    <div class="card"><h3>Publicaciones y citas por año</h3><div class="chart-box"><canvas id="cInv"></canvas></div></div>
+    <div class="card"><h3>UNALM vs. pares (publicaciones acumuladas)</h3><div class="chart-box"><canvas id="cPares"></canvas></div></div>
+  </div>
+  <p class="note" id="invNote"></p>
+</div></section>
+
+<!-- GASTO ↔ VALOR PÚBLICO -->
+<section id="valor"><div class="wrap">
+  <div class="eyebrow">¿Rinde el dinero?</div>
+  <h2>Gasto ↔ valor público</h2>
+  <p class="lead">¿Cuánta producción científica genera la UNALM por cada sol? Cruzamos el presupuesto ejecutado con las publicaciones. Indicadores <strong>exploratorios</strong>: sirven para hacer preguntas, no para dar un veredicto.</p>
+  <div class="kpis" id="valorKpis" style="margin-bottom:20px"></div>
+  <div class="grid2">
+    <div class="card"><h3>Presupuesto ejecutado vs. publicaciones por año</h3><div class="chart-box tall"><canvas id="cValor"></canvas></div></div>
+    <div class="card"><h3>Publicaciones por S/ 10 M ejecutados</h3><div class="chart-box tall"><canvas id="cCosto"></canvas></div></div>
+  </div>
+  <p class="note" id="valorNote"></p>
+</div></section>
+
+<!-- PLANILLA -->
+<section id="planilla"><div class="wrap">
+  <div class="eyebrow">Quiénes trabajan</div>
+  <h2>Planilla y remuneraciones</h2>
+  <p class="lead">Personal de la UNALM (docentes, funcionarios y administrativos) con nombre, cargo, dependencia y monto mensual, tal como la propia universidad lo declara en el <strong>Portal de Transparencia Estándar</strong>, más el agregado de registros AIRHSP del MEF. Son servidores públicos: la Ley 27806 obliga a publicar sus remuneraciones. Nunca estudiantes.</p>
+  <div class="kpis" id="planKpis" style="margin-bottom:20px"></div>
+  <div class="grid2">
+    <div class="card"><h3>Registros por régimen laboral (AIRHSP)</h3><div class="chart-box"><canvas id="cReg"></canvas></div></div>
+    <div class="card"><h3>Remuneración base promedio por régimen (S/, AIRHSP)</h3><div class="chart-box"><canvas id="cRegS"></canvas></div></div>
+  </div>
+  <div id="planWrap" style="margin-top:20px"></div>
+</div></section>
+
+<!-- EN QUÉ SE GASTA -->
+<section id="gasto"><div class="wrap">
+  <div class="eyebrow">Anatomía del gasto</div>
+  <h2>En qué se gasta cada sol</h2>
+  <p class="lead" id="gastoLead">Desglose del último ejercicio cerrado por genérica de gasto, fuente de financiamiento, producto/proyecto y función. ¿Cuánto va a planilla y cuánto a bienes, servicios e inversión? ¿Con qué dinero se paga?</p>
+  <div id="gastoWrap">
+    <div class="grid2">
+      <div class="card"><h3>Por genérica de gasto (S/ millones)</h3><div class="chart-box"><canvas id="cGen"></canvas></div></div>
+      <div class="card"><h3 id="cUniTitle">Por fuente de financiamiento (S/ millones)</h3><div class="chart-box"><canvas id="cUni"></canvas></div></div>
+    </div>
+    <div class="card" style="margin-top:20px"><h3>Por producto / proyecto SIAF (S/ millones, PIM)</h3><div class="chart-box tall"><canvas id="cProg"></canvas></div><p class="note" id="progNote"></p></div>
+    <div class="card" style="margin-top:20px"><h3>Detalle por función</h3><div class="scroll"><table id="tFun"><thead><tr><th>Función</th><th class="n">PIM (S/)</th><th class="n">Devengado (S/)</th><th class="n">Ejec.</th></tr></thead><tbody></tbody></table></div></div>
+  </div>
+  <p class="note" id="gastoNote"></p>
+</div></section>
+
+<!-- TUPA -->
+<section id="tupa"><div class="wrap">
+  <div class="eyebrow">Trámites</div>
+  <h2>TUPA: cuánto cuesta cada trámite</h2>
+  <p class="lead">Procedimientos administrativos del Texto Único de Procedimientos Administrativos (TUPA) de la UNALM: derecho de tramitación, plazo, tipo de calificación y unidad responsable, según el anexo publicado en su portal de transparencia.</p>
+  <div class="kpis" id="tupaKpis" style="margin-bottom:20px"></div>
+  <div id="tupaWrap"></div>
+</div></section>
+
+<!-- TRANSPARENCIA -->
+<section id="transparencia"><div class="wrap">
+  <div class="eyebrow">Fuentes oficiales</div>
+  <h2>Transparencia: enlaces oficiales</h2>
+  <p class="lead">Este observatorio no reemplaza a los canales oficiales. Para pedir información que no está aquí, usa la solicitud de acceso a la información pública (Ley 27806).</p>
+  <div class="links-grid">
+    <a class="card" href="https://www.transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=10037" target="_blank" rel="noopener"><strong>Portal de Transparencia Estándar (PTE)</strong><span>Presupuesto, personal, contrataciones y más que la UNALM publica en transparencia.gob.pe.</span></a>
+    <a class="card" href="https://www.gob.pe/unalm" target="_blank" rel="noopener"><strong>gob.pe/unalm</strong><span>Página institucional en la Plataforma Digital Única del Estado: trámites, normas y publicaciones.</span></a>
+    <a class="card" href="https://www.gob.pe/institucion/unalm/normas-legales" target="_blank" rel="noopener"><strong>Normas legales (gob.pe)</strong><span>Resoluciones publicadas por la UNALM en gob.pe.</span></a>
+    <a class="card" href="https://www.lamolina.edu.pe/Rectorado/transparencia2/" target="_blank" rel="noopener"><strong>Portal de transparencia UNALM</strong><span>Sección de transparencia del sitio web de la universidad (resoluciones, planeamiento, TUPA).</span></a>
+    <a class="card" href="https://apps5.mineco.gob.pe/transparencia/Navegador/default.aspx" target="_blank" rel="noopener"><strong>Consulta Amigable MEF</strong><span>Ejecución presupuestal diaria. Ruta: Gobierno Nacional › 10 Educación › pliego 518.</span></a>
+    <a class="card" href="https://conosce.osce.gob.pe/" target="_blank" rel="noopener"><strong>CONOSCE (OECE)</strong><span>Datos abiertos de contrataciones públicas: adjudicaciones, contratos, órdenes.</span></a>
+    <a class="card" href="https://openalex.org/I79080234" target="_blank" rel="noopener"><strong>OpenAlex: UNALM</strong><span>Registro abierto de la producción científica de la universidad (I79080234).</span></a>
+    <a class="card" href="https://www.lamolina.edu.pe/" target="_blank" rel="noopener"><strong>lamolina.edu.pe</strong><span>Sitio web oficial de la Universidad Nacional Agraria La Molina.</span></a>
+  </div>
+</div></section>
+
+<!-- HOJA DE RUTA -->
+<section id="roadmap"><div class="wrap">
+  <div class="eyebrow">Qué viene</div>
+  <h2>Hoja de ruta</h2>
+  <p class="lead">Este observatorio crece con la comunidad de la UNALM. ¿Ideas, críticas o datos que aportar? Escríbenos a <a href="mailto:carlos@cardenas.pe">carlos@cardenas.pe</a>.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px">
+    <div class="card">
+      <h3>✅ Hecho</h3>
+      <ul style="font-size:13.5px;padding-left:18px;margin:0">
+        <li>Presupuesto histórico 2012–2026</li>
+        <li>En qué se gasta cada sol (genérica, fuente, producto/proyecto, función)</li>
+        <li>Proveedores 2023–2026 + dueños cuando es posible</li>
+        <li>Comedor universitario (contratos, órdenes, presupuesto)</li>
+        <li>Planilla nominal del PTE + buscador</li>
+        <li>Investigación (OpenAlex) + gasto↔valor</li>
+        <li>TUPA con buscador</li>
+        <li>Asistente IA</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🔜 En cola</h3>
+      <ul style="font-size:13.5px;padding-left:18px;margin:0">
+        <li>Buscador de órdenes de compra y servicio (todas, no solo comedor)</li>
+        <li>Grafo proveedor → dueño</li>
+        <li>Serie de proveedores antes de 2023</li>
+        <li>TUPA nuevo (Sistema Único de Trámites) cuando se publique</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🧭 Por evaluar</h3>
+      <ul style="font-size:13.5px;padding-left:18px;margin:0">
+        <li>Presupuesto por facultad*</li>
+        <li>Admisión y matrícula por carrera*</li>
+        <li>Empleabilidad de egresados*</li>
+        <li>Ingresos propios y centros de producción</li>
+      </ul>
+      <p class="note" style="margin-top:8px">*Requieren una fuente pública que hoy no está disponible (la Consulta Amigable no desagrega por facultad a nivel de pliego).</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- METODOLOGÍA -->
+<section id="metodo" style="border-bottom:0"><div class="wrap">
+  <div class="eyebrow">Cómo se hizo</div>
+  <h2>Metodología y fuentes</h2>
+  <div class="grid2">
+    <div class="card">
+      <h3>Fuentes de datos (todas públicas)</h3>
+      <ul style="font-size:14px;padding-left:18px">
+        <li><strong>Presupuesto y gasto:</strong> MEF, Consulta Amigable del SIAF, pliego 518 (UNALM), serie 2012–2026; 2026 parcial.</li>
+        <li><strong>Proveedores:</strong> OECE/CONOSCE, reporte de adjudicaciones 2023–2026 (buena pro por ítem); integrantes de consorcios (Reporte de Consorcios CONOSCE) y representantes según datosperu.org (fuente secundaria).</li>
+        <li><strong>Comedor:</strong> CONOSCE (convocatorias, adjudicaciones, desiertos, contratos, órdenes) + OCDS del OECE + Consulta Amigable MEF.</li>
+        <li><strong>Planilla:</strong> Portal de Transparencia Estándar, rubro Personal (id_entidad 10037) + agregado AIRHSP del MEF (dic-2025).</li>
+        <li><strong>TUPA:</strong> anexo del TUPA 2020 (R. N.° 0234-2020-R-UNALM) publicado en el portal de transparencia de la UNALM.</li>
+        <li><strong>Investigación:</strong> OpenAlex (institución I79080234, ROR 00vr49948), abierto/CC0.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Alcance y honestidad</h3>
+      <p style="font-size:14px;color:var(--muted)">Este es un portal <strong>exploratorio y ciudadano</strong>, construido solo con <strong>información pública</strong>. No publica datos personales sensibles (DNI, teléfonos, correos) ni nombres de estudiantes. Las cifras se reportan tal como las publican las fuentes oficiales, con su fecha de corte; cuando un dato no está disponible lo decimos en vez de estimarlo. Los cruces (p. ej. proveedor → dueño) indican su fuente. Correcciones bienvenidas: <a href="mailto:carlos@cardenas.pe">carlos@cardenas.pe</a>.</p>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  Observatorio UNALM · datos públicos MEF · OECE · PTE · OpenAlex · construido por
+  <a href="https://unimauro.github.io" target="_blank" rel="noopener">Carlos Cárdenas (@unimauro)</a>.
+  No es un portal oficial de la Universidad Nacional Agraria La Molina.
+</div></footer>
+
+<!-- Yape modal -->
+<div class="modal" id="yape" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="box">
+    <h3 style="margin-top:0">Apóyanos con Yape 💜</h3>
+    <img src="https://raw.githubusercontent.com/unimauro/salariosperu/main/yape.png" alt="Yape 940 584 307" onerror="this.style.display='none'">
+    <p style="font-size:14px">Número: <strong>940 584 307</strong><br>Carlos Cárdenas</p>
+    <button class="tgl" style="background:var(--granate2)" onclick="document.getElementById('yape').classList.remove('open')">Cerrar</button>
+  </div>
+</div>
+
+<!-- asistente IA -->
+<button class="fab" onclick="document.getElementById('chat').classList.toggle('open')" title="Pregúntale al observatorio" aria-label="Asistente">💬</button>
+<div class="chat" id="chat">
+  <div class="top">Asistente del Observatorio UNALM</div>
+  <div class="msgs" id="msgs"><div class="m a">Hola 👋 Pregúntame sobre el presupuesto, los proveedores, el comedor, la planilla, el TUPA o la investigación de la UNALM.</div></div>
+  <div class="in"><input id="chatIn" placeholder="Escribe tu pregunta…" onkeydown="if(event.key==='Enter')sendChat()"><button class="send" onclick="sendChat()">Enviar</button></div>
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

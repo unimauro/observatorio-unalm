@@ -1,0 +1,495 @@
+{
+ "fuente": "Portal de Transparencia UNALM - Oficina de Planeamiento, sección \"Texto Único de Procedimientos Administrativos TUPA 2020\" (anexo en formato del Sistema Único de Trámites/PCM).",
+ "fuente_url": "https://www.lamolina.edu.pe/Rectorado/transparencia2/ofic_planificacion/TUPA_2020/ANEXO_TUPA_2020_Modificacion.pdf",
+ "portal_url": "https://www.lamolina.edu.pe/Rectorado/transparencia2/ofic_planificacion/",
+ "norma_aprobatoria": "Resolución N.° 0234-2020-R-UNALM (modifica el TUPA aprobado por R. N.° 0061-2015-R-UNALM, modificado por R. N.° 0451-2018-R-UNALM, que deja sin efecto)",
+ "norma_url": "https://www.lamolina.edu.pe/Rectorado/transparencia2/ofic_planificacion/TUPA_2020/RR-2020-0234.pdf",
+ "normas_historial": [
+  {
+   "accion": "Aprueba",
+   "norma": "0061-2015-R-UNALM",
+   "fecha": "2015-05-04"
+  },
+  {
+   "accion": "Modifica",
+   "norma": "0451-2018-R-UNALM",
+   "fecha": "2018-08-08"
+  },
+  {
+   "accion": "Modifica",
+   "norma": "0234-2020-R-UNALM",
+   "fecha": "2020-06-23"
+  }
+ ],
+ "fecha": "2020-06-23",
+ "normas_posteriores_relacionadas": [
+  {
+   "norma": "0678-2024-R-UNALM",
+   "fecha": "2024-09-05",
+   "objeto": "Modifica los formularios FUT SG-002 a SG-005 (grados y títulos); no cambia derechos de tramitación según su texto.",
+   "url": "https://www.lamolina.edu.pe/rectorado/transparencia2/rectorales/2024/setiembre/RR_2024_0678.pdf"
+  },
+  {
+   "norma": "0124-2025-R-UNALM",
+   "fecha": "2025-03-20",
+   "objeto": "Plan de trabajo para actualizar el TUPA en el Sistema Único de Trámites (SUT).",
+   "url": "https://www.lamolina.edu.pe/rectorado/transparencia2/rectorales/2025/marzo/0124-2025-R-UNALM.pdf"
+  },
+  {
+   "norma": "0183-2025-R-UNALM",
+   "fecha": "2025-04-14",
+   "objeto": "Directiva de lineamientos para implementar el TUPA de la UNALM en el SUT.",
+   "url": "https://www.lamolina.edu.pe/rectorado/secgeneral/resoluciones_2025/Directiva_%20Lineamientos_TUPA_RR_2025_0183.pdf"
+  },
+  {
+   "norma": "0382-2025-R-UNALM",
+   "fecha": "2025-06-12",
+   "objeto": "Modifica de nuevo los FUT SG-002 a SG-005 de Secretaría General.",
+   "url": "https://www.lamolina.edu.pe/rectorado/transparencia2/rectorales/2025/junio/TR%200382-2025-R-UNALM.pdf"
+  }
+ ],
+ "extraido": "2026-11-16",
+ "procedimientos": [
+  {
+   "codigo": "PA58003B16",
+   "nombre": "MATRÍCULA REGULAR",
+   "derecho_tramitacion_soles": 0.0,
+   "gratuito": true,
+   "montos_detalle": null,
+   "plazo_dias": 1,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "SUBDIRECCIÓN DE REGISTROS"
+  },
+  {
+   "codigo": "PA580010C9",
+   "nombre": "MATRÍCULA RECIEN INGRESANTE",
+   "derecho_tramitacion_soles": 0.0,
+   "gratuito": true,
+   "montos_detalle": null,
+   "plazo_dias": 1,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "DIRECCIÓN DE ESTUDIOS Y REGISTROS ACADÉMICOS / SUBDIRECCIÓN DE REGISTROS"
+  },
+  {
+   "codigo": "PA580021A9",
+   "nombre": "MATRÍCULA EXTEMPORÁNEA",
+   "derecho_tramitacion_soles": 20.3,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 5,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "DIRECCIÓN DE ESTUDIOS Y REGISTROS ACADÉMICOS"
+  },
+  {
+   "codigo": "PA58009563",
+   "nombre": "CURSO DIRIGIDO",
+   "derecho_tramitacion_soles": 0.0,
+   "gratuito": true,
+   "montos_detalle": null,
+   "plazo_dias": 20,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Evaluación previa - silencio administrativo positivo",
+   "unidad": "CONSEJO DE FACULTAD"
+  },
+  {
+   "codigo": "PA58008D46",
+   "nombre": "CERTIFICADO DE ESTUDIOS",
+   "derecho_tramitacion_soles": 17.2,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 3,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "DIRECCIÓN DE ESTUDIOS Y REGISTROS ACADÉMICOS"
+  },
+  {
+   "codigo": "PA580046D4",
+   "nombre": "CONSTANCIAS",
+   "derecho_tramitacion_soles": 13.1,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 1,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "CENTRO DE ADMISIÓN Y PROMOCIÓN / SUBDIRECCIÓN DE REGISTROS"
+  },
+  {
+   "codigo": "PA58008BE2",
+   "nombre": "CARNÉ UNIVERSITARIO REGULAR, DUPLICADO Y CORRECCIONES",
+   "derecho_tramitacion_soles": 16.0,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 20,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "SUBDIRECCIÓN DE REGISTROS"
+  },
+  {
+   "codigo": "PA58003AA2",
+   "nombre": "RETIRO TOTAL DE CURSOS EN FORMA EXCEPCIONAL",
+   "derecho_tramitacion_soles": 0.0,
+   "gratuito": true,
+   "montos_detalle": null,
+   "plazo_dias": 30,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Evaluación previa - silencio administrativo positivo",
+   "unidad": "SUBDIRECCIÓN DE REGISTROS"
+  },
+  {
+   "codigo": "PA58003F45",
+   "nombre": "RECLAMO SOBRE RESULTADO DE EVALUACIÓN",
+   "derecho_tramitacion_soles": 0.0,
+   "gratuito": true,
+   "montos_detalle": null,
+   "plazo_dias": 15,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "CONSEJO DE FACULTAD"
+  },
+  {
+   "codigo": "PA58001DA4",
+   "nombre": "REINCORPORACIÓN A LA CONDICIÓN DE ESTUDIANTE",
+   "derecho_tramitacion_soles": 141.2,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 30,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Evaluación previa - silencio administrativo positivo",
+   "unidad": "CONSEJO DE FACULTAD"
+  },
+  {
+   "codigo": "PA580042E8",
+   "nombre": "TRASLADOS INTERNOS",
+   "derecho_tramitacion_soles": 154.8,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 30,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Evaluación previa - silencio administrativo positivo",
+   "unidad": "CONSEJO DE FACULTAD"
+  },
+  {
+   "codigo": "PA5800B5CC",
+   "nombre": "APROBACIÓN DE PROYECTO DE TESIS",
+   "derecho_tramitacion_soles": 0.0,
+   "gratuito": true,
+   "montos_detalle": null,
+   "plazo_dias": 30,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "CONSEJO DE FACULTAD"
+  },
+  {
+   "codigo": "PA5800BA64",
+   "nombre": "EXAMEN PROFESIONAL",
+   "derecho_tramitacion_soles": 1563.3,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 30,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "CONSEJO DE FACULTAD"
+  },
+  {
+   "codigo": "PA5800DFB7",
+   "nombre": "MAESTRÍA - MATRÍCULA",
+   "derecho_tramitacion_soles": 147.9,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 1,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "DIRECTORIO DE LA ESCUELA DE POSGRADO"
+  },
+  {
+   "codigo": "PA580006F1",
+   "nombre": "MAESTRÍA - MATRÍCULA DE ALUMNOS ESPECIALES",
+   "derecho_tramitacion_soles": 84.2,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 1,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "DIRECTORIO DE LA ESCUELA DE POSGRADO"
+  },
+  {
+   "codigo": "PA580008B1",
+   "nombre": "MAESTRÍA - EXAMEN DE IDIOMA EXTRANJERO",
+   "derecho_tramitacion_soles": 99.3,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 2,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "JURADO DE EXAMEN DE IDIOMA EXTRANJERO DE LA EPG"
+  },
+  {
+   "codigo": "PA5800BC4F",
+   "nombre": "MAESTRÍA - REINCORPORACIÓN",
+   "derecho_tramitacion_soles": 345.3,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 10,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Evaluación previa - silencio administrativo positivo",
+   "unidad": "DIRECTORIO DE LA ESCUELA DE POSGRADO"
+  },
+  {
+   "codigo": "PA5800E589",
+   "nombre": "MAESTRÍA-EXAMEN DE GRADO",
+   "derecho_tramitacion_soles": 828.2,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 7,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "DIRECTORIO DE LA ESCUELA DE POSGRADO"
+  },
+  {
+   "codigo": "PA5800408A",
+   "nombre": "MAESTRÍA-SUSTENTACIÓN DE TESIS",
+   "derecho_tramitacion_soles": 1367.7,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 3,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "DIRECTORIO DE LA ESCUELA DE POSGRADO"
+  },
+  {
+   "codigo": "PA58003812",
+   "nombre": "DOCTORADO - MATRÍCULA",
+   "derecho_tramitacion_soles": 147.9,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 1,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "DIRECTORIO DE LA ESCUELA DE POSGRADO"
+  },
+  {
+   "codigo": "PA58007818",
+   "nombre": "DOCTORADO - MATRÍCULA DE ALUMNOS ESPECIALES",
+   "derecho_tramitacion_soles": 84.2,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 1,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "DIRECTORIO DE LA ESCUELA DE POSGRADO"
+  },
+  {
+   "codigo": "PA5800E63E",
+   "nombre": "DOCTORADO - EXAMEN DE IDIOMAS EXTRANJERO",
+   "derecho_tramitacion_soles": 99.3,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 2,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "JURADO DE EXAMEN DE IDIOMA EXTRANJERO DE LA EPG"
+  },
+  {
+   "codigo": "PA58002E5D",
+   "nombre": "DOCTORADO - REINCORPORACIÓN",
+   "derecho_tramitacion_soles": 345.3,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 10,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Evaluación previa - silencio administrativo positivo",
+   "unidad": "DIRECTORIO DE LA ESCUELA DE POSGRADO"
+  },
+  {
+   "codigo": "PA5800B8F2",
+   "nombre": "DOCTORADO - EXAMEN DE GRADO",
+   "derecho_tramitacion_soles": 828.2,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 7,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "DIRECTORIO DE LA ESCUELA DE POSGRADO"
+  },
+  {
+   "codigo": "PA58002091",
+   "nombre": "DOCTORADO - SUSTENTACIÓN DE TESIS",
+   "derecho_tramitacion_soles": 1367.7,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 3,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "DIRECTORIO DE LA ESCUELA DE POSGRADO"
+  },
+  {
+   "codigo": "PA5800EA24",
+   "nombre": "CARNÉ DE LECTOR INGRESANTE",
+   "derecho_tramitacion_soles": 12.1,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 1,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "BIBLIOTECA AGRICOLA NACIONAL ORLANDO OLCESE"
+  },
+  {
+   "codigo": "PA5800DD51",
+   "nombre": "CARNÉ DE EGRESADO UNALM",
+   "derecho_tramitacion_soles": 15.1,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 1,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "BIBLIOTECA AGRICOLA NACIONAL ORLANDO OLCESE"
+  },
+  {
+   "codigo": "PA580027DF",
+   "nombre": "CARNÉ DE VISITANTE",
+   "derecho_tramitacion_soles": 14.8,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 1,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "BIBLIOTECA AGRICOLA NACIONAL ORLANDO OLCESE"
+  },
+  {
+   "codigo": "PA58001402",
+   "nombre": "OBTENCIÓN DEL GRADO DE BACHILLER",
+   "derecho_tramitacion_soles": 518.7,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 30,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "CONSEJO UNIVERSITARIO"
+  },
+  {
+   "codigo": "PA580000A0",
+   "nombre": "OBTENCIÓN DEL TÍTULO PROFESIONAL",
+   "derecho_tramitacion_soles": 531.7,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 30,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "CONSEJO UNIVERSITARIO"
+  },
+  {
+   "codigo": "PA580011B2",
+   "nombre": "DUPLICADO DE GRADO O TÍTULO POR PERDIDA O ROBO",
+   "derecho_tramitacion_soles": 727.6,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 30,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "CONSEJO UNIVERSITARIO"
+  },
+  {
+   "codigo": "PA58006622",
+   "nombre": "DUPLICADO DE GRADO O TÍTULO POR DETERIORO O MUTILACIÓN",
+   "derecho_tramitacion_soles": 727.6,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 30,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "CONSEJO UNIVERSITARIO"
+  },
+  {
+   "codigo": "PA58007B71",
+   "nombre": "OBTENCIÓN DEL GRADO DE MAESTRO",
+   "derecho_tramitacion_soles": 518.0,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 30,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "CONSEJO UNIVERSITARIO"
+  },
+  {
+   "codigo": "PA5800523F",
+   "nombre": "OBTENCIÓN DEL GRADO DE DOCTOR",
+   "derecho_tramitacion_soles": 516.3,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 30,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "CONSEJO UNIVERSITARIO"
+  },
+  {
+   "codigo": "PA5800721A",
+   "nombre": "REVÁLIDA DE GRADO Y TÍTULO",
+   "derecho_tramitacion_soles": 803.2,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 30,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "CONSEJO UNIVERSITARIO"
+  },
+  {
+   "codigo": "PA580032E9",
+   "nombre": "ACCESO A LA INFORMACIÓN QUE POSEE O PRODUCE LA UNALM",
+   "derecho_tramitacion_soles": 0.0,
+   "gratuito": true,
+   "montos_detalle": [
+    {
+     "concepto": "Copia fotostática A4 b/n por unidad (simple)",
+     "monto_soles": 0.1
+    },
+    {
+     "concepto": "CD (unidad)",
+     "monto_soles": 0.8
+    },
+    {
+     "concepto": "Correo electrónico",
+     "monto_soles": 0.0
+    }
+   ],
+   "plazo_dias": 7,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Evaluación previa - silencio administrativo negativo",
+   "unidad": "OFICINA DE SECRETARIA GENERAL"
+  },
+  {
+   "codigo": "PA5800A0C1",
+   "nombre": "RECTIFICACIÓN DE DIPLOMA",
+   "derecho_tramitacion_soles": 48.5,
+   "gratuito": false,
+   "montos_detalle": null,
+   "plazo_dias": 5,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Aprobación automática",
+   "unidad": "OFICINA DE SECRETARIA GENERAL"
+  },
+  {
+   "codigo": "PA58001C60",
+   "nombre": "PRESTACIONES PENSIONARIAS",
+   "derecho_tramitacion_soles": 0.0,
+   "gratuito": true,
+   "montos_detalle": null,
+   "plazo_dias": 30,
+   "plazo_unidad": "días hábiles",
+   "calificacion": "Evaluación previa - silencio administrativo negativo",
+   "unidad": "OFICINA DE RECURSOS HUMANOS"
+  }
+ ],
+ "resumen": {
+  "n_procedimientos": 38,
+  "n_gratuitos": 8,
+  "n_con_pago": 30,
+  "derecho_max_soles": 1563.3,
+  "derecho_min_soles": 12.1,
+  "n_aprobacion_automatica": 30,
+  "n_evaluacion_previa": 8
+ },
+ "nota": "TUPA vigente publicado en el portal de transparencia de la UNALM al 2026-11-16: versión 2020 (R. 0234-2020-R-UNALM). En 2025 la UNALM inició la actualización del TUPA en el Sistema Único de Trámites (R. 0124-2025 y 0183-2025), pero no se encontró publicada una resolución que apruebe un TUPA nuevo; si se aprueba, este archivo queda desactualizado. Montos en soles tal como figuran en el anexo 2020 (calculados con la UIT 2020 de S/ 4,300; por D.S. 062-2009-PCM el cambio de UIT no modifica automáticamente el derecho de tramitación). derecho_tramitacion_soles = primer monto de la ficha (0 = gratuito; null = no se pudo leer); si hay varios conceptos ver montos_detalle. Extracción automática con pdftotext: verificar contra el PDF antes de citar un caso puntual. gob.pe/unalm no muestra el TUPA en HTML sin JavaScript; no se usó."
+}

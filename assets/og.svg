@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f2e18"/><stop offset="0.5" stop-color="#1b4d2b"/><stop offset="1" stop-color="#2e7d3e"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#g)"/>
+<text x="70" y="150" font-family="Georgia,serif" font-size="30" fill="#d9b44a" letter-spacing="4">SEGUIR EL DINERO · MEF · OECE · PTE · OPENALEX</text>
+<text x="66" y="255" font-family="Georgia,serif" font-size="68" font-weight="700" fill="#ffffff">Observatorio UNALM</text>
+<text x="70" y="322" font-family="Georgia,serif" font-size="27" fill="#dcefd9">Universidad Nacional Agraria La Molina · Lima</text>
+<text x="70" y="440" font-family="-apple-system,Arial" font-size="29" fill="#dcefd9">Presupuesto · proveedores · comedor · planilla ·</text>
+<text x="70" y="483" font-family="-apple-system,Arial" font-size="29" fill="#dcefd9">TUPA · investigación. Solo datos públicos.</text>
+<text x="70" y="585" font-family="-apple-system,Arial" font-size="23" fill="#d9b44a">unimauro.github.io/observatorio-unalm</text>
+<g transform="translate(1040,200)">
+<path d="M60 200V80" stroke="#d9b44a" stroke-width="8" stroke-linecap="round"/>
+<path d="M60 110C25 110 5 88 5 55c33 0 55 20 55 55z" fill="#d9b44a"/>
+<path d="M60 95C60 62 80 40 115 40c0 33-22 55-55 55z" fill="#8fc46a"/>
+</g>
+</svg>
